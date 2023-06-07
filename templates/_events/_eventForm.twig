@@ -1,0 +1,165 @@
+{% extends "_layout.twig" %}
+
+{% set breadcrumbs = [
+    craft.entries.section('profile').one(),
+	entry
+] %}
+
+{% set draftId = craft.app.request.getQueryParam('draftId') %}
+{% set draft = craft.entries.draftId(draftId).status(null).one() %}
+
+{% set settings = '{
+    "buttons": ["format","bold","italic","lists","link"],
+    "formatting": ["p", "h2", "h3", "h4", "h5"],
+    "pasteLinks": false,
+    "pasteImages": false
+}' %}
+{% do view.registerAssetBundle("craft\\redactor\\assets\\redactor\\RedactorAsset") %}
+
+{% block content %}
+	{% requireLogin %}
+	<div class="section section--light">
+		<div class="container">
+			<div class="w-full md:w-2/3">
+				{% include ['_snippet/_content/_pageTitle/_' ~ currentSite.handle ~'.twig', '_snippet/_content/_pageTitle/_default.twig'] %}
+				{% include ['_snippet/_content/_intro/_' ~ currentSite.handle ~'.twig', '_snippet/_content/_intro/_default.twig'] %}
+			</div>
+		</div>
+	</div>
+
+	<div class="section section--light">
+		<div class="container">
+			<form method="POST" enctype="multipart/form-data" class="w-full md:w-2/3" data-s-validate>
+				{{ csrfInput() }}
+				{{ actionInput('statik/events/save-event') }}
+				{{ redirectInput(craft.entries.section('profile').one().url) }}
+				{{ hiddenInput('siteId', currentSite.id) }}
+				{{ hiddenInput('authorId', currentUser.id) }}
+				{{ hiddenInput('enabled', '0') }}
+				{% if draftId|length %}
+					{{ hiddenInput('draftId', draftId) }}
+				{% endif %}
+
+				<h2>{{ 'Inzendingsformulier repareer evenement'|t }}</h2>
+
+				<div class="form__field">
+					<label class="form__label" for="title">{{ 'Titel van het evenement'|t }}</label>
+					<input class="form__input" type="text" name="fields[title]" id="title" required value="{% if draftId|length %}{{ draft.title }}{% endif %}">
+				</div>
+
+				<div class="form__field">
+					<label class="form__label" for="date">{{ 'Datum'|t }}</label>
+					<input class="form__input js-date-picker" type="datetime-local" name="fields[date]" id="date" required value="{% if draftId|length %}{{ draft.date|date('Y-m-d\\TH:i') }}{% endif %}">
+				</div>
+
+				<div class="form__field">
+					<label class="form__label" for="location">{{ 'Locatie'|t }}</label>
+					<input class="form__input" type="text" name="fields[location]" id="location" required value="{% if draftId|length %}{{ draft.location }}{% endif %}">
+				</div>
+
+				<div class="form__field">
+					<label class="form__label" for="organisationName">{{ 'Organisator'|t }}</label>
+					<input class="form__input" type="text" name="fields[organisationName]" id="organisationName" required value="{% if draftId|length %}{{ draft.organisationName }}{% endif %}">
+				</div>
+
+
+				<div class="form__field">
+					<label class="form__label" for="organisationUrl">{{ 'Website organisator'|t }}</label>
+					<p class="text-base">{{ 'Je kan hier de URL invoeren die linkt naar meer informatie over de organisator.'|t }}</p>
+					<input class="form__input" type="text" name="fields[organisationUrl]" id="organisationUrl" value="{% if draftId|length %}{{ draft.organisationUrl }}{% endif %}">
+					{% if draftId|length %}
+						{% set draftEventType = draft.category.one() %}
+					{% endif %}
+				</div>
+
+				<div class="form__field">
+					<label class="form__label" for="category">{{ 'Categorie evenement'|t }}</label>
+					<div class="">
+						<select name="fields[category][]" id="category" class="w-full p-1 bg-white border-black border-1 rounded-xs" data-s-autocomplete required multiple>
+							{% set categories = craft.categories.group('eventType') %}
+							{% for category in categories.all() %}
+								<option value="{{ category.id }}" {% if draftId|length %} {% if draftEventType.id == category.id %} selected {% endif %} {% endif %}>{{ category.title }}</option>
+							{% endfor %}
+						</select>
+					</div>
+				</div>
+
+				<div class="form__field">
+					<label class="form__label" for="registerUrl">{{ 'Link naar het registratie formulier'|t }}</label>
+					<p class="text-base">{{ 'Als je een inschrijvingsformulier voor dit evenement hebt, kan je hier de URL invullen.'|t }}</p>
+					<input class="form__input" type="text" name="fields[registerUrl]" id="registerUrl" value="{% if draftId|length %}{{ draft.registerUrl }}{% endif %}">
+				</div>
+
+				<div class="form__field">
+					<label class="form__label" for="infoUrl">{{ 'Link naar meer informatie'|t }}</label>
+					<p class="text-base">{{ 'Als je meer informatie over dit evenement heeft, kan je hier de URL naar die informatie invullen.'|t }}</p>
+					<input class="form__input" type="text" name="fields[infoUrl]" id="infoUrl" value="{% if draftId|length %}{{ draft.infoUrl }}{% endif %}">
+				</div>
+
+				<div class="form__field">
+					<label class="form__label" for="intro">{{ 'Introductie'|t }}</label>
+					<p class="text-base">{{ 'Schrijf 3 introductieregels voor jouw reparatieverhaal.'|t }}</p>
+					<textarea class="form__input" rows="3" type="text" name="fields[intro]" id="intro" required>{% if draftId|length %}{{ draft.intro }}{% endif %}</textarea>
+				</div>
+
+				<div class="form__field">
+					<label class="form__label" for="body">{{ 'Body tekst'|t }}</label>
+					<p class="text-base">{{ 'U kunt hier de daadwerkelijke inhoud van uw verhaal plaatsen, met behulp van kopteksten, vetgedrukte/cursieve stijlen, enz. om uw artikel te structureren.'|t }}</p>
+					<textarea class="form__input" name="fields[body]" id="body" required>{% if draftId|length %}{{ draft.body|raw }}{% endif %}</textarea>
+					{% set script = "$('#body').redactor(" ~ settings ~ ");" %}
+					{% do view.registerJs(script) %}
+				</div>
+
+				<div class="mt-4 form__field">
+					<div class="form__label">{{ 'Hoofdafbeelding'|t }}</div>
+					<label class="flex items-center" for="mainImage">
+						<svg class="mr-2 icon text-primary" aria-hidden="true"><use xlink:href="/icon/sprite.svg#photo-camera"></use></svg>
+						<span class="inline-block text-base border-b-1 border-divider">{{ "Selecteer een foto"|t }}</span>
+					</label>
+					<div class="mt-4 mb-2 text-base">{{ 'Kies een afbeelding die wordt weergegeven als hoofdafbeelding voor je verhaal.'|t }}</div>
+					<div class="image-upload-preview" id="mainImagePreview">
+					{% if draftId %}
+						{% if draft.mainImage|length %}
+							<div>
+								<img src="{{draft.mainImage|first.url}}" alt=""/>
+							</div>
+						{% endif %}
+					{% endif %}
+					</div>
+					<input type="file" name="fields[mainImage]" id="mainImage" value="{% if draftId %}{{ draft.mainImage }}{% endif %}" accept=".png,.jpg,.jpeg" class="sr-only form__input" data-show-images-in="mainImagePreview"/>
+				</div>
+
+				<div class="mt-4 form__field">
+					<div class="form__label">{{ 'Bijkomende afbeeldingen'|t }}</div>
+					<label class="flex items-center" for="additionalImage">
+						<svg class="mr-2 icon text-primary" aria-hidden="true"><use xlink:href="/icon/sprite.svg#photo-camera"></use></svg>
+						<span class="inline-block text-base border-b-1 border-divider">{{ "Selecteer extra foto's"|t }}</span>
+					</label>
+					<div class="mt-4 mb-2 text-base">{{ 'Laad tot 3 afbeeldingen op die zullen getoond worden in een gallerij onder de hoofdafbeelding.'|t }}</div>
+					<div class="image-upload-preview" id="additionalImagePreview">
+					{% if draftId %}
+						{% if draft.additionalImage|length %}
+							{% for image in draft.additionalImage.all() %}
+								<img src="{{ image.url }}" class="sm:w-1/2 md:w-1/3">
+							{% endfor %}
+						{% endif %}
+					{% endif %}
+					</div>
+					<input type="file" name="fields[additionalImage][]" id="additionalImage" multiple value="{% if draftId %}{{ draft.mainImage }}{% endif %}" accept=".png,.jpg,.jpeg" class="sr-only form__input" data-show-images-in="additionalImagePreview"/>
+				</div>
+
+				<div class="flex flex-wrap justify-between w-full mt-4 submit-with-loader">
+					<input class="my-2 btn btn--primary btn--ext" name="submitEvent" type="submit" value="{{ 'Stuur je evenement in'|t }}">
+					<input class="my-2 btn btn--secondary btn--ext" name="saveDraft" type="submit" value="{{ 'Sla op als draft'|t }}">
+					<div class="flex flex-col items-center justify-center w-full pb-4 bg-white loader-block">
+						<span class="scale-50">
+							{% include '_snippet/_item/_loader/_default.twig' %}
+						</span>
+						<span class="-mt-4 italic">{{"We slaan jouw evenement op..."|t}}</span>
+					</div>
+				</div>
+				<p class="mt-4 text-base">{{ 'Na het indienen zal een beheerder jouw evenement binnenkort beoordelen en publiceren.'|t }}</p>
+			</form>
+		</div>
+	</div>
+{% endblock %}

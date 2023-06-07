@@ -1,0 +1,27 @@
+columnSuffix: apwzgntp
+contentColumnType: text
+fieldGroup: d45680a5-3f22-46ee-87ca-99d226b4c7bf # Organisations
+handle: organisationIntro
+instructions: null
+name: 'Organisation Intro'
+searchable: true
+settings:
+  availableTransforms: '*'
+  availableVolumes: '*'
+  columnType: text
+  configSelectionMode: choose
+  defaultTransform: ''
+  manualConfig: ''
+  purifierConfig: null
+  purifyHtml: true
+  redactorConfig: Standard.json
+  removeEmptyTags: true
+  removeInlineStyles: true
+  removeNbsp: true
+  showHtmlButtonForNonAdmins: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: true
+  uiMode: enlarged
+translationKeyFormat: null
+translationMethod: language
+type: craft\redactor\Field

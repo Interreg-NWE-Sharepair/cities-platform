@@ -1,0 +1,37 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 39b3406d-d1bb-4a84-a13a-bce5cc293238 # Globals
+handle: logoContrast
+instructions: null
+name: 'Logo Contrast'
+searchable: false
+settings:
+  allowSelfRelations: false
+  allowSubfolders: false
+  allowUploads: false
+  allowedKinds:
+    - image
+  branchLimit: null
+  defaultUploadLocationSource: 'volume:979c3eeb-f99a-4ca1-bcbe-ce9298a4e4ca' # Files
+  defaultUploadLocationSubpath: null
+  localizeRelations: true
+  maintainHierarchy: false
+  maxRelations: 1
+  minRelations: null
+  previewMode: full
+  restrictFiles: true
+  restrictLocation: false
+  restrictedDefaultUploadSubpath: null
+  restrictedLocationSource: 'volume:979c3eeb-f99a-4ca1-bcbe-ce9298a4e4ca' # Files
+  restrictedLocationSubpath: null
+  selectionLabel: null
+  showSiteMenu: false
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: large
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Assets

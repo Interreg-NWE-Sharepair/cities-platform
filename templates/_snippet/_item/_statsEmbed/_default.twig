@@ -1,0 +1,48 @@
+{% if currentSite.handle == 'apeldoornNl' or currentSite.handle == 'leuvenNl' or currentSite.handle == 'leuvenEn' or currentSite.handle == 'roeselareNl' %}
+  <div class="section section--default">
+    <div class="container">
+
+      <h2 class="mb-8 text-center">{{ 'Herstel in cijfers'|t }}</h2>
+      {# Get the right language for the embed #}
+      {% set embedLanguage = currentSite.language|trim('-BE')|default('nl') %}
+      
+      {# Show the right stats embed on the right subsite #}
+      {% if currentSite.handle == 'apeldoornNl' %}
+        <iframe 
+          id="statistics-embed"
+          title="Statistics"
+          src="https://www.repairconnects.org/api/repair/statistics?lang={{ embedLanguage }}&bbox=52.15392510303019,5.8453928138329445,52.30323053893957,6.110781302602476&base_url={{ currentSite.baseUrl|slice(0, -1) }}&cta1={{ currentSite.baseUrl }}repair-apeldoorn&cta1_organisation_type=professional_repairer&cta2={{ currentSite.baseUrl }}repair-apeldoorn&cta2_organisation_type=repair_cafe"
+          frameborder="0"
+          style="width: 1px; min-width: 100%;"></iframe>
+      {% elseif currentSite.handle == 'leuvenNl' or currentSite.handle == 'leuvenEn' %}
+        <iframe
+          id="statistics-embed"
+          title="Statistics"
+          src="https://www.repairconnects.org/api/repair/statistics?lang={{ embedLanguage }}&bbox=50.810165303594566,4.632453918457032,50.94869429460228,4.765148162841798&base_url={{ currentSite.baseUrl|slice(0, -1) }}&cta1={{ currentSite.baseUrl }}repair-leuven&cta1_organisation_type=professional_repairer&cta2={{ currentSite.baseUrl }}repair-leuven&cta2_organisation_type=repair_cafe"
+          frameborder="0"
+          style="width: 1px; min-width: 100%;"></iframe>
+      {# {% elseif currentSite.handle == 'louvainLaNeuveFr' %}
+        <iframe
+          id="statistics-embed"
+          title="Statistics"
+          src="https://www.repairconnects.org/api/repair/statistics?lang={{ embedLanguage }}&bbox=50.60579369643938,4.547481536865235,50.74253872133164,4.680175781250001&baseUrl={{ currentSite.baseUrl|slice(0, -1) }}&mapUrlBbox={{ currentSite.baseUrl }}repair-louvain-la-neuve?bbox=50.60579369643938,4.547481536865235,50.74253872133164,4.680175781250001&mapUrlFilters={{ currentSite.baseUrl }}repair-louvain-la-neuve?organisation_types=repair_cafe"
+          frameborder="0"
+          style="width: 1px; min-width: 100%;"></iframe> #}
+      {% elseif currentSite.handle == 'roeselareNl' %}
+        <iframe
+          id="statistics-embed"
+          title="Statistics"
+          src="https://www.repairconnects.org/api/repair/statistics?lang={{ embedLanguage }}&bbox=50.875311142200765,3.058490753173828,51.013646659086646,3.191184997558594&base_url={{ currentSite.baseUrl|slice(0, -1) }}&cta1={{ currentSite.baseUrl }}repair-roeselare&cta1_organisation_type=professional_repairer&cta2={{ currentSite.baseUrl }}repair-roeselare&cta2_organisation_type=repair_cafe"
+          frameborder="0"
+          style="width: 1px; min-width: 100%;"></iframe>
+      {% endif %}
+
+      {# Only import the script on the right subsites #}
+      {% if currentSite.handle == 'apeldoornNl' or currentSite.handle == 'leuvenNl' or currentSite.handle == 'leuvenEn' or currentSite.handle == 'roeselareNl' %}
+        <script>
+          iFrameResize({}, '#statistics-embed');
+        </script>
+      {% endif %}
+    </div>
+  </div>
+{% endif %}

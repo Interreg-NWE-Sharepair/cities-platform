@@ -1,0 +1,16 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: c5433317-7d49-4535-8c7b-894b8be40653 # Home
+handle: homeHero
+instructions: null
+name: 'Home hero'
+searchable: true
+settings:
+  contentTable: '{{%matrixcontent_homehero}}'
+  maxBlocks: 1
+  minBlocks: 1
+  propagationKeyFormat: null
+  propagationMethod: siteGroup
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

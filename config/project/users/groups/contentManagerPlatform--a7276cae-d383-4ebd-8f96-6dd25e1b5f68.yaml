@@ -1,0 +1,108 @@
+description: null
+handle: contentManagerPlatform
+name: 'Content Manager Platform'
+permissions:
+  - accesscp
+  - accessplugin-freeform
+  - accessplugin-navigate
+  - accessplugin-seo-fields
+  - accessplugin-translate
+  - administrateusers
+  - 'assignusergroup:a7276cae-d383-4ebd-8f96-6dd25e1b5f68' # Content Manager Platform
+  - 'createentries:45b7c78f-587d-441b-bbd1-605ca629d0bd' # Pages
+  - 'createentries:c576870d-abd8-46aa-8fe5-cdd12c40dfa8' # News
+  - 'createentries:edafcdcc-cb6a-4636-8b06-692031d123dc' # Functionals
+  - 'createfolders:15d0b6ac-6fae-4d64-abf2-3a53ea5348ca' # Frontend
+  - 'createfolders:979c3eeb-f99a-4ca1-bcbe-ce9298a4e4ca' # Files
+  - 'deleteassets:15d0b6ac-6fae-4d64-abf2-3a53ea5348ca' # Frontend
+  - 'deleteassets:979c3eeb-f99a-4ca1-bcbe-ce9298a4e4ca' # Files
+  - 'deleteentries:45b7c78f-587d-441b-bbd1-605ca629d0bd' # Pages
+  - 'deleteentries:c576870d-abd8-46aa-8fe5-cdd12c40dfa8' # News
+  - 'deletepeerassets:15d0b6ac-6fae-4d64-abf2-3a53ea5348ca' # Frontend
+  - 'deletepeerassets:979c3eeb-f99a-4ca1-bcbe-ce9298a4e4ca' # Files
+  - 'deletepeerentries:45b7c78f-587d-441b-bbd1-605ca629d0bd' # Pages
+  - 'deletepeerentries:c576870d-abd8-46aa-8fe5-cdd12c40dfa8' # News
+  - 'deletepeerentrydrafts:0731fc69-9ba5-4022-b4e8-d26be5c12bf8' # Privacy policy
+  - 'deletepeerentrydrafts:36895330-a28e-477f-9327-bdbe66dabf99' # Cookie policy
+  - 'deletepeerentrydrafts:45b7c78f-587d-441b-bbd1-605ca629d0bd' # Pages
+  - 'deletepeerentrydrafts:4750849d-9328-4d3e-956d-9d317da5e6eb' # Page not found
+  - 'deletepeerentrydrafts:4c32edae-2824-4f0f-b38b-2477d2500dfe' # News Overview
+  - 'deletepeerentrydrafts:5d236e94-b6a8-472c-9296-a5c992cdd49a' # Contact
+  - 'deletepeerentrydrafts:68926962-527f-44bb-b721-08cde7220c82' # Home Sharepair
+  - 'deletepeerentrydrafts:c576870d-abd8-46aa-8fe5-cdd12c40dfa8' # News
+  - 'editglobalset:10fdc148-c0a4-486b-a5d1-3d36f2862352' # Social Media
+  - 'editglobalset:4666d048-0521-4d0f-9a4a-208e6182fb85' # Fallback
+  - 'editglobalset:a16348a9-07b9-433a-9f5b-c1cc61d632eb' # Site Specific Info
+  - 'editglobalset:ea47ff3a-c705-483f-895b-b57c76b061cb' # Partners
+  - 'editimages:15d0b6ac-6fae-4d64-abf2-3a53ea5348ca' # Frontend
+  - 'editimages:979c3eeb-f99a-4ca1-bcbe-ce9298a4e4ca' # Files
+  - 'editpeerimages:15d0b6ac-6fae-4d64-abf2-3a53ea5348ca' # Frontend
+  - 'editpeerimages:979c3eeb-f99a-4ca1-bcbe-ce9298a4e4ca' # Files
+  - 'editsite:6de046f0-6167-4af1-aa91-ffaf83e36a14' # Platform
+  - editusers
+  - freeform-submissionsaccess
+  - freeform-submissionsmanage
+  - 'freeform-submissionsmanage:16'
+  - freeform-submissionsmanageindividual
+  - freeform-submissionsread
+  - 'freeform-submissionsread:16'
+  - freeform-submissionsreadindividual
+  - moderateusers
+  - registerusers
+  - 'replacefiles:15d0b6ac-6fae-4d64-abf2-3a53ea5348ca' # Frontend
+  - 'replacefiles:979c3eeb-f99a-4ca1-bcbe-ce9298a4e4ca' # Files
+  - 'replacepeerfiles:15d0b6ac-6fae-4d64-abf2-3a53ea5348ca' # Frontend
+  - 'replacepeerfiles:979c3eeb-f99a-4ca1-bcbe-ce9298a4e4ca' # Files
+  - 'saveassets:15d0b6ac-6fae-4d64-abf2-3a53ea5348ca' # Frontend
+  - 'saveassets:979c3eeb-f99a-4ca1-bcbe-ce9298a4e4ca' # Files
+  - 'saveentries:0731fc69-9ba5-4022-b4e8-d26be5c12bf8' # Privacy policy
+  - 'saveentries:36895330-a28e-477f-9327-bdbe66dabf99' # Cookie policy
+  - 'saveentries:45b7c78f-587d-441b-bbd1-605ca629d0bd' # Pages
+  - 'saveentries:4750849d-9328-4d3e-956d-9d317da5e6eb' # Page not found
+  - 'saveentries:4c32edae-2824-4f0f-b38b-2477d2500dfe' # News Overview
+  - 'saveentries:5d236e94-b6a8-472c-9296-a5c992cdd49a' # Contact
+  - 'saveentries:68926962-527f-44bb-b721-08cde7220c82' # Home Sharepair
+  - 'saveentries:c576870d-abd8-46aa-8fe5-cdd12c40dfa8' # News
+  - 'saveentries:edafcdcc-cb6a-4636-8b06-692031d123dc' # Functionals
+  - 'savepeerassets:15d0b6ac-6fae-4d64-abf2-3a53ea5348ca' # Frontend
+  - 'savepeerassets:979c3eeb-f99a-4ca1-bcbe-ce9298a4e4ca' # Files
+  - 'savepeerentries:45b7c78f-587d-441b-bbd1-605ca629d0bd' # Pages
+  - 'savepeerentries:c576870d-abd8-46aa-8fe5-cdd12c40dfa8' # News
+  - 'savepeerentries:edafcdcc-cb6a-4636-8b06-692031d123dc' # Functionals
+  - 'savepeerentrydrafts:0731fc69-9ba5-4022-b4e8-d26be5c12bf8' # Privacy policy
+  - 'savepeerentrydrafts:36895330-a28e-477f-9327-bdbe66dabf99' # Cookie policy
+  - 'savepeerentrydrafts:45b7c78f-587d-441b-bbd1-605ca629d0bd' # Pages
+  - 'savepeerentrydrafts:4750849d-9328-4d3e-956d-9d317da5e6eb' # Page not found
+  - 'savepeerentrydrafts:4c32edae-2824-4f0f-b38b-2477d2500dfe' # News Overview
+  - 'savepeerentrydrafts:5d236e94-b6a8-472c-9296-a5c992cdd49a' # Contact
+  - 'savepeerentrydrafts:68926962-527f-44bb-b721-08cde7220c82' # Home Sharepair
+  - 'savepeerentrydrafts:c576870d-abd8-46aa-8fe5-cdd12c40dfa8' # News
+  - 'savepeerentrydrafts:edafcdcc-cb6a-4636-8b06-692031d123dc' # Functionals
+  - 'seo-fields:default'
+  - 'seo-fields:notfound'
+  - 'seo-fields:redirects'
+  - 'viewassets:15d0b6ac-6fae-4d64-abf2-3a53ea5348ca' # Frontend
+  - 'viewassets:979c3eeb-f99a-4ca1-bcbe-ce9298a4e4ca' # Files
+  - 'viewentries:0731fc69-9ba5-4022-b4e8-d26be5c12bf8' # Privacy policy
+  - 'viewentries:36895330-a28e-477f-9327-bdbe66dabf99' # Cookie policy
+  - 'viewentries:45b7c78f-587d-441b-bbd1-605ca629d0bd' # Pages
+  - 'viewentries:4750849d-9328-4d3e-956d-9d317da5e6eb' # Page not found
+  - 'viewentries:4c32edae-2824-4f0f-b38b-2477d2500dfe' # News Overview
+  - 'viewentries:5d236e94-b6a8-472c-9296-a5c992cdd49a' # Contact
+  - 'viewentries:68926962-527f-44bb-b721-08cde7220c82' # Home Sharepair
+  - 'viewentries:c576870d-abd8-46aa-8fe5-cdd12c40dfa8' # News
+  - 'viewentries:edafcdcc-cb6a-4636-8b06-692031d123dc' # Functionals
+  - 'viewpeerassets:15d0b6ac-6fae-4d64-abf2-3a53ea5348ca' # Frontend
+  - 'viewpeerassets:979c3eeb-f99a-4ca1-bcbe-ce9298a4e4ca' # Files
+  - 'viewpeerentries:45b7c78f-587d-441b-bbd1-605ca629d0bd' # Pages
+  - 'viewpeerentries:c576870d-abd8-46aa-8fe5-cdd12c40dfa8' # News
+  - 'viewpeerentries:edafcdcc-cb6a-4636-8b06-692031d123dc' # Functionals
+  - 'viewpeerentrydrafts:0731fc69-9ba5-4022-b4e8-d26be5c12bf8' # Privacy policy
+  - 'viewpeerentrydrafts:36895330-a28e-477f-9327-bdbe66dabf99' # Cookie policy
+  - 'viewpeerentrydrafts:45b7c78f-587d-441b-bbd1-605ca629d0bd' # Pages
+  - 'viewpeerentrydrafts:4750849d-9328-4d3e-956d-9d317da5e6eb' # Page not found
+  - 'viewpeerentrydrafts:4c32edae-2824-4f0f-b38b-2477d2500dfe' # News Overview
+  - 'viewpeerentrydrafts:5d236e94-b6a8-472c-9296-a5c992cdd49a' # Contact
+  - 'viewpeerentrydrafts:68926962-527f-44bb-b721-08cde7220c82' # Home Sharepair
+  - 'viewpeerentrydrafts:c576870d-abd8-46aa-8fe5-cdd12c40dfa8' # News
+  - 'viewpeerentrydrafts:edafcdcc-cb6a-4636-8b06-692031d123dc' # Functionals

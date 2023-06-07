@@ -1,0 +1,50 @@
+{% extends "_mail/_layout" %}
+
+{% block title %}
+	{{ 'A new Repair Event has been submitted by'|t }}
+	{{ user.firstName }}
+	{{ user.lastName }}
+{% endblock %}
+
+{% block content %}
+	<p>
+		{{ 'The event has following details:'|t }}
+	</p>
+
+	<ul>
+		{% for key,value in event %}
+			<li>
+				<strong>
+					{% switch key %}
+						{% case "title" %}
+							Event title
+						{% case "date" %}
+							Date
+						{% case "location" %}
+							Location
+						{% case "organisationName" %}
+							Organisation
+						{% case "organisationUrl" %}
+							Organisation URL
+						{% case "category" %}
+							Event category
+						{% case "registerUrl" %}
+							Link to register form
+						{% case "infoUrl" %}
+							Link to more information
+						{% case "intro" %}
+							Introduction
+						{% case "body" %}
+							Body text
+					{% endswitch %}
+				</strong>
+				<br>
+				{{ value|raw }}
+			</li>
+		{% endfor %}
+	</ul>
+
+	<p>
+		{{ 'Please review and publish this event as soon as possible.'|t }}
+	</p>
+{% endblock %}

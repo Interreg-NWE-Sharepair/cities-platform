@@ -1,0 +1,119 @@
+description: null
+handle: contentManagers3dPrinting
+name: 'Content Managers 3D Printing'
+permissions:
+  - accesscp
+  - accessplugin-freeform
+  - accessplugin-navigate
+  - accessplugin-seo-fields
+  - accessplugin-translate
+  - administrateusers
+  - 'assignusergroup:fdec3bd3-a47c-4f82-8a66-83152d5d9107' # Content Managers 3D Printing
+  - 'createentries:45b7c78f-587d-441b-bbd1-605ca629d0bd' # Pages
+  - 'createentries:7801d79f-ad8f-4f1b-8e2f-ac3747b72114' # Events
+  - 'createentries:c576870d-abd8-46aa-8fe5-cdd12c40dfa8' # News
+  - 'createfolders:41922f26-ec6a-4773-bc8b-9aef8d832f8c' # Backend 3D
+  - 'deleteassets:41922f26-ec6a-4773-bc8b-9aef8d832f8c' # Backend 3D
+  - 'deletecategories:5d3f9f3d-7382-4e6a-ab5a-e51b78e7f509' # Event Type
+  - 'deleteentries:45b7c78f-587d-441b-bbd1-605ca629d0bd' # Pages
+  - 'deleteentries:7801d79f-ad8f-4f1b-8e2f-ac3747b72114' # Events
+  - 'deleteentries:c576870d-abd8-46aa-8fe5-cdd12c40dfa8' # News
+  - 'deletepeerassets:41922f26-ec6a-4773-bc8b-9aef8d832f8c' # Backend 3D
+  - 'deletepeercategorydrafts:5d3f9f3d-7382-4e6a-ab5a-e51b78e7f509' # Event Type
+  - 'deletepeerentries:45b7c78f-587d-441b-bbd1-605ca629d0bd' # Pages
+  - 'deletepeerentries:7801d79f-ad8f-4f1b-8e2f-ac3747b72114' # Events
+  - 'deletepeerentries:c576870d-abd8-46aa-8fe5-cdd12c40dfa8' # News
+  - 'deletepeerentrydrafts:0731fc69-9ba5-4022-b4e8-d26be5c12bf8' # Privacy policy
+  - 'deletepeerentrydrafts:36895330-a28e-477f-9327-bdbe66dabf99' # Cookie policy
+  - 'deletepeerentrydrafts:45b7c78f-587d-441b-bbd1-605ca629d0bd' # Pages
+  - 'deletepeerentrydrafts:4c32edae-2824-4f0f-b38b-2477d2500dfe' # News Overview
+  - 'deletepeerentrydrafts:5d236e94-b6a8-472c-9296-a5c992cdd49a' # Contact
+  - 'deletepeerentrydrafts:68926962-527f-44bb-b721-08cde7220c82' # Home Sharepair
+  - 'deletepeerentrydrafts:7801d79f-ad8f-4f1b-8e2f-ac3747b72114' # Events
+  - 'deletepeerentrydrafts:c576870d-abd8-46aa-8fe5-cdd12c40dfa8' # News
+  - 'deletepeerentrydrafts:defcf5bd-5207-471b-9e12-68ada21b246c' # Events Overview
+  - 'editglobalset:10fdc148-c0a4-486b-a5d1-3d36f2862352' # Social Media
+  - 'editglobalset:4666d048-0521-4d0f-9a4a-208e6182fb85' # Fallback
+  - 'editglobalset:a16348a9-07b9-433a-9f5b-c1cc61d632eb' # Site Specific Info
+  - 'editglobalset:ea47ff3a-c705-483f-895b-b57c76b061cb' # Partners
+  - 'editimages:41922f26-ec6a-4773-bc8b-9aef8d832f8c' # Backend 3D
+  - 'editpeerimages:41922f26-ec6a-4773-bc8b-9aef8d832f8c' # Backend 3D
+  - 'editsite:047f745f-3685-4496-8e78-bd0b667af2e0' # 3D Repair EN
+  - 'editsite:583f2eba-5ad5-4741-b9a2-132b67b3bcaf' # 3D Repair NL
+  - 'editsite:8aa67b04-5a77-45c2-a2ac-d1f65698459f' # 3D Repair FR
+  - 'editsite:cd22acbb-24d6-4b36-94b8-5addbd7bd365' # 3D Repair DE
+  - editusers
+  - freeform-formsaccess
+  - 'freeform-formsmanage:17'
+  - 'freeform-formsmanage:18'
+  - 'freeform-formsmanage:19'
+  - 'freeform-formsmanage:20'
+  - freeform-formsmanageindividual
+  - freeform-submissionsaccess
+  - 'freeform-submissionsmanage:17'
+  - 'freeform-submissionsmanage:18'
+  - 'freeform-submissionsmanage:19'
+  - 'freeform-submissionsmanage:20'
+  - freeform-submissionsmanageindividual
+  - 'freeform-submissionsread:17'
+  - 'freeform-submissionsread:18'
+  - 'freeform-submissionsread:19'
+  - 'freeform-submissionsread:20'
+  - freeform-submissionsreadindividual
+  - moderateusers
+  - registerusers
+  - 'replacefiles:41922f26-ec6a-4773-bc8b-9aef8d832f8c' # Backend 3D
+  - 'replacepeerfiles:41922f26-ec6a-4773-bc8b-9aef8d832f8c' # Backend 3D
+  - 'saveassets:41922f26-ec6a-4773-bc8b-9aef8d832f8c' # Backend 3D
+  - 'savecategories:5d3f9f3d-7382-4e6a-ab5a-e51b78e7f509' # Event Type
+  - 'saveentries:0731fc69-9ba5-4022-b4e8-d26be5c12bf8' # Privacy policy
+  - 'saveentries:36895330-a28e-477f-9327-bdbe66dabf99' # Cookie policy
+  - 'saveentries:45b7c78f-587d-441b-bbd1-605ca629d0bd' # Pages
+  - 'saveentries:4c32edae-2824-4f0f-b38b-2477d2500dfe' # News Overview
+  - 'saveentries:5d236e94-b6a8-472c-9296-a5c992cdd49a' # Contact
+  - 'saveentries:68926962-527f-44bb-b721-08cde7220c82' # Home Sharepair
+  - 'saveentries:7801d79f-ad8f-4f1b-8e2f-ac3747b72114' # Events
+  - 'saveentries:c576870d-abd8-46aa-8fe5-cdd12c40dfa8' # News
+  - 'saveentries:defcf5bd-5207-471b-9e12-68ada21b246c' # Events Overview
+  - 'savepeerassets:41922f26-ec6a-4773-bc8b-9aef8d832f8c' # Backend 3D
+  - 'savepeercategorydrafts:5d3f9f3d-7382-4e6a-ab5a-e51b78e7f509' # Event Type
+  - 'savepeerentries:45b7c78f-587d-441b-bbd1-605ca629d0bd' # Pages
+  - 'savepeerentries:7801d79f-ad8f-4f1b-8e2f-ac3747b72114' # Events
+  - 'savepeerentries:c576870d-abd8-46aa-8fe5-cdd12c40dfa8' # News
+  - 'savepeerentrydrafts:0731fc69-9ba5-4022-b4e8-d26be5c12bf8' # Privacy policy
+  - 'savepeerentrydrafts:36895330-a28e-477f-9327-bdbe66dabf99' # Cookie policy
+  - 'savepeerentrydrafts:45b7c78f-587d-441b-bbd1-605ca629d0bd' # Pages
+  - 'savepeerentrydrafts:4c32edae-2824-4f0f-b38b-2477d2500dfe' # News Overview
+  - 'savepeerentrydrafts:5d236e94-b6a8-472c-9296-a5c992cdd49a' # Contact
+  - 'savepeerentrydrafts:68926962-527f-44bb-b721-08cde7220c82' # Home Sharepair
+  - 'savepeerentrydrafts:7801d79f-ad8f-4f1b-8e2f-ac3747b72114' # Events
+  - 'savepeerentrydrafts:c576870d-abd8-46aa-8fe5-cdd12c40dfa8' # News
+  - 'savepeerentrydrafts:defcf5bd-5207-471b-9e12-68ada21b246c' # Events Overview
+  - 'seo-fields:default'
+  - 'seo-fields:notfound'
+  - 'seo-fields:redirects'
+  - 'viewassets:41922f26-ec6a-4773-bc8b-9aef8d832f8c' # Backend 3D
+  - 'viewcategories:5d3f9f3d-7382-4e6a-ab5a-e51b78e7f509' # Event Type
+  - 'viewentries:0731fc69-9ba5-4022-b4e8-d26be5c12bf8' # Privacy policy
+  - 'viewentries:36895330-a28e-477f-9327-bdbe66dabf99' # Cookie policy
+  - 'viewentries:45b7c78f-587d-441b-bbd1-605ca629d0bd' # Pages
+  - 'viewentries:4c32edae-2824-4f0f-b38b-2477d2500dfe' # News Overview
+  - 'viewentries:5d236e94-b6a8-472c-9296-a5c992cdd49a' # Contact
+  - 'viewentries:68926962-527f-44bb-b721-08cde7220c82' # Home Sharepair
+  - 'viewentries:7801d79f-ad8f-4f1b-8e2f-ac3747b72114' # Events
+  - 'viewentries:c576870d-abd8-46aa-8fe5-cdd12c40dfa8' # News
+  - 'viewentries:defcf5bd-5207-471b-9e12-68ada21b246c' # Events Overview
+  - 'viewpeerassets:41922f26-ec6a-4773-bc8b-9aef8d832f8c' # Backend 3D
+  - 'viewpeercategorydrafts:5d3f9f3d-7382-4e6a-ab5a-e51b78e7f509' # Event Type
+  - 'viewpeerentries:45b7c78f-587d-441b-bbd1-605ca629d0bd' # Pages
+  - 'viewpeerentries:7801d79f-ad8f-4f1b-8e2f-ac3747b72114' # Events
+  - 'viewpeerentries:c576870d-abd8-46aa-8fe5-cdd12c40dfa8' # News
+  - 'viewpeerentrydrafts:0731fc69-9ba5-4022-b4e8-d26be5c12bf8' # Privacy policy
+  - 'viewpeerentrydrafts:36895330-a28e-477f-9327-bdbe66dabf99' # Cookie policy
+  - 'viewpeerentrydrafts:45b7c78f-587d-441b-bbd1-605ca629d0bd' # Pages
+  - 'viewpeerentrydrafts:4c32edae-2824-4f0f-b38b-2477d2500dfe' # News Overview
+  - 'viewpeerentrydrafts:5d236e94-b6a8-472c-9296-a5c992cdd49a' # Contact
+  - 'viewpeerentrydrafts:68926962-527f-44bb-b721-08cde7220c82' # Home Sharepair
+  - 'viewpeerentrydrafts:7801d79f-ad8f-4f1b-8e2f-ac3747b72114' # Events
+  - 'viewpeerentrydrafts:c576870d-abd8-46aa-8fe5-cdd12c40dfa8' # News
+  - 'viewpeerentrydrafts:defcf5bd-5207-471b-9e12-68ada21b246c' # Events Overview

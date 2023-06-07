@@ -1,0 +1,127 @@
+fieldLayouts:
+  536c647a-6d86-4234-b385-8839799efba8:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 95de2da9-b21a-4635-9dd6-df8af947a0bc
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: b5de6dcf-80e6-48e2-b846-0dab7f35c4c8 # Intro Text
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a427acde-5ee3-4967-be16-1f910c9a8397
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 56d715d0-6a9d-4562-9c66-e5b4caad7f44 # Content Builder
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b14d7e17-6e92-49dd-8a85-a224195a15a7
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 00ce99ae-d5cd-4bf8-a134-b5fef59270dd
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 4a2bad07-8d89-4689-b0bf-774eed764660 # Overview title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1118b542-655c-46ad-9c97-1a7b410e4b04
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 2f8a6ddc-4ab7-4f9f-a2ea-72c6cb387f38 # Overview description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8bfb3232-0ca2-42b7-a870-bc25b787748d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 15ed2b72-8955-4cec-93f8-9736a9e50e80 # Overview image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5a57071f-6f6c-49e2-99f1-ab2aa05456b2
+            userCondition: null
+            warning: null
+            width: 100
+        name: Overview
+        uid: 9fa5d09e-354b-46bc-b0ea-8d50a3402bec
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 685530fc-e1f1-4be1-813b-ebf9ac3aa108 # SEO
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3ced1ffc-d03d-48de-9c12-d1225fc36d18
+            userCondition: null
+            warning: null
+            width: 100
+        name: SEO
+        uid: d1752fd6-bc75-47aa-bee2-dd65579fb38a
+        userCondition: null
+handle: cookiePolicy
+hasTitleField: true
+name: 'Cookie policy'
+section: 36895330-a28e-477f-9327-bdbe66dabf99 # Cookie policy
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

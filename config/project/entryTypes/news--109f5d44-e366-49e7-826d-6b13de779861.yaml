@@ -1,0 +1,127 @@
+fieldLayouts:
+  e649780e-8bf9-4c9b-82f7-f60db1204d40:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 6981240e-5fd8-4d05-a444-9095a7002d13
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: b5de6dcf-80e6-48e2-b846-0dab7f35c4c8 # Intro Text
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 71d36a4f-ff2e-4c96-88e4-20e63fb62f02
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 56d715d0-6a9d-4562-9c66-e5b4caad7f44 # Content Builder
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 068adf5e-6042-434f-9c21-bfcf5d6e0ae3
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 7b9e154f-7361-45c7-a09f-600096ca0844
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 4a2bad07-8d89-4689-b0bf-774eed764660 # Overview title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0c30f2ef-592d-404e-b2cc-d0900388ffd5
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 2f8a6ddc-4ab7-4f9f-a2ea-72c6cb387f38 # Overview description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 31285ef1-445d-44c9-ab32-a423c87924e6
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 15ed2b72-8955-4cec-93f8-9736a9e50e80 # Overview image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 25d36650-1d67-477c-9e58-56539683e66e
+            userCondition: null
+            warning: null
+            width: 100
+        name: Overview
+        uid: d185f4b1-e587-4cb5-99a3-ad0ec9a2ecbc
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 685530fc-e1f1-4be1-813b-ebf9ac3aa108 # SEO
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c54eeb94-b847-4d5d-819c-f17382823242
+            userCondition: null
+            warning: null
+            width: 100
+        name: SEO
+        uid: 5f4dc3af-a86c-4b1b-bc57-fa644f25d5ab
+        userCondition: null
+handle: news
+hasTitleField: true
+name: News
+section: c576870d-abd8-46aa-8fe5-cdd12c40dfa8 # News
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

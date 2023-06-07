@@ -1,0 +1,27 @@
+{% set entry = craft.entries.section('pageNotFound').one() %}
+
+{% extends "_layout.twig" %}
+
+{% set breadcrumbs = [
+    entry,
+] %}
+
+{% block content %}
+
+    <div class="section section--default">
+        <div class="container">
+            {% include '_snippet/_content/_pageTitle/_default.twig' %}
+            {% include '_snippet/_content/_intro/_default.twig' %}
+        </div>
+    </div>
+
+    {% include '_snippet/_content/_contentBuilder/_default.twig'
+        with {
+        settings : {
+            section: 'section',
+            container: 'container'
+        }
+    }
+    %}
+
+{% endblock %}

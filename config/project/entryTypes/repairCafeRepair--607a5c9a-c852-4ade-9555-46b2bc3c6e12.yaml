@@ -1,0 +1,127 @@
+fieldLayouts:
+  328f035d-e876-42d1-b8c7-7f3216cfbf39:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 381aad9f-b74e-4703-b82b-654f57450c90
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: b5de6dcf-80e6-48e2-b846-0dab7f35c4c8 # Intro Text
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bbf9e9f2-b615-4a0b-abad-4a6f49dc7576
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 56d715d0-6a9d-4562-9c66-e5b4caad7f44 # Content Builder
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: fc5dcdec-f120-4b32-8941-b3e5e4da0dd6
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 5affaaa9-f1ee-4526-88dd-827700db1e9f
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 4a2bad07-8d89-4689-b0bf-774eed764660 # Overview title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a8792b1d-efef-4566-b709-1cbbaa6fda20
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 2f8a6ddc-4ab7-4f9f-a2ea-72c6cb387f38 # Overview description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 971084ee-27d1-46ed-b9cd-bf9792772831
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 15ed2b72-8955-4cec-93f8-9736a9e50e80 # Overview image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0d24bbdc-eb67-4a9e-9ace-360452a70787
+            userCondition: null
+            warning: null
+            width: 100
+        name: Overview
+        uid: 0aa6db95-31b3-457a-92d3-e899658a21ca
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 685530fc-e1f1-4be1-813b-ebf9ac3aa108 # SEO
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 87200d33-c127-47ba-8beb-18eae029343c
+            userCondition: null
+            warning: null
+            width: 100
+        name: SEO
+        uid: 462ff129-1674-4f1d-a9b5-1cb184460d2a
+        userCondition: null
+handle: repairCafeRepair
+hasTitleField: true
+name: 'Repair café repair'
+section: 40291883-407a-406f-997c-b700ede4d9e6 # Repair café repair
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

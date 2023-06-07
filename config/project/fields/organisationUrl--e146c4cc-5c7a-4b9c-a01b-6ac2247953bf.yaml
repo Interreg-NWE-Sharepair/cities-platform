@@ -1,0 +1,14 @@
+columnSuffix: null
+contentColumnType: string(255)
+fieldGroup: 3e2b6360-0c98-4b32-a8ec-672d54f7a09a # Events
+handle: organisationUrl
+instructions: null
+name: 'Organisation URL'
+searchable: false
+settings:
+  maxLength: 255
+  types:
+    - url
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Url

@@ -1,0 +1,16 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: c5433317-7d49-4535-8c7b-894b8be40653 # Home
+handle: whatCanYouDo
+instructions: null
+name: 'What can you do?'
+searchable: true
+settings:
+  contentTable: '{{%matrixcontent_whatcanyoudo}}'
+  maxBlocks: 1
+  minBlocks: null
+  propagationKeyFormat: null
+  propagationMethod: siteGroup
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

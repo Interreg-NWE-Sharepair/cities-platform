@@ -1,0 +1,117 @@
+<footer class="page-footer">
+	<div class="py-8 text-white bg-primary">
+		<div class="container">
+			<div class="flex flex-wrap -mx-4">
+				<div class="w-full px-4 sm:w-1/2 md:w-2/3">
+					<a href="{{ siteUrl }}" class="">
+						{% if siteInfo.logoContrast|length %}
+							<img class="w-full max-w-logo" src="{{siteInfo.logoContrast|first.getUrl()}}" alt=""/>
+						{% else %}
+							{{ svg('@webroot/img/logo-contrast.svg')|attr({ class: 'w-full max-w-logo' }) }}
+						{% endif %}
+					</a>
+					<div class="flex flex-wrap mt-4 -mx-4">
+						<div class="w-full px-4 md:w-1/3">
+							<p>{{ 'Dit project kwam tot stand dankzij het Interreg project <a href="https://www.nweurope.eu/projects/project-search/sharepair-digital-support-infrastructure-for-citizens-in-the-repair-economy/" class="underline" target="_blank">Sharepair</a>'|t|raw }}</p>
+
+							{% if socialMedia.facebook or  socialMedia.instagram or socialMedia.linkedin or socialMedia.twitter or socialMedia.youtube %}
+								<div class="mt-6">
+									<ul class="space-y-3">
+										{% include '_snippet/_content/_socialMedia/_default.twig' %}
+									</ul>
+								</div>
+							{% endif %}
+
+						</div>
+						{% include '_snippet/_nav/_doormat.twig' %}
+					</div>
+					<div class="flex w-full mt-12 " id="carbonBadge">
+						<div id="wcb" class="carbonbadge"></div>
+						<script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
+					</div>
+				</div>
+				{% if not (currentSite.handle == "platform" or currentSite.group().name == "3D") %}
+					<div class="w-full px-4 mt-8 sm:mt-4 sm:w-1/2 md:w-1/3">
+						{% include ["_snippet/_global/_subscribe/_" ~ currentSite.handle , "_snippet/_global/_subscribe/_default.twig"] %}
+					</div>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+	{% set partners = partners.partners.all() %}
+	{% if partners|length %}
+		<div class="py-6 footer">
+			<div class="container">
+				<h3 class="text-lg font-normal text-center opacity-50">{{ 'Onze partners'|t }}</h3>
+				<div class="flex flex-wrap justify-center -mx-4 md:flex-no-wrap">
+					{% for partner in partners %}
+						<a href="{{ partner.partnerUrl }}" class="flex items-center w-1/2 px-4 md:w-1/6" target="_blank" rel="nofollow">
+							{{ partner.partnerLogo.one().getImg({ width: 300 }, ['1.5x', '2x', '3x']) }}
+						</a>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	{% endif %}
+	<div class="py-6 footer border-t-1 border-divider">
+		<div class="container">
+			<div class="xs:flex xs:flex-wrap xs:justify-center">
+				<div class="flex flex-wrap items-center justify-center sm:flex-no-wrap">
+					<div class="sm:mr-4">
+						<div class="pr-8 overflow-hidden rounded-full bg-primary sm:p-0 sm:bg-transparent sm:rounded-none">
+							{% set currentLocale = craft.app.language|split('-') %}
+							{% switch currentLocale[0] %}
+								{% case "nl" %}
+								<img src="/img/label-nl.svg" alt="{{"Repareren, een wereld van verschil"|t}}"/>
+								{% case "fr" %}
+								<img src="/img/label-fr.svg" alt="{{"Réparer, un monde de différence"|t}}"/>
+								{% case "de" %}
+								<img src="/img/label-de.svg" alt="{{"Reparieren-eine Welt voller Unterschiede"|t}}"/>
+								{% default %}
+								<img src="/img/label-en.svg" alt="{{"Repairing, a world of difference  "|t}}"/>
+							{% endswitch %}
+						</div>
+					</div>
+					<div class="mt-4 sm:mt-0">
+						<div class="">
+							<span>&copy;
+								{{ siteInfo.cityName }},
+								{{ now|date('Y') }}
+								- Built with
+								<span class="sr-only">
+									love
+								</span>
+								<svg class="icon text-primary" aria-hidden="true">
+									<use xlink:href="/icon/sprite.svg#heart"></use>
+								</svg>
+								by
+								<a target="_blank" rel="noopener" href="https://www.statik.be" class="hover:underline hover:text-primary-hover">Statik</a>
+							</span>
+						</div>
+						<div class="mt-2">
+							<nav class="">
+								<ul class="text-center divide-black sm:text-left xs:flex xs:flex-wrap xs:divide-x-1">
+									{% set cookiePage = craft.entries.section('cookiePolicy').one() %}
+									{% if cookiePage %}
+										<li class="xs:pr-4">
+											<a href="#" class="underline js-cookie-settings hover:no-underline hover:text-primary-hover" role="button">{{ 'Cookie-instellingen'|t }}</a>
+										</li>
+										<li class="xs:px-4">
+											<a href="{{ cookiePage.url }}" class="underline hover:no-underline hover:text-primary-hover">{{ cookiePage.title }}</a>
+										</li>
+									{% endif %}
+									{% set privacyPage = craft.entries.section('privacyPolicy').one() %}
+									{% if privacyPage %}
+										<li class="xs:pl-4">
+											<a href="{{ privacyPage.url }}" class="underline hover:no-underline hover:text-primary-hover">{{ privacyPage.title }}</a>
+										</li>
+									{% endif %}
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>

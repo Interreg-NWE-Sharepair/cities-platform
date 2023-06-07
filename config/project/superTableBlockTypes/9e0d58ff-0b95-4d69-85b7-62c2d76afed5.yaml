@@ -1,0 +1,123 @@
+changedFieldIndicator: null
+field: d808c207-d862-4cb1-8b04-f256a30a9e0b # Options
+fieldLayouts:
+  28267d64-2d05-490f-aa53-6d4e512e8f71:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: e5151f73-1061-48e4-b1bc-f2c53ed9837b # Title
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1198fc51-f706-41a7-934d-b7da97af1360
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: ce78e94c-276c-4354-884b-e9080c353bb5 # Image
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: dba38d14-8146-4f7a-922d-6a02c2a0a707
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 3e99b79c-1ba7-4d00-ac1e-fa5fc25f4e1b # Call to actions
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: eba2feeb-f4ce-4c60-9818-e0b5f90d9b09
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 515518ba-046e-4350-b9ef-703e0edafd47
+        userCondition: null
+fields:
+  3e99b79c-1ba7-4d00-ac1e-fa5fc25f4e1b: # Call to actions
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: cta
+    instructions: null
+    name: 'Call to actions'
+    searchable: true
+    settings:
+      contentTable: '{{%matrixcontent_cta_3}}'
+      maxBlocks: null
+      minBlocks: null
+      propagationKeyFormat: null
+      propagationMethod: all
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Matrix
+  ce78e94c-276c-4354-884b-e9080c353bb5: # Image
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: image
+    instructions: null
+    name: Image
+    searchable: true
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: false
+      allowedKinds:
+        - image
+      branchLimit: null
+      defaultUploadLocationSource: 'volume:979c3eeb-f99a-4ca1-bcbe-ce9298a4e4ca' # Files
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 1
+      minRelations: null
+      previewMode: full
+      restrictFiles: true
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:979c3eeb-f99a-4ca1-bcbe-ce9298a4e4ca' # Files
+      restrictedLocationSubpath: null
+      selectionLabel: 'Add an image'
+      showSiteMenu: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  e5151f73-1061-48e4-b1bc-f2c53ed9837b: # Title
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: optionTitle
+    instructions: null
+    name: Title
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText

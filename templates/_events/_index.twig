@@ -1,0 +1,170 @@
+{% extends "_layout.twig" %}
+
+{% set entries = craft.entries.section('events').date('>=' ~ now|date_modify('-1 day')|date('U')).orderBy('date') %}
+{% set catQuery = craft.app.request.getParam('category') %}
+{% if catQuery %}
+    {% set entries = entries.relatedTo([{ targetElement: catQuery }]) %}
+{% endif %}
+
+{% set breadcrumbs = [
+    entry,
+] %}
+
+{% block content %}
+
+	<div class="section section--light">
+		<div class="container">
+			<div class="flex flex-wrap -mx-4">
+				<div class="order-2 w-full px-4 sm:w-2/3 sm:order-1">
+					{% include ['_snippet/_content/_pageTitle/_' ~ currentSite.handle ~'.twig', '_snippet/_content/_pageTitle/_default.twig'] %}
+					{% include ['_snippet/_content/_intro/_' ~ currentSite.handle ~'.twig', '_snippet/_content/_intro/_default.twig'] %}
+					{% if currentSite.group().name != "3D" and currentSite.handle != "platform" %}
+						<div class="pt-12">
+							<h2 class="text-2xl js-filter-scroll-position">{{ 'Filter categorieën'|t }}</h2>
+							{% set categories = craft.categories().group('eventType').level(1) %}
+							{% if categories|length %}
+							<form action="" class="js-filter-form">
+								<ul class="flex flex-wrap">
+									{% for category in categories.all() %}
+										{% if craft.entries.section('events').relatedTo(category).ids|length %}
+											<li class="mr-4 category-toggle">
+												<input class="sr-only" type="checkbox" id="{{ category.id }}" name="category[]" value="{{ category.id }}" {% if category.id in catQuery %} checked {% endif %}/>
+												<label class="" for="{{ category.id }}">{{ category.title }} <svg class="icon" aria-hidden="true"><use xlink:href="/icon/sprite.svg#clear"></use></svg></label>
+											</li>
+										{% endif %}
+									{% endfor %}
+								</ul>
+								<button type="submit" class="sr-only">{{"Filter"|t}}</button>
+							</form>
+							{% endif %}
+						</div>
+					{% endif %}
+				</div>
+				{% if entry.hero is defined and entry.hero|length %}
+				<div class="order-1 w-full max-w-xs px-4 mx-auto sm:max-w-none sm:w-1/3 sm:block">
+					{% if entry.hero|first.extension != 'svg' %}
+						{% set optimizedImage = entry.hero|first.optimizedTextImage %}
+						<picture>
+							{% if craft.imageOptimize.serverSupportsWebP() and entry.hero|first.extension != 'svg' %}
+								<source data-srcset="{{ optimizedImage.srcsetWebP() }}" sizes="(max-width: 479px) 95vw, (min-width: 480px) and (max-width: 659px) 448px, (min-width: 660px) and (max-width: 819px) 628px, (min-width: 820px) and (max-width: 979px) 378px, (min-width: 980px) and (max-width: 1199px) 458px, (min-width: 1200px) 568px" type="image/webp"/>
+							{% endif %}
+							<img src="{{ optimizedImage.placeholderBox() }}" data-srcset="{{ optimizedImage.srcset() }}" sizes="(max-width: 479px) 95vw, (min-width: 480px) and (max-width: 659px) 448px, (min-width: 660px) and (max-width: 819px) 628px, (min-width: 820px) and (max-width: 979px) 378px, (min-width: 980px) and (max-width: 1199px) 458px, (min-width: 1200px) 568px" alt="{{ entry.hero|first.imageCaption ?? entry.hero|first.title ?? entry.title }}" class="lazyload"/>
+						</picture>
+					{% else %}
+						<img src="{{entry.hero|first.getUrl()}}" alt="{{ entry.hero|first.imageCaption ?? entry.hero|first.title ?? entry.title }}" class="lazyload"/>
+					{% endif %}
+				</div>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+
+	<div class="section section--default">
+		<div class="container">
+		{% if entries|length %}
+		{% set totalEntries = entries|length %}
+		{% paginate entries.limit(12) as pageInfo, events %}
+			<div class="hidden js-filter-loader" tabindex="-1">
+				<div class="flex justify-center">
+					{% include '_snippet/_item/_loader/_default.twig' %}
+				</div>
+			</div>
+			<div aria-live="polite" class="sr-only js-filter-aria-live" tabindex="-1">
+				<span>{{"A total of {total} items found."|t({total: totalEntries})}}
+				</span>
+				{% if pageInfo.totalPages > 1 %}
+					<span>{{"Showing {totalItems} items on page {currentPage} of {totalPages}."|t({totalItems: totalEntries, currentPage: pageInfo.currentPage, totalPages: pageInfo.totalPages})}}</span>
+				{% endif %}
+			</div>
+			<div class="js-filter-results">
+				<div class="flex flex-wrap -mx-2">
+					{% for cardEntry in events %}
+						{% include '_snippet/_item/_card/_default.twig' %}
+					{% else %}
+						<div>
+							{{ "Geen events gevonden"|t }}
+						</div>
+					{% endfor %}
+				</div>
+				{% if pageInfo.totalPages > 1 %}
+					<div class="js-filter-pagination">
+						{{ craft.statik.paginate(pageInfo) }}
+					</div>
+				{% endif %}
+			</div>
+		{% else %}
+			<p>{{ 'Er zijn momenteel geen events'|t }}</p>
+		{% endif %}
+		</div>
+	</div>
+
+{#	Past Events #}
+	{% set pastEvents = craft.entries.section('events').date('< now').orderBy('date DESC').limit(3) %}
+	{% if pastEvents|length %}
+		<div class="section section--default">
+			<div class="container">
+				<h2>{{ 'Past Events'|t }}</h2>
+				<div class="flex flex-wrap -mx-2">
+					{% for event in pastEvents %}
+						<div class="flex w-full px-3 mb-4 sm:w-1/2 md:w-1/3">
+							<div class="relative flex flex-col w-full min-h-full overflow-hidden transition duration-300 ease-in-out rounded-card {% if event.enabled %}cursor-pointer{% endif %} card bg-light group">
+								{% set image = null %}
+								{% if (event.section.handle == "repairStories" or event.section.handle == "events") and event.mainImage|length %}
+									{% set image = event.mainImage|first %}
+								{% elseif event.overviewImage|length %}
+									{% set image = event.overviewImage|first %}
+								{% endif %}
+								{% set optimizedImage = image|default(fallback.image|first).optimizedOverview %}
+								{% if optimizedImage is defined %}
+									<div class="relative">
+										{% set sizes = "(max-width: 479px) 95vw, (min-width: 480px) and (max-width: 819px) 298px, (min-width: 820px) and (max-width: 1199px) 295px, (min-width: 1200px) 368px" %}
+										<picture class="">
+											{% if craft.imageOptimize.serverSupportsWebP() and image|default(fallback.image)|first.extension != 'svg' %}
+												<source data-srcset="{{ optimizedImage.srcsetWebP() }}" sizes="{{sizes}}" type="image/webp"/>
+											{% endif %}
+											<img src="{% if optimizedImage.optimizedImageUrls|length %}{{ optimizedImage.placeholderBox() }}{% elseif image %}{{ image.one().url }}{% endif %}"
+												 data-srcset="{{ optimizedImage.srcset() }}" srcset="{{ optimizedImage.srcset() }}" sizes="{{sizes}}" alt="{{ image|first.imageCaption ?? image|first.title ?? event.title }}" class="w-full lazyload"/>
+										</picture>
+										{% if event.category|length or event.status %}
+											<div class="absolute bottom-0 left-0 flex flex-wrap mb-6 ml-6">
+												{% if event.category|length %}
+													<div class="px-4 py-1 mt-4 mr-4 text-sm font-bold tracking-wide bg-white rounded-full text-secondary">{{ event.category.one().title }}</div>
+												{% endif %}
+											</div>
+										{% endif %}
+									</div>
+								{% endif %}
+								<div class="w-full flex flex-col flex-auto p-4 md:p-6 xl:p-8">
+									<h3 class="mb-1 text-primary">
+										<a href="{{ event.url }}" class="link--extended hover:text-primary-hover hover:underline">{{ event.overviewTitle ?? event.title }}</a>
+									</h3>
+									<div class="py-1 text-base italic font-bold">
+										<div>
+											<svg class="mr-1 icon text-secondary" aria-hidden="true">
+												<use xlink:href="/icon/sprite.svg#date-range"></use>
+											</svg>
+											{{ event.date|date('d/m/Y H:i'|t) }}
+										</div>
+										<div>
+											<svg class="mr-1 icon text-secondary" aria-hidden="true">
+												<use xlink:href="/icon/sprite.svg#place"></use>
+											</svg>
+											{{ event.location }}
+										</div>
+										<div class="font-normal">
+											{{ 'Georganiseerd door'|t }}
+											{{ event.organisationName }}
+										</div>
+									</div>
+									<div class="my-4 redactor">{{ event.overviewDescription ?? (event.intro ?? '')|striptags|truncate(140) }}</div>
+									<span class="mt-auto link link--ext group-hover:no-underline group-hover:text-primary-hover">{{ 'Lees meer'|t }}</span>
+								</div>
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	{% endif %}
+
+{% endblock %}

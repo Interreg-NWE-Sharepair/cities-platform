@@ -1,0 +1,147 @@
+/**
+*   Core
+*/
+/* purgecss start ignore */
+.glide {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+}
+.glide * {
+  box-sizing: inherit;
+}
+.glide__track {
+  overflow: hidden;
+}
+.glide__slides {
+  position: relative;
+  width: 100%;
+  list-style: none;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  touch-action: pan-Y;
+  overflow: hidden;
+  padding: 0;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+  will-change: transform;
+}
+.glide__slides--dragging {
+  user-select: none;
+}
+.glide__slide {
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+  white-space: normal;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.glide__slide a {
+  user-select: none;
+  -webkit-user-drag: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+.glide__arrows {
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+.glide__bullets {
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+.glide--rtl {
+  direction: rtl;
+}
+
+/**
+* Theme
+*/
+
+.glide__arrow {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  z-index: 2;
+  color: theme(colors.black);
+  background-color: transparent;
+  border: 1px solid theme(colors.primary.500);
+  border-radius: 100%;
+  opacity: 1;
+  cursor: pointer;
+  transition: opacity 150ms ease, border 300ms ease-in-out;
+  transform: translateY(-50%);
+  line-height: 1;
+  width: 2rem;
+  height: 2rem;
+}
+.glide__arrow:focus {
+  outline: none;
+}
+.glide__arrow:hover {
+  border-color: theme(colors.secondary.500);
+}
+.glide__arrow--left {
+  left: 2em;
+}
+.glide__arrow--right {
+  right: 2em;
+}
+.glide__arrow--disabled {
+  opacity: 0.33;
+}
+
+.glide__bullets {
+  @apply -mx-2;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.glide__bullet {
+  @apply mx-2 mt-4 border-transparent border-3;
+  max-width: calc(20% - 1rem);
+}
+
+/* .glide__bullet {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 9px;
+  height: 9px;
+  padding: 0;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  transition: all 300ms ease-in-out;
+  cursor: pointer;
+  line-height: 0;
+  box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.1);
+  margin: 0 0.25em;
+} */
+.glide__bullet:focus {
+  outline: none;
+}
+.glide__bullet:hover,
+.glide__bullet:focus {
+  border-color: theme(colors.primary.500);
+}
+.glide__bullet--active {
+  border-color: theme(colors.secondary.500);
+}
+
+.glide--swipeable {
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
+
+.glide--dragging {
+  cursor: grabbing;
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
+}
+/* purgecss end ignore */

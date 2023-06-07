@@ -1,0 +1,23 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: d45680a5-3f22-46ee-87ca-99d226b4c7bf # Organisations
+handle: productCategory
+instructions: null
+name: 'Product Category'
+searchable: true
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  localizeRelations: false
+  maintainHierarchy: true
+  maxRelations: null
+  minRelations: null
+  selectionLabel: null
+  showSiteMenu: false
+  source: 'group:dd337e5e-443b-43fe-ba3c-8707e7b3b31d' # Product Category
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Categories

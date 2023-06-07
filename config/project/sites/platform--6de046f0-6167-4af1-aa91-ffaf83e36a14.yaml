@@ -1,0 +1,9 @@
+baseUrl: '@baseUrl'
+enabled: true
+handle: platform
+hasUrls: true
+language: en-BE
+name: Platform
+primary: true
+siteGroup: 61cbb04c-ab3f-421e-bb8f-9e81ecc0da41 # Platform
+sortOrder: 1

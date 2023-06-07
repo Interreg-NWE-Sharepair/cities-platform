@@ -1,0 +1,336 @@
+field: 56d715d0-6a9d-4562-9c66-e5b4caad7f44 # Content Builder
+fieldLayouts:
+  8e0153f8-35f6-4a49-bc77-316bc5dce081:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 24983cba-9d55-413d-80dc-0374abd19ec0 # Title Column 1
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2c277682-cbf7-4ec3-9418-72b4071421c7
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: b1cd3558-d939-48d0-8628-239236ff699c # Text Column 1
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d911bbd3-d6b9-48c9-97f2-0cc44aedacde
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: bde7c3e4-1530-4cdf-94a4-6ac068e88c8a # CTA Column 1
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c9fe3492-b93e-4e39-b516-09bd1c32381f
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: e73dd38a-5d76-40ba-99eb-25ee65bf7ab5 # Title Column 2
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: de76160a-09db-4653-ac5e-5c8f93797cdf
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: a2d7684e-6737-4123-ad14-2c4e4221bbdd # Text Column 2
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1001baba-23fd-4a49-bc80-090bdc4bfa03
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 84a6a70f-85ce-43a5-ad74-738a0cbea388 # CTA Column 2
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3a29510c-0878-4cea-b218-d527faba5c48
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 3e5318bd-23e0-4319-8f7c-3f38350d8764 # Background Color
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 20b72893-3748-4677-9ec5-19e17a0c9767
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 3bb49d53-d6b3-4f94-96c3-6d4aa564ce77
+        userCondition: null
+fields:
+  3e5318bd-23e0-4319-8f7c-3f38350d8764: # Background Color
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: backgroundColor
+    instructions: 'Select the background color of the whole section. Note: depending on the background color, the text colors might change.'
+    name: 'Background Color'
+    searchable: true
+    settings:
+      dataSet: 'Background colors'
+      type: dropdown
+    translationKeyFormat: null
+    translationMethod: none
+    type: statikbe\configvaluesfield\fields\ConfigValuesFieldField
+  84a6a70f-85ce-43a5-ad74-738a0cbea388: # CTA Column 2
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: ctaColumn2
+    instructions: null
+    name: 'CTA Column 2'
+    searchable: true
+    settings:
+      allowClass: '1'
+      allowCustomText: '1'
+      allowTarget: '1'
+      allowedLinkNames: '*'
+      class: null
+      classes: null
+      defaultLinkName: entry
+      defaultText: 'Read more'
+      typeSettings:
+        __assoc__:
+          -
+            - asset
+            -
+              __assoc__:
+                -
+                  - sources
+                  - '*'
+          -
+            - category
+            -
+              __assoc__:
+                -
+                  - sources
+                  - '*'
+          -
+            - entry
+            -
+              __assoc__:
+                -
+                  - sources
+                  - '*'
+          -
+            - email
+            -
+              __assoc__:
+                -
+                  - disableValidation
+                  - ''
+          -
+            - tel
+            -
+              __assoc__:
+                -
+                  - disableValidation
+                  - ''
+          -
+            - url
+            -
+              __assoc__:
+                -
+                  - disableValidation
+                  - ''
+    translationKeyFormat: null
+    translationMethod: site
+    type: statikbe\cta\fields\CTAField
+  24983cba-9d55-413d-80dc-0374abd19ec0: # Title Column 1
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: titleColumn1
+    instructions: 'Add an optional title to the block'
+    name: 'Title Column 1'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: text
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+  a2d7684e-6737-4123-ad14-2c4e4221bbdd: # Text Column 2
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: textColumn2
+    instructions: 'Type the second column text here'
+    name: 'Text Column 2'
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: Extended.json
+      removeEmptyTags: true
+      removeInlineStyles: true
+      removeNbsp: true
+      showHtmlButtonForNonAdmins: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: true
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\redactor\Field
+  b1cd3558-d939-48d0-8628-239236ff699c: # Text Column 1
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: textColumn1
+    instructions: 'Type the first column text here'
+    name: 'Text Column 1'
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: Extended.json
+      removeEmptyTags: true
+      removeInlineStyles: true
+      removeNbsp: true
+      showHtmlButtonForNonAdmins: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: true
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\redactor\Field
+  bde7c3e4-1530-4cdf-94a4-6ac068e88c8a: # CTA Column 1
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: ctaColumn1
+    instructions: null
+    name: 'CTA Column 1'
+    searchable: true
+    settings:
+      allowClass: '1'
+      allowCustomText: '1'
+      allowTarget: '1'
+      allowedLinkNames: '*'
+      class: null
+      classes: null
+      defaultLinkName: entry
+      defaultText: 'Read more'
+      typeSettings:
+        __assoc__:
+          -
+            - asset
+            -
+              __assoc__:
+                -
+                  - sources
+                  - '*'
+          -
+            - category
+            -
+              __assoc__:
+                -
+                  - sources
+                  - '*'
+          -
+            - entry
+            -
+              __assoc__:
+                -
+                  - sources
+                  - '*'
+          -
+            - email
+            -
+              __assoc__:
+                -
+                  - disableValidation
+                  - ''
+          -
+            - tel
+            -
+              __assoc__:
+                -
+                  - disableValidation
+                  - ''
+          -
+            - url
+            -
+              __assoc__:
+                -
+                  - disableValidation
+                  - ''
+    translationKeyFormat: null
+    translationMethod: site
+    type: statikbe\cta\fields\CTAField
+  e73dd38a-5d76-40ba-99eb-25ee65bf7ab5: # Title Column 2
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: titleColumn2
+    instructions: 'Add an optional title to the block'
+    name: 'Title Column 2'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: text
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+handle: textTwoColumns
+name: 'Text (2 columns)'
+sortOrder: 2

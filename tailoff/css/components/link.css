@@ -1,0 +1,47 @@
+/* purgecss start ignore */
+.link {
+  @apply inline-flex font-semibold text-black underline;
+
+  &:hover {
+    @apply no-underline text-primary-hover;
+  }
+
+  &--ext {
+    @apply items-center;
+    @mixin icon chevron-right;
+
+    &::after {
+      @apply ml-1 text-primary;
+    }
+
+    &:hover::after {
+      @apply text-primary-hover;
+    }
+  }
+
+  &--extended::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  &--inverse {
+    @apply inline-flex font-bold text-white underline;
+
+    &:hover {
+      @apply no-underline;
+
+      &::after {
+        @apply ml-1 text-white;
+      }
+    }
+
+    &::after {
+      @apply ml-1 text-white;
+    }
+  }
+}
+/* purgecss end ignore */

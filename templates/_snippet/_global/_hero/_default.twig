@@ -1,0 +1,35 @@
+<div class="section section--light">
+    <div class="container">
+        <div class="flex flex-wrap -mx-4">
+            <div class="order-2 w-full px-4 sm:w-2/3 sm:order-1">
+                {% include ['_snippet/_content/_pageTitle/_' ~ currentSite.handle ~'.twig', '_snippet/_content/_pageTitle/_default.twig'] %}
+                {% include ['_snippet/_content/_intro/_' ~ currentSite.handle ~'.twig', '_snippet/_content/_intro/_default.twig'] %}
+                {% if entry.ctas %}
+                    <div class="flex flex-wrap mt-10 space-x-4">
+                    {% set ctas = entry.ctas.all() %}
+                    {% for cta in ctas %}
+                        <div class="mt-4">
+                            {{ cta.cta.getLink() }}
+                        </div>
+                    {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+            {% if entry.hero is defined and entry.hero|length %}
+            <div class="order-1 w-full max-w-xs px-4 mx-auto sm:max-w-none sm:w-1/3 sm:block">
+                {% if entry.hero|first.extension != 'svg' %}
+                    {% set optimizedImage = entry.hero|first.optimizedTextImage %}
+                    <picture>
+                        {% if craft.imageOptimize.serverSupportsWebP() and entry.hero|first.extension != 'svg' %}
+                            <source data-srcset="{{ optimizedImage.srcsetWebP() }}" sizes="(max-width: 479px) 95vw, (min-width: 480px) and (max-width: 659px) 448px, (min-width: 660px) and (max-width: 819px) 628px, (min-width: 820px) and (max-width: 979px) 378px, (min-width: 980px) and (max-width: 1199px) 458px, (min-width: 1200px) 568px" type="image/webp"/>
+                        {% endif %}
+                        <img src="{{ optimizedImage.placeholderBox() }}" data-srcset="{{ optimizedImage.srcset() }}" sizes="(max-width: 479px) 95vw, (min-width: 480px) and (max-width: 659px) 448px, (min-width: 660px) and (max-width: 819px) 628px, (min-width: 820px) and (max-width: 979px) 378px, (min-width: 980px) and (max-width: 1199px) 458px, (min-width: 1200px) 568px" alt="{{ entry.hero|first.imageCaption ?? entry.hero|first.title ?? entry.title }}" class="lazyload"/>
+                    </picture>
+                {% else %}
+                    <img src="{{entry.hero|first.getUrl()}}" alt="{{ entry.hero|first.imageCaption ?? entry.hero|first.title ?? entry.title }}" class="lazyload"/>
+                {% endif %}
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>

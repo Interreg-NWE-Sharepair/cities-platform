@@ -1,0 +1,103 @@
+field: 56d715d0-6a9d-4562-9c66-e5b4caad7f44 # Content Builder
+fieldLayouts:
+  9b1f9b55-1ac7-434c-9b8b-4d7a5d6181c2:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: bb71be13-625f-43ab-8e2f-2e3c62e41b39 # Title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 94e69695-3da1-49c0-a5fd-4bcf07d5eef2
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 7872a2bd-be0b-4708-8614-899a57483712 # Options
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 16d7777c-4e8b-412b-9c43-8b9f31475fcb
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 8ce495ce-4f23-4cd2-9466-ca8b3c17a6d2
+        userCondition: null
+fields:
+  7872a2bd-be0b-4708-8614-899a57483712: # Options
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: options
+    instructions: null
+    name: Options
+    searchable: true
+    settings:
+      blockTypeFields: 0
+      changedFieldIndicator: 1837359691
+      columns:
+        __assoc__:
+          -
+            - 3062f250-5f46-4114-aad9-41b657d96422 # Title
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - 9b465961-d787-42e4-a784-0e719b818891 # Image
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - e748a9e9-20a3-4995-8e2f-bf2ea91b50d0 # Call to actions
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+      contentTable: '{{%stc_27_options}}'
+      fieldLayout: matrix
+      maxRows: 3
+      minRows: 1
+      propagationKeyFormat: null
+      propagationMethod: all
+      selectionLabel: null
+      staticField: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: verbb\supertable\fields\SuperTableField
+  bb71be13-625f-43ab-8e2f-2e3c62e41b39: # Title
+    columnSuffix: pwvswqtg
+    contentColumnType: text
+    fieldGroup: null
+    handle: blockTitle
+    instructions: 'Add an optional title to the block'
+    name: Title
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: targetAudience
+name: 'Target Audience'
+sortOrder: 9

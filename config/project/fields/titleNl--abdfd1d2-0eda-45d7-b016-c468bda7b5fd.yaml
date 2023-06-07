@@ -1,0 +1,19 @@
+columnSuffix: fxrndxow
+contentColumnType: text
+fieldGroup: 2c770290-8edc-4f26-b846-6d99d36d7844 # Common
+handle: titleNl
+instructions: null
+name: 'Title NL'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

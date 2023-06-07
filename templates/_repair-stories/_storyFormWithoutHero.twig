@@ -1,0 +1,119 @@
+{% import "_macro/_form.twig" as forms %}
+
+{% extends "_layout.twig" %}
+
+{% set breadcrumbs = [
+    craft.entries.section('repairStoriesOverview').one(),
+	entry
+] %}
+
+{% block content %}
+	<div class="section section--light">
+		<div class="container">
+			<div class="w-full sm:w-2/3">
+				{% include ['_snippet/_content/_pageTitle/_' ~ currentSite.handle ~'.twig', '_snippet/_content/_pageTitle/_default.twig'] %}
+				{% include ['_snippet/_content/_intro/_' ~ currentSite.handle ~'.twig', '_snippet/_content/_intro/_default.twig'] %}
+				{% for ctaBlock in entry.callToActionBlock.all() %}
+					{% include ['_snippet/_item/_callToActionBlock/_' ~ currentSite.handle ~'.twig', '_snippet/_item/_callToActionBlock/_default.twig'] %}
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+	<div class="section section--light">
+		<div class="container">
+			<form method="POST" enctype="multipart/form-data" class="w-full md:w-2/3" data-s-validate>
+				{{ csrfInput() }}
+				{{ actionInput('statik/stories/save-story-without-author') }}
+				{{ hiddenInput('siteId', currentSite.id) }}
+				{{ hiddenInput('enabled', '0') }}
+
+				<h2>{{ 'Inzendingsformulier repareerverhaal'|t }}</h2>
+
+				<h3>{{ 'Jouw repareerverhaal'|t }}</h3>
+
+				{% include "_snippet/_item/_form/_createStory.twig" with {required: true} %}
+
+				<h3>{{ 'Info over jou'|t }}</h3>
+				<div>{{ "We zouden een kort tekstje over jou willen weergeven aan het eind van je artikel, en hebben enkele gegevens nodig om je te kunnen contacteren. Die laatste zullen uiteraard niet op de website weergegeven worden."|t }}</div>
+
+				<div class="flex flex-wrap -mx-2">
+					<div class="w-full px-2 md:w-1/2">
+						<label class="form__label" for="firstName">{{ 'Voornaam'|t }}</label>
+						<input class="form__input" type="text" name="fields[firstName]" id="firstName" value="{% if story is defined %} {{ story.firstName }} {% endif %}" required>
+						{% if story is defined %}
+							{{ forms.errorList(story.getErrors('firstName')) }}
+						{% endif %}
+					</div>
+					<div class="w-full px-2 md:w-1/2">
+						<label class="form__label" for="lastName">{{ 'Achternaam'|t }}</label>
+						<input class="form__input" type="text" name="fields[lastName]" id="lastName" value="{% if story is defined %} {{ story.lastName }} {% endif %}" required>
+						{% if story is defined %}
+							{{ forms.errorList(story.getErrors('lastName')) }}
+						{% endif %}
+					</div>
+				</div>
+				<div class="w-full md:pr-2 md:w-1/2">
+					<label class="form__label" for="email">{{ 'E-mail'|t }}</label>
+					<input class="form__input" type="email" name="fields[email]" id="email" value="{% if story is defined %} {{ story.email }} {% endif %}" required>
+					{% if story is defined %}
+						{{ forms.errorList(story.getErrors('email')) }}
+					{% endif %}
+				</div>
+				<div class="w-full md:pr-2 md:w-1/2">
+					<label class="form__label" for="phone">{{ 'Telefoonnummer'|t }}</label>
+					<input class="form__input" type="text" name="fields[phone]" id="phone" value="{% if story is defined %} {{ story.phone }} {% endif %}">
+					{% if story is defined %}
+						{{ forms.errorList(story.getErrors('phone')) }}
+					{% endif %}
+				</div>
+				<div class="form__field">
+					<label class="form__label" for="bio">{{ 'Korte biografie'|t }}</label>
+					<textarea class="form__input" name="fields[bio]" id="bio">{% if story is defined %} {{ story.bio }} {% endif %}</textarea>
+					{% if story is defined %}
+						{{ forms.errorList(story.getErrors('bio')) }}
+					{% endif %}
+				</div>
+				<div class="form__field">
+					<div class="form__label">{{ 'Profielfoto'|t }}</div>
+					<label class="flex items-center" for="profilePic">
+						<svg class="mr-2 icon text-primary" aria-hidden="true"><use xlink:href="/icon/sprite.svg#photo-camera"></use></svg>
+						<span class="inline-block text-base border-b-1 border-divider">{{ "Selecteer een foto"|t }}</span>
+					</label>
+					<div class="mt-4 image-upload-preview" id="profilePicPreview"></div>
+					<input type="file" name="fields[profilePic]" id="profilePic" accept=".png,.jpg,.jpeg" class="sr-only form__input" data-show-images-in="profilePicPreview"/>
+					{% if story is defined %}
+						{{ forms.errorList(story.getErrors('profilePic')) }}
+					{% endif %}
+				</div>
+				<div class="my-4 form__field">
+					<input type="checkbox" id="data" required>
+					{% set cityName = siteInfo.cityName %}
+					<label for="data">{{ 'Door dit formulier in te dienen, stem ik ermee in dat {cityName} mijn persoonlijke gegevens mag gebruiken om me te contacteren.'|t({cityName : cityName}) }}</label>
+					{% if story is defined %}
+						{{ forms.errorList(story.getErrors('data')) }}
+					{% endif %}
+				</div>
+				<div class="my-4 form__field">
+					<input type="checkbox" id="terms" required>
+					{% set privacyPage = craft.entries.section('privacyPolicy').one().url %}
+					<label for="terms">{{ 'Ik ga akkoord met <a href="{privacyPage}" class="underline" target="_blank"> het privacybeleid en de gebruikersvoorwaarden</a> van deze website.'|t({privacyPage : privacyPage})|raw }}</label>
+					{% if story is defined %}
+						{{ forms.errorList(story.getErrors('terms')) }}
+					{% endif %}
+				</div>
+
+				{{ craft.recaptcha.render() }}
+				
+				<div class="my-4 submit-with-loader">
+					<button class="btn btn--primary btn--ext" name="submitStory" type="submit">{{ 'Stuur je verhaal in'|t }}</button>
+					<div class="flex flex-col items-center justify-center w-full pb-4 bg-white loader-block">
+						<span class="scale-50">
+							{% include '_snippet/_item/_loader/_default.twig' %}
+						</span>
+						<span class="-mt-4 italic">{{"We slaan jouw verhaal op..."|t}}</span>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+{% endblock %}

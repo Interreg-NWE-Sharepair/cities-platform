@@ -1,0 +1,51 @@
+{% extends "_mail/_layout" %}
+
+{% block title %}
+	{{ 'Er is een nieuwe Repair Story verstuurd door '|t }}
+	{% if user is defined %}
+		{{ user.firstName }}
+		{{ user.lastName }}
+	{% else %}
+		{{ story.firstName }}
+		{{ story.lastName }}
+	{% endif %}
+{% endblock %}
+
+{% block content %}
+	<p>
+		{{ 'De story bevat volgende details:'|t }}
+	</p>
+
+	<ul>
+		{% for key,value in story %}
+			<li>
+				<strong>
+					{% switch key %}
+						{% case "title" %}
+							Titel
+						{% case "intro" %}
+							Introductie
+						{% case "body" %}
+							Body tekst
+						{% case "firstName" %}
+							Voornaam
+						{% case "lastName" %}
+							Achternaam
+						{% case "email" %}
+							E-mailadres
+						{% case "phone" %}
+							Telefoon nummer
+						{% case "bio" %}
+							Korte biografie
+					{% endswitch %}
+				</strong>
+				<br>
+				{{ value|raw }}
+			</li>
+		{% endfor %}
+	</ul>
+
+	<p>
+		{{ 'Bekijk en publiceer deze story zo snel mogelijk aub.'|t }}
+	</p>
+{% endblock %}

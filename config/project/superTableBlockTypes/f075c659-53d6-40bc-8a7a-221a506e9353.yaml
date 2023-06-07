@@ -1,0 +1,92 @@
+changedFieldIndicator: null
+field: 7e23c327-4825-4f8b-815a-6f07dae99dd2 # Call to actions
+fieldLayouts:
+  ab216a9d-a6e0-4cb7-9288-77195104ef84:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 7e31e194-fc15-495f-aaef-d2906c3cc267 # link
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 90590a78-17ee-415f-aeda-d0a0d1b0fe1c
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: f96e967b-7116-4a50-8af3-74470480b9dc
+        userCondition: null
+fields:
+  7e31e194-fc15-495f-aaef-d2906c3cc267: # link
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: linkit
+    instructions: null
+    name: link
+    searchable: false
+    settings:
+      allowClass: '1'
+      allowCustomText: '1'
+      allowTarget: ''
+      allowedLinkNames:
+        1: asset
+        3: entry
+        4: email
+        6: url
+      class: null
+      classes: null
+      defaultLinkName: entry
+      defaultText: ''
+      typeSettings:
+        __assoc__:
+          -
+            - asset
+            -
+              __assoc__:
+                -
+                  - sources
+                  - '*'
+          -
+            - category
+            -
+              __assoc__:
+                -
+                  - sources
+                  - '*'
+          -
+            - entry
+            -
+              __assoc__:
+                -
+                  - sources
+                  - '*'
+          -
+            - email
+            -
+              __assoc__:
+                -
+                  - disableValidation
+                  - ''
+          -
+            - tel
+            -
+              __assoc__:
+                -
+                  - disableValidation
+                  - ''
+          -
+            - url
+            -
+              __assoc__:
+                -
+                  - disableValidation
+                  - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: statikbe\cta\fields\CTAField

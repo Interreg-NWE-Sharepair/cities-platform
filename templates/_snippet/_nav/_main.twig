@@ -1,0 +1,18 @@
+{% set mainNav = craft.navigate.raw('mainNav') %}
+{% set searchResultsEntry = craft.entries.section('searchResults').one() %}
+
+{% if mainNav|length %}
+	<nav class="flex-auto hidden md:block" aria-label="{{ 'Main'|t }}">
+		<ul class="flex justify-end space-x-8 xl:space-x-12">
+			{% for node in mainNav %}
+				<li class="{% if node.classes|length %}{{ node.classes }}{% endif %}">
+					<a href="{{ node.url }}" class="whitespace-no-wrap menu__item
+											 {% if node.active %}font-bold text-primary{% endif %}"
+							{% if node.blank %} target="_blank" rel="noopener" {% endif %} data-text="{{ node.name }}">
+						{{ node.name }}
+					</a>
+				</li>
+			{% endfor %}
+		</ul>
+	</nav>
+{% endif %}

@@ -1,0 +1,9 @@
+baseUrl: '@baseUrlLouvainLaNeuve'
+enabled: '1'
+handle: louvainLaNeuveFr
+hasUrls: true
+language: fr-BE
+name: 'Louvain La Neuve FR'
+primary: false
+siteGroup: 6fe614c5-400f-4012-9e8f-c700fc1181fa # Louvain-La-Neuve
+sortOrder: 6

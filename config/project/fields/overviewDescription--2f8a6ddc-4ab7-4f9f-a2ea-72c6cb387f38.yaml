@@ -1,0 +1,27 @@
+columnSuffix: null
+contentColumnType: text
+fieldGroup: e9218327-8360-4a72-aae4-ff2db8be2c18 # Overview
+handle: overviewDescription
+instructions: null
+name: 'Overview description'
+searchable: true
+settings:
+  availableTransforms: '*'
+  availableVolumes: '*'
+  columnType: text
+  configSelectionMode: choose
+  defaultTransform: ''
+  manualConfig: ''
+  purifierConfig: null
+  purifyHtml: true
+  redactorConfig: Simple.json
+  removeEmptyTags: true
+  removeInlineStyles: true
+  removeNbsp: true
+  showHtmlButtonForNonAdmins: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: true
+  uiMode: enlarged
+translationKeyFormat: null
+translationMethod: language
+type: craft\redactor\Field

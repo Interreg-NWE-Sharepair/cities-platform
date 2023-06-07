@@ -1,0 +1,182 @@
+field: 56d715d0-6a9d-4562-9c66-e5b4caad7f44 # Content Builder
+fieldLayouts:
+  0f0db14f-2f40-48e1-853e-ba4ea386b28f:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 933f619e-82e4-4b3d-a27f-9d7d9cce42b8 # Text
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b11396d4-ed4d-4426-8f8c-638203a63e60
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: dec0e89d-38ee-4f11-85d8-7057c5437993 # Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1a9c28d6-50df-4cf6-9946-a82656c02f81
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 9a0dd6a8-9ebb-44f8-a62a-03f12bf2a504 # Author
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d26629a2-12ac-46c1-afb8-49009b753bf5
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 302aeb89-2e5c-42f2-a735-98e504b28a37 # Call to action
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2e1a2d4b-9205-4976-a328-cb06eda204f4
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: ad8251a7-a6f6-4d4d-b258-2eee0115e2f1
+        userCondition: null
+fields:
+  9a0dd6a8-9ebb-44f8-a62a-03f12bf2a504: # Author
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: writer
+    instructions: null
+    name: Author
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: text
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  302aeb89-2e5c-42f2-a735-98e504b28a37: # Call to action
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: cta
+    instructions: 'Add one or more call to actions and define styling (button, link, ...).'
+    name: 'Call to action'
+    searchable: true
+    settings:
+      blockTypeFields: 0
+      changedFieldIndicator: 2115301229
+      columns:
+        __assoc__:
+          -
+            - 6d99d3e8-e687-44e6-9e4f-8724da1c5123 # Link
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+      contentTable: '{{%stc_8_cta}}'
+      fieldLayout: matrix
+      maxRows: null
+      minRows: null
+      propagationKeyFormat: null
+      propagationMethod: all
+      selectionLabel: 'Add a call to action'
+      staticField: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: verbb\supertable\fields\SuperTableField
+  933f619e-82e4-4b3d-a27f-9d7d9cce42b8: # Text
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: text
+    instructions: 'Type your quote here'
+    name: Text
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+  dec0e89d-38ee-4f11-85d8-7057c5437993: # Image
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: image
+    instructions: null
+    name: Image
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: false
+      allowedKinds:
+        - image
+      branchLimit: null
+      defaultUploadLocationSource: 'volume:979c3eeb-f99a-4ca1-bcbe-ce9298a4e4ca' # Files
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 1
+      minRelations: null
+      previewMode: full
+      restrictFiles: true
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:979c3eeb-f99a-4ca1-bcbe-ce9298a4e4ca' # Files
+      restrictedLocationSubpath: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Asset
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\assets\AssetCondition
+      selectionLabel: null
+      showSiteMenu: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: quote
+name: Quote
+sortOrder: 6

@@ -1,0 +1,127 @@
+fieldLayouts:
+  45f992fb-2be9-4f11-b850-566e7ac1db4f:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 8ed26c00-c6da-4c29-8d9f-d330d44e4786
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 94462b6d-8def-48ce-9a56-fa9867cf589e # Home hero
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 752d9342-ecac-46fe-af1d-4fcacecee80e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 56d715d0-6a9d-4562-9c66-e5b4caad7f44 # Content Builder
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4f0cb0fc-635d-4629-846d-298f36bf93f8
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 76af7da8-a114-45ad-8021-aa9b2e6e7a40
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 4a2bad07-8d89-4689-b0bf-774eed764660 # Overview title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a15fb866-d527-4648-aa1c-577dc50434e0
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 2f8a6ddc-4ab7-4f9f-a2ea-72c6cb387f38 # Overview description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4b1e93fa-7407-48a0-84cf-d0184119960a
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 15ed2b72-8955-4cec-93f8-9736a9e50e80 # Overview image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9b75303c-da9a-4ebb-b623-34556802a897
+            userCondition: null
+            warning: null
+            width: 100
+        name: Overview
+        uid: 6922bb67-341c-4d96-8c4c-984c9fcfd1d0
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 685530fc-e1f1-4be1-813b-ebf9ac3aa108 # SEO
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 517820fe-3e3b-41c2-8ce0-69b1bdecb9df
+            userCondition: null
+            warning: null
+            width: 100
+        name: SEO
+        uid: c9400b90-00d1-4a44-bfb1-3a6d92fcb23d
+        userCondition: null
+handle: homeSharepair
+hasTitleField: false
+name: 'Home Sharepair'
+section: 68926962-527f-44bb-b721-08cde7220c82 # Home Sharepair
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

@@ -1,0 +1,67 @@
+tabs:
+  -
+    elementCondition: null
+    elements:
+      -
+        elementCondition: null
+        fieldUid: b5de6dcf-80e6-48e2-b846-0dab7f35c4c8 # Intro Text
+        instructions: null
+        label: null
+        required: false
+        tip: null
+        type: craft\fieldlayoutelements\CustomField
+        uid: c66cf67e-eee0-43e2-919f-1b32f0767266
+        userCondition: null
+        warning: null
+        width: 100
+      -
+        elementCondition: null
+        fieldUid: 41398197-b27d-4823-b251-100fdd176a3d # Function
+        instructions: null
+        label: null
+        required: false
+        tip: null
+        type: craft\fieldlayoutelements\CustomField
+        uid: dec677f2-65f8-42d2-9022-4209f7472a2d
+        userCondition: null
+        warning: null
+        width: 50
+      -
+        elementCondition: null
+        fieldUid: b61b54a0-b2e4-4a80-9fae-ad213cceb746 # Favorite repair tool
+        instructions: null
+        label: null
+        required: false
+        tip: null
+        type: craft\fieldlayoutelements\CustomField
+        uid: e2fcfe72-ecd0-449b-960d-bbe7fdd92627
+        userCondition: null
+        warning: null
+        width: 100
+      -
+        elementCondition: null
+        fieldUid: b7f4d45f-3f16-4424-bf30-a5167bb30e47 # Oldest memory
+        instructions: null
+        label: null
+        required: false
+        tip: null
+        type: craft\fieldlayoutelements\CustomField
+        uid: 79ea5c94-6c0b-4a2d-90d4-0ee6efde1cb0
+        userCondition: null
+        warning: null
+        width: 100
+      -
+        elementCondition: null
+        fieldUid: 5b8362b6-f4a8-4570-8e8b-29fa181cb510 # Repair tip
+        instructions: null
+        label: null
+        required: false
+        tip: null
+        type: craft\fieldlayoutelements\CustomField
+        uid: 2fcdb9a4-b73d-4596-a409-9090324093c9
+        userCondition: null
+        warning: null
+        width: 100
+    name: 'Profile details'
+    uid: 0cba28bc-acbb-4ad5-9a0a-e760add10153
+    userCondition: null

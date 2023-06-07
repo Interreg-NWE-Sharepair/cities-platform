@@ -1,0 +1,40 @@
+{% set baseUrl = craft.app.config.general.aliases.baseUrl %}
+{% extends "_mail/_layout" %}
+
+{# subject: Merci de vous être inscrit comme héro de la réparation! #}
+{# fromEmail: {{ craft.app.projectConfig.get('email.fromEmail') }} #}
+{# fromName: {{ siteInfo.cityName }} #}
+{# replyToEmail: {{ craft.app.projectConfig.get('email.fromEmail') }} #}
+{# cc:  #}
+{# bcc: #}
+{# includeAttachments: true #}
+{# presetAssets: 42,67 #}
+{# description: #}
+
+	{% block title %}
+{{ 'Merci de vous être inscrit comme héro de la réparation!'|t }}
+{% endblock %}
+
+	{% block content %}
+		<p>{{ 'Bonjour'|t }}
+		{{ firstName }}
+	,
+	</p>
+		<p>
+	{{ "Nous avons reçu votre candidature de héro de réparation. Merci d'avoir postulé! Un des administrateurs de le plateforme examinera votre demande et vous contactera pour vous présenter la communauté et activer votre profil de héro de réparation."|t }}
+	</p>
+		<p>
+	{{ 'Une copie de votre application:'|t }}
+	</p>
+		<ul>
+			{% for field in allFields|filter(field => field.handle != 'terms' and field.handle != 'data') %}
+				<li>
+					<strong>
+						{{ field.label }}
+					</strong>
+				<br>
+			{{ field.getValueAsString() }}
+		</li>
+	{% endfor %}
+	</ul>
+</p>{% endblock %}

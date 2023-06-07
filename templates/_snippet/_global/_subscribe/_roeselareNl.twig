@@ -1,0 +1,26 @@
+{#<div class="p-5 text-black bg-white">
+	<h2 class="text-3xl text-secondary">{{ 'Inschrijven op onze nieuwsbrief'|t }}</h2>
+	<div class="mb-4">{{ 'Via de nieuwsbrief van Klimaatswitch #VANRSL houden we je graag op de hoogte van wat er zoal gebeurt bij Roeselare Repareert.'|t }}</div>
+	<form method="POST" class="form__group" data-s-validate>
+		{{ csrfInput() }}
+		{{ redirectInput('/bedanktpagina-inschrijving-nieuwsbrief') }}
+		<input type="hidden" name="action" value="mailchimp-subscribe/audience/subscribe">
+		<div class="form__field">
+			<label class="form__label" for="email">{{ 'E-mailadres'|t }}</label>
+			<input class="form__input" type="email" name="email" placeholder="name@email.com" required />
+		</div>
+
+		<div class="form__field">
+			<label for="terms" class="flex items-baseline">
+				<input class="mr-2" type="checkbox" name="terms" id="terms" required="" data-unique-id="s-validate-1-6">
+				<span class="text-sm">
+					{% set privacyPage = craft.entries.section('privacyPolicy').one().url %}
+					{{ 'Ik ga akkoord met de <a href="{privacyPage}" class="underline text-primary hover:no-underline">privacy voorwaarden</a>.'|t({privacyPage : privacyPage})|raw }}
+				</span>
+			</label>
+		</div>
+		<div class="mt-4">
+			<button class="btn btn--secondary btn--ext" type="submit">{{ 'Inschrijven'|t }}</button>
+		</div>
+	</form>
+</div>#}

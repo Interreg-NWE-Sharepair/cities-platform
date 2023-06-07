@@ -1,0 +1,106 @@
+defaultPlacement: end
+fieldLayouts:
+  13ba4fc9-2d07-428a-bec7-abc01fc4def1:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            uid: 44a67a39-ea15-46a7-b4f1-b4cad82a7d6b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: bb9385fe-249e-4f2c-8305-d55060448917 # Category ID
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7c6cd51c-24e8-4e2d-bdae-cca5a0cdf2ae
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: ceb9e91e-607f-478d-96b5-3228f1a24d46 # Color
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 874b19ab-ef03-4ae6-9c6b-3204851ad59d
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 268e8f4a-42a3-45da-87ae-6a5a5a36d143
+        userCondition: null
+handle: organisationType
+name: 'Organisation Type'
+siteSettings:
+  6de046f0-6167-4af1-aa91-ffaf83e36a14: # Platform
+    hasUrls: true
+    template: null
+    uriFormat: 'organisation-type/{slug}'
+  8aa67b04-5a77-45c2-a2ac-d1f65698459f: # 3D Repair FR
+    hasUrls: true
+    template: null
+    uriFormat: 'organisation-type/{slug}'
+  047f745f-3685-4496-8e78-bd0b667af2e0: # 3D Repair EN
+    hasUrls: true
+    template: null
+    uriFormat: 'organisation-type/{slug}'
+  51cad071-cea3-48ce-8809-1681b032cbd6: # Louvain La Neuve FR
+    hasUrls: true
+    template: null
+    uriFormat: 'organisation-type/{slug}'
+  583f2eba-5ad5-4741-b9a2-132b67b3bcaf: # 3D Repair NL
+    hasUrls: true
+    template: null
+    uriFormat: 'organisation-type/{slug}'
+  9194d239-4539-4912-ad6a-0c181ecfb860: # Leuven EN
+    hasUrls: true
+    template: null
+    uriFormat: 'organisation-type/{slug}'
+  74572bf4-408d-451b-bdd2-d2367f83a598: # Apeldoorn NL
+    hasUrls: true
+    template: null
+    uriFormat: 'organisation-type/{slug}'
+  780304c4-c532-4a30-8dc2-6890f5d60517: # Leuven NL
+    hasUrls: true
+    template: null
+    uriFormat: 'organisation-type/{slug}'
+  cd22acbb-24d6-4b36-94b8-5addbd7bd365: # 3D Repair DE
+    hasUrls: true
+    template: null
+    uriFormat: 'organisation-type/{slug}'
+  fc9c5d93-393d-4dfd-8d21-c9ff35643fb4: # Roeselare NL
+    hasUrls: true
+    template: null
+    uriFormat: 'organisation-type/{slug}'
+structure:
+  maxLevels: null
+  uid: 951f03d9-0e68-44c6-9b72-eccba5e5e63a

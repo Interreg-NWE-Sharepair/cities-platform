@@ -1,0 +1,6 @@
+allowPublicRegistration: true
+deactivateByDefault: false
+defaultGroup: ''
+photoSubpath: users
+photoVolumeUid: 15d0b6ac-6fae-4d64-abf2-3a53ea5348ca # Frontend
+requireEmailVerification: true

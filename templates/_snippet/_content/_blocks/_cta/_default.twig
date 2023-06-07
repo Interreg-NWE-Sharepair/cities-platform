@@ -1,0 +1,11 @@
+{% if inverse is not defined %}
+	{% set inverse = false %}
+{% endif %}
+
+<div class="mt-2">
+{% if inverse %}
+  {{ cta.linkit.getLink({class: cta.linkit.class|replace("btn--primary", "btn--primary-inverse")|replace("btn--secondary", "btn--secondary-inverse")|replace("btn--ghost", "btn--ghost-inverse")|replace("link ", "link--inverse ")}) }}
+{% else %}
+  {{ cta.linkit.getLink() }}
+{% endif %}
+</div>

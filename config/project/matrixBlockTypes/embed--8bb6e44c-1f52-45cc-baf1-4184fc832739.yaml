@@ -1,0 +1,46 @@
+field: 56d715d0-6a9d-4562-9c66-e5b4caad7f44 # Content Builder
+fieldLayouts:
+  0878f9fa-5597-458c-9378-ad4ab7b35564:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 2b19be6d-9f98-4f44-b5cf-04a3bf2addf0 # Code
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 09942aaf-68e4-4e15-a125-f5f69c60377d
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 65490750-96a7-4cd0-a42b-9c86dbf85315
+        userCondition: null
+fields:
+  2b19be6d-9f98-4f44-b5cf-04a3bf2addf0: # Code
+    columnSuffix: jjchvnhx
+    contentColumnType: text
+    fieldGroup: null
+    handle: code
+    instructions: null
+    name: Code
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 6
+      multiline: true
+      placeholder: null
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: embed
+name: Embed
+sortOrder: 11

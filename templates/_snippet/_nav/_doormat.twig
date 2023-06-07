@@ -1,0 +1,49 @@
+{% set mainNav = craft.navigate.raw('mainNav') %}
+{% set searchResultsEntry = craft.entries.section('searchResults').one() %}
+
+{% if mainNav|length %}
+<div class="w-1/2 px-4 pt-8 mt-8 border-white md:w-1/3 md:mt-0 border-t-1 md:pt-0 md:border-none">
+	<nav class="" aria-label="{{ 'Footer'|t }}">
+		<ul class="space-y-4">
+			{% for node in mainNav %}
+				<li class="{% if node.classes|length %}{{ node.classes }}{% endif %}">
+					<a href="{{ node.url }}" class="hover:underline {% if node.active %}font-bold{% endif %}"
+							{% if node.blank %} target="_blank" rel="noopener" {% endif %} data-text="{{ node.name }}">
+						{{ node.name }}
+					</a>
+				</li>
+			{% endfor %}
+		</ul>
+	</nav>
+</div>
+{% endif %}
+
+<div class="w-1/2 px-4 pt-8 mt-8 border-white md:w-1/3 md:mt-0 border-t-1 md:pt-0 md:border-none">
+	<nav class="" aria-label="{{ 'Footer Service'|t }}">
+		<ul class="space-y-4">
+			{% set serviceNav = craft.navigate.raw('serviceNav') %}
+			{% if serviceNav|length %}
+				{% for node in serviceNav %}
+					<li class="{% if node.classes|length %}{{ node.classes }}{% endif %}">
+						<a href="{{ node.url }}" class="text-sm underline hover:no-underline {% if node.active %}font-bold{% endif %}"
+								{% if node.blank %} target="_blank" rel="noopener" {% endif %}>
+							{{ node.name }}
+						</a>
+					</li>
+				{% endfor %}
+			{% endif %}
+			{% if not (currentSite.handle == "platform" or currentSite.group().name == "3D") %}
+				<li>
+					<a href="{{ siteUrl }}{% if currentUser %}profiel{% else %}login{% endif %}" class="text-sm underline hover:no-underline">
+						<svg class="mr-1 text-lg icon" aria-hidden="true"><use xlink:href="/icon/sprite.svg#person-outline"></use></svg>
+						{% if currentUser %}
+							{{ 'Mijn profiel'|t }}
+						{% else %}
+							{{ 'Login'|t }}
+						{% endif %}
+					</a>
+				</li>
+			{% endif %}
+		</ul>
+	</nav>
+</div>

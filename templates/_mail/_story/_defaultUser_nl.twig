@@ -1,0 +1,47 @@
+{% extends "_mail/_layout" %}
+
+{% block title %}
+	{{ 'Bedankt om een Repair Story in te zenden'|t }}
+{% endblock %}
+
+{% block content %}
+	<p>Hey
+		{% if user is defined %}
+			{{ user.firstName }}
+		{% else %}
+			{{ story.firstName }}
+		{% endif %}
+	</p>
+
+	<p>{{ 'Een kopie van jouw ingezonden bericht:'|t }}</p>
+
+	<ul>
+		{% for key,value in story %}
+			<li>
+				<strong>
+					{% switch key %}
+						{% case "title" %}
+							Titel
+						{% case "intro" %}
+							Introductie
+						{% case "body" %}
+							Body tekst
+						{% case "firstName" %}
+							Voornaam
+						{% case "lastName" %}
+							Achternaam
+						{% case "email" %}
+							E-mailadres
+						{% case "phone" %}
+							Telefoon nummer
+						{% case "bio" %}
+							Korte biografie
+					{% endswitch %}
+				</strong>
+				<br>
+				{{ value|raw }}
+			</li>
+		{% endfor %}
+	</ul>
+
+{% endblock %}

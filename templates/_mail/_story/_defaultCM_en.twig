@@ -1,0 +1,51 @@
+{% extends "_mail/_layout" %}
+
+{% block title %}
+	{{ 'A new Repair Story has been submitted by'|t }}
+	{% if user is defined %}
+		{{ user.firstName }}
+		{{ user.lastName }}
+	{% else %}
+		{{ story.firstName }}
+		{{ story.lastName }}
+	{% endif %}
+{% endblock %}
+
+{% block content %}
+	<p>
+		{{ 'The story has following details:'|t }}
+	</p>
+
+	<ul>
+		{% for key,value in story %}
+			<li>
+				<strong>
+					{% switch key %}
+						{% case "title" %}
+							Title
+						{% case "intro" %}
+							Introduction
+						{% case "body" %}
+							Body text
+						{% case "firstName" %}
+							Firstname
+						{% case "lastName" %}
+							Lastname
+						{% case "email" %}
+							E-mailaddress
+						{% case "phone" %}
+							Phone number
+						{% case "bio" %}
+							Short biography
+					{% endswitch %}
+				</strong>
+				<br>
+				{{ value|raw }}
+			</li>
+		{% endfor %}
+	</ul>
+
+	<p>
+		{{ 'Please review and publish this story as soon as possible.'|t }}
+	</p>
+{% endblock %}

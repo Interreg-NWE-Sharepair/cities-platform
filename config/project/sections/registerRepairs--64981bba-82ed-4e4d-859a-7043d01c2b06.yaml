@@ -1,0 +1,44 @@
+defaultPlacement: end
+enableVersioning: true
+handle: registerRepairs
+name: 'Register repairs'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  51cad071-cea3-48ce-8809-1681b032cbd6: # Louvain La Neuve FR
+    enabledByDefault: true
+    hasUrls: true
+    template: _register-repairs/_index
+    uriFormat: enregistrez-vos-reparations
+  9194d239-4539-4912-ad6a-0c181ecfb860: # Leuven EN
+    enabledByDefault: true
+    hasUrls: true
+    template: _register-repairs/_index
+    uriFormat: register-your-repairs
+  74572bf4-408d-451b-bdd2-d2367f83a598: # Apeldoorn NL
+    enabledByDefault: true
+    hasUrls: true
+    template: _register-repairs/_index
+    uriFormat: registreer-jouw-herstellingen
+  780304c4-c532-4a30-8dc2-6890f5d60517: # Leuven NL
+    enabledByDefault: true
+    hasUrls: true
+    template: _register-repairs/_index
+    uriFormat: registreer-jouw-herstellingen
+  fc9c5d93-393d-4dfd-8d21-c9ff35643fb4: # Roeselare NL
+    enabledByDefault: true
+    hasUrls: true
+    template: _register-repairs/_index
+    uriFormat: registreer-jouw-herstellingen
+type: single

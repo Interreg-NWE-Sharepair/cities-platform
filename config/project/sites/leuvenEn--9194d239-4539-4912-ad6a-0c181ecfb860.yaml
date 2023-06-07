@@ -1,0 +1,9 @@
+baseUrl: '@baseUrlLeuven/en'
+enabled: '0'
+handle: leuvenEn
+hasUrls: true
+language: en-BE
+name: 'Leuven EN'
+primary: false
+siteGroup: 94ee0a59-b60e-4780-8580-0c42534a98aa # Leuven
+sortOrder: 8

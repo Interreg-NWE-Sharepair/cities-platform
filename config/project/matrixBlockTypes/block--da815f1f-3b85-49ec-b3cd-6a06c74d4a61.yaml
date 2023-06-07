@@ -1,0 +1,161 @@
+field: 94462b6d-8def-48ce-9a56-fa9867cf589e # Home hero
+fieldLayouts:
+  032b1d83-ac54-478d-89f1-f71bb22a4656:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 7723e7fe-e015-46e5-9d0a-d7064f5b9d1b # Title
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: aa485066-77f8-458f-aa01-f56374b37f70
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: c028da1c-8b47-42c5-be98-6d4bdbf43604 # Intro
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 74acecd8-cf19-4ebe-938b-0645ad6c86d1
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 9171d777-0d41-4369-8b33-67214837a2e8 # CTA
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ba49a0dd-135b-423e-bc64-451cd9ef3d90
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 7abdbd01-3082-4476-aef1-5415c03addac # Legende
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f0789639-101e-4575-81c2-59d1b6d33e01
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 9136a1ae-ca97-4548-937a-4b11c42177f0
+        userCondition: null
+fields:
+  7abdbd01-3082-4476-aef1-5415c03addac: # Legende
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: legend
+    instructions: 'Write a footnote about the numbers.'
+    name: Legende
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+  7723e7fe-e015-46e5-9d0a-d7064f5b9d1b: # Title
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: heroTitle
+    instructions: null
+    name: Title
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+  9171d777-0d41-4369-8b33-67214837a2e8: # CTA
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: cta
+    instructions: null
+    name: CTA
+    searchable: true
+    settings:
+      blockTypeFields: 0
+      changedFieldIndicator: null
+      columns:
+        __assoc__:
+          -
+            - 993edc82-f2c4-4e86-baf2-17a7cb72b6e1 # Link
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+      contentTable: '{{%stc_20_cta}}'
+      fieldLayout: matrix
+      maxRows: null
+      minRows: null
+      propagationKeyFormat: null
+      propagationMethod: all
+      selectionLabel: null
+      staticField: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: verbb\supertable\fields\SuperTableField
+  c028da1c-8b47-42c5-be98-6d4bdbf43604: # Intro
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: intro
+    instructions: null
+    name: Intro
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: Simple.json
+      removeEmptyTags: true
+      removeInlineStyles: true
+      removeNbsp: true
+      showHtmlButtonForNonAdmins: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\redactor\Field
+handle: block
+name: Block
+sortOrder: 1

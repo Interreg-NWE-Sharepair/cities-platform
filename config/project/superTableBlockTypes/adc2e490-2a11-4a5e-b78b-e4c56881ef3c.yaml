@@ -1,0 +1,121 @@
+changedFieldIndicator: null
+field: f76a3408-5f35-49f1-90d1-4cd3e535ab1c # Partners
+fieldLayouts:
+  8b9064e4-2b70-4d68-92de-7842ff38f8d0:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 0e04b48d-cb94-461f-a1ff-25eb5013aa74 # Name Partner
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b3fa7d7f-90b3-4f2a-bfc3-1af34960ac3c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: d6d6ebcb-f2ac-4b5d-ad67-7d533a50ae69 # Partner Logo
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0fef2545-8267-4ea1-908e-538e49787f87
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: d59c1191-e655-4961-a9c8-660cd98d608c # Partner URL
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 98778177-aaff-426e-8b9d-d92c8246dda2
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: f3a31528-ac67-48b0-9623-729658a42975
+        userCondition: null
+fields:
+  0e04b48d-cb94-461f-a1ff-25eb5013aa74: # Name Partner
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: namePartner
+    instructions: null
+    name: 'Name Partner'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  d6d6ebcb-f2ac-4b5d-ad67-7d533a50ae69: # Partner Logo
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: partnerLogo
+    instructions: 'Please insert a logo of this partner.'
+    name: 'Partner Logo'
+    searchable: true
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: false
+      allowedKinds:
+        - image
+      branchLimit: null
+      defaultUploadLocationSource: 'volume:979c3eeb-f99a-4ca1-bcbe-ce9298a4e4ca' # Files
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 1
+      minRelations: null
+      previewMode: full
+      restrictFiles: true
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:979c3eeb-f99a-4ca1-bcbe-ce9298a4e4ca' # Files
+      restrictedLocationSubpath: null
+      selectionLabel: null
+      showSiteMenu: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  d59c1191-e655-4961-a9c8-660cd98d608c: # Partner URL
+    columnSuffix: null
+    contentColumnType: string(255)
+    fieldGroup: null
+    handle: partnerUrl
+    instructions: 'Please insert the website url of this partner.'
+    name: 'Partner URL'
+    searchable: true
+    settings:
+      maxLength: 255
+      types:
+        - url
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Url

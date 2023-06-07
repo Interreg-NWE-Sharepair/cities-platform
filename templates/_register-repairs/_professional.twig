@@ -1,0 +1,193 @@
+{% import '_macro/_form.twig' as forms %}
+{% extends "_layout.twig" %}
+
+{% set breadcrumbs = [
+    craft.entries.section('registerRepairs').one(),
+    entry
+] %}
+
+{% block content %}
+    {% set language = currentSite.language|slice(0,2) %}
+    {% set organisationIdQuery = craft.app.request.getParam('organisation') %}
+
+    {% include ['_snippet/_global/_hero/_' ~ currentSite.handle ~'.twig', '_snippet/_global/_hero/_default.twig'] %}
+
+    <div class="section section--light">
+        <div class="container">
+            <form method="post" data-s-validate="true">
+                {{ csrfInput() }}
+                {% set redirect = entry.redirectPage.one() %}
+                {% if not redirect %}
+                    {% set redirect = craft.entries.section('home').one() %}
+                {% endif %}
+                {{ redirectInput(redirect.getUrl()) }}
+                <input type="hidden" name="action" value="recaptcha/recaptcha/verify-submission">
+                <input type="hidden" name="verified-action" value="statik/repair/handle-professional-repair">
+                <div>
+                    <h2>{{ entry.formTitle }}</h2>
+                    <div class="w-full my-6 md:w-1/2 lg:w-1/3 form_input form__field">
+                        <label for="repairDate" class="block w-full mb-4 font-bold">{{ "Date"|t }}</label>
+                        <div class="relative">
+                            <input type="date" id="repairDate" name="fields[date]"
+                                   class="w-full p-1 border-black border-1 rounded-xs js-date-picker"
+                                   placeholder="{{ "DD/MM/YYYY"|t }}"
+                                   required>
+                            <span class="absolute top-0 bottom-0 right-0 flex items-center pr-2 pointer-events-none">
+                                <svg class="text-2xl text-primary icon" aria-hidden="true"><use xlink:href="/icon/sprite.svg#date-range"></use></svg>
+                            </span>
+                        </div>
+                        {% if repair is defined %}
+                            {{ forms.errorList(repair.getErrors('date')) }}
+                        {% endif %}
+                    </div>
+                    {% set cat = craft.categories.id('3583').one() %}
+                    {% set professionals = craft.statik.sortByDistance() %}
+                    {% if cat %}
+                        {% set professionals = professionals.relatedTo({
+                            targetElement: cat,
+                            field: 'organisationType'
+                        }).all() %}
+                    {% else %}
+                        {% set professionals = professionals.all() %}
+                    {% endif %}
+                    {% if professionals|length %}
+                        <div class="w-full form_input">
+                            <div class="w-full my-6 md:w-1/2 lg:w-1/3">
+                                <label for="professional" class="block w-full mb-4 font-bold">{{ "Name of the professional"|t }}</label>
+                                    <select class="w-full p-1 bg-white border-black border-1 rounded-xs" name="professional[]" id="professional" data-s-autocomplete required>
+                                        <option value="">{{ "Select a professional"|t }}</option>
+                                        {% for professional in professionals %}
+                                            <option value="{{ professional.organisationId }}" {% if professional.organisationId == organisationIdQuery %} selected="selected" {% endif %}>{{ professional.title }} ({{ professional.postalCode }})</option>
+                                        {% endfor %}
+                                    </select>
+                            </div>
+                            {% if repair is defined %}
+                                {{ forms.errorList(repair.getErrors('professional')) }}
+                            {% endif %}
+                        </div>
+                    {% endif %}
+
+                    {% set productCategories = craft.categories.group('productCategory').level(1).all() %}
+                    {% if productCategories|length %}
+                        <div class="form_input form__field">
+                            <h3 class="text-xl font-bold text-black">{{ "Product category"|t }}</h3>
+                            <div class="flex flex-wrap -mx-4">
+                                {% set other = [] %}
+                                {% for category in productCategories %}
+                                    {% set children = category.children.all() %}
+                                    {% if children|length %}
+                                        <div class="w-full px-4 mb-6 md:w-1/2 lg:w-1/3">
+                                            <h4 class="mb-2 text-xl font-normal text-black">{{ attribute(category, "title" ~ language|capitalize ) ? attribute(category, "title" ~ language|capitalize ) : category.title }}</h4>
+                                            {% for child in children %}
+                                                <div class="flex items-baseline mb-2">
+                                                    <input class="mr-2 form_input" type="radio" id="productCategory_{{ child.categoryId }}" name="productCategory[]" value="{{ child.categoryId }}" required>
+                                                    <label for="productCategory_{{ child.categoryId }}">{{ attribute(child, "title" ~ language|capitalize ) ? attribute(child, "title" ~ language|capitalize ) : child.title }}</label>
+                                                </div>
+                                            {% endfor %}
+                                        </div>
+                                    {% else %}
+                                        {% set other = other|merge([category]) %}
+                                    {% endif %}
+                                {% endfor %}
+                                {% if other|length %}
+                                    <div class="w-full px-4 mb-6 md:w-1/2 lg:w-1/3">
+                                        <h4 class="mb-2 text-xl font-normal text-black">{{ "Other"|t }}</h4>
+                                        {% for category in other %}
+                                            <div class="flex items-baseline mb-2">
+                                                <input class="mr-2 form_input" type="radio" id="productCategory_{{ category.categoryId }}" name="productCategory[]" value="{{ category.categoryId }}">
+                                                <label for="productCategory_{{ category.categoryId }}">{{ attribute(category, "title" ~ language|capitalize ) ? attribute(category, "title" ~ language|capitalize ) : category.title }}</label>
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+                                {% if repair is defined %}
+                                    {{ forms.errorList(repair.getErrors('productCategory')) }}
+                                {% endif %}
+                            </div>
+                        </div>
+                    {% endif %}
+
+                    <div class="flex flex-wrap mb-4 -mx-4">
+                        <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+                            <label for="brand" class="form__label">{{ "Brand"|t }}</label>
+                            <input class="w-full p-1 border-black form_input border-1 rounded-xs" type="text" id="brand" name="fields[brand]" >
+                            {% if repair is defined %}
+                                {{ forms.errorList(repair.getErrors('brand')) }}
+                            {% endif %}
+                        </div>
+                        <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+                            <label for="age" class="form__label">{{ "What is the manufacture year of your device?"|t }}</label>
+                            <input class="w-full p-1 border-black form_input border-1 rounded-xs" type="number" min="1900" max="9999" id="age" name="fields[age]" >
+                            {% if repair is defined %}
+                                {{ forms.errorList(repair.getErrors('age')) }}
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <div class="mb-4 form__field">
+                        <label class="form__label" for="sparePart">{{ "Was a spare part used during the repair?"|t }}</label>
+                        <div>
+                            <input class="mb-2 form_input" type="radio" name="fields[sparePart]" id="sparePart" value="yes" required>
+                            <label for="sparePart">{{ "Yes"|t }}</label>
+                        </div>
+                        <div>
+                            <input class="mb-2 form_input" type="radio" name="fields[sparePart]" id="sparePart" value="no">
+                            <label for="sparePart">{{ "No"|t }}</label>
+                        </div>
+                        <div>
+                            <input class="mb-2 form_input" type="radio" name="fields[sparePart]" id="sparePart" value="dontKnow">
+                            <label for="sparePart">{{ "I don't know"|t }}</label>
+                        </div>
+                        {% if repair is defined %}
+                            {{ forms.errorList(repair.getErrors('sparePart')) }}
+                        {% endif %}
+                    </div>
+
+                    {% set repairStatus = craft.categories.group('repairStatus').level(1).all() %}
+                    {% if repairStatus|length %}
+                        <div class="mb-6 form_input form__field">
+                            <div class="mb-4 font-bold">{{ "Repair Status"|t }}</div>
+                            <div>
+                                {% for status in repairStatus %}
+                                    <div class="mb-2">
+                                        <input type="radio" id="repairStatus_{{ status.categoryId }}" name="repairStatus[]" value="{{ status.categoryId }}" required>
+                                        <label for="repairStatus_{{ status.categoryId }}">{{ status.title }}</label>
+                                    </div>
+                                {% endfor %}
+                                {% if repair is defined %}
+                                    {{ forms.errorList(repair.getErrors('repairStatus')) }}
+                                {% endif %}
+                            </div>
+                        </div>
+                    {% endif %}
+
+                    <div class="flex flex-wrap mb-4 -mx-4">
+                        <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+                            <label for="name" class="form__label">{{ "Name"|t }}</label>
+                            <input class="w-full p-1 border-black form_input border-1 rounded-xs" type="text" id="name" name="fields[firstName]" >
+                            {% if repair is defined %}
+                                {{ forms.errorList(repair.getErrors('name')) }}
+                            {% endif %}
+                        </div>
+                        <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+                            <label for="mail" class="form__label">{{ "Email"|t }}</label>
+                            <input class="w-full p-1 border-black form_input border-1 rounded-xs" type="text" id="mail" name="fields[mail]" >
+                            {% if repair is defined %}
+                                {{ forms.errorList(repair.getErrors('mail')) }}
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <div class="my-12">
+                        {{ craft.recaptcha.render() }}
+                    </div>
+
+                    <div class="my-6">
+                        <button type="submit" class="btn btn--primary btn--ext">{{ "Submit form"|t }}</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

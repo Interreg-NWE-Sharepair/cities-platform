@@ -1,0 +1,43 @@
+<nav class="" aria-label="{{ 'Mobile'|t }}">
+    {% set mainNav = craft.navigate.raw('mainNav') %}
+    {% set searchResultsEntry = craft.entries.section('searchResults').one() %}
+
+    {% if mainNav|length %}
+            <ul class="space-y-4 ">
+                {% for node in mainNav %}
+                    <li class="{% if node.classes|length %}{{ node.classes }}{% endif %}">
+                        <a href="{{ node.url }}" class="menu__item {% if node.active %}font-bold text-primary{% endif %}"
+                                {% if node.blank %} target="_blank" rel="noopener" {% endif %} data-text="{{ node.name }}">
+                            {{ node.name }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+    {% endif %}
+
+    {% set serviceNav = craft.navigate.raw('serviceNav') %}
+    {% if serviceNav|length %}
+        <ul class="pt-6 mt-6 space-y-2 border-t-1 border-divider">
+            {% set login = craft.entries.section("login").one() %}
+            {% set profile = craft.entries.section('profile').one() %}
+            {% if login|length or profile|length %}
+                <li>
+                    <a href="{% if currentUser %}{{ profile.url }}{% elseif login|length %}{{ login.url }}{% endif %}" class="text-sm text-black underline hover:text-primary-hover">
+                        <svg class="mr-1 text-lg icon text-primary" aria-hidden="true"><use xlink:href="/icon/sprite.svg#person-outline"></use></svg>
+                        {% if currentUser %}
+                            {{ 'Mijn profiel'|t }}
+                        {% else %}
+                            {{ 'Login'|t }}
+                        {% endif %}
+                    </a>
+                </li>
+            {% endif %}
+            {% for node in serviceNav %}
+                <li class="{% if node.classes|length %}{{ node.classes }}{% endif %}">
+                    <a href="{{ node.url }}" class="text-sm text-black underline hover:text-primary-hover{% if node.active %} text-black font-bold{% endif %}" {% if node.blank %} target="_blank" rel="noopener" {% endif %}>{{ node.name }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</nav>

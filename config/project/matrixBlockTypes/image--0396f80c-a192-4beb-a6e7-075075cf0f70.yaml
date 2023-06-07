@@ -1,0 +1,101 @@
+field: 56d715d0-6a9d-4562-9c66-e5b4caad7f44 # Content Builder
+fieldLayouts:
+  dbac7280-eb96-48c9-9218-1f8706af3656:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: cd736fb3-c9b7-4ce1-88a8-da8b64249eb1 # Image
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ce7e4da1-63ab-41b3-81f5-3846322b74e8
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 4ce05044-aa3d-4bbe-ad21-be03fbc1a273 # Background Color
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d5128e2c-f9fa-48f2-b1c9-52c393b83fac
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: b187a3b4-549a-464c-9ca9-6b3b885aff44
+        userCondition: null
+fields:
+  4ce05044-aa3d-4bbe-ad21-be03fbc1a273: # Background Color
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: backgroundColor
+    instructions: 'Select the background color of the whole section.'
+    name: 'Background Color'
+    searchable: true
+    settings:
+      dataSet: 'Background colors'
+      type: dropdown
+    translationKeyFormat: null
+    translationMethod: none
+    type: statikbe\configvaluesfield\fields\ConfigValuesFieldField
+  cd736fb3-c9b7-4ce1-88a8-da8b64249eb1: # Image
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: image
+    instructions: 'Select an image to display in this block.'
+    name: Image
+    searchable: true
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: false
+      allowedKinds:
+        - image
+      branchLimit: null
+      defaultUploadLocationSource: 'volume:979c3eeb-f99a-4ca1-bcbe-ce9298a4e4ca' # Files
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: null
+      minRelations: null
+      previewMode: full
+      restrictFiles: true
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:979c3eeb-f99a-4ca1-bcbe-ce9298a4e4ca' # Files
+      restrictedLocationSubpath: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Asset
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\assets\AssetCondition
+      selectionLabel: 'Add an image'
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: true
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: image
+name: Image
+sortOrder: 3

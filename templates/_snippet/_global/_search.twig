@@ -1,0 +1,22 @@
+{% set searchResultsEntry = craft.entries.section('searchResults').one() %}
+{% if searchResultsEntry %}
+	<form action="{{ searchResultsEntry.getUrl() }}" class="flex-1 w-full py-2 js-search-form">
+		<input type="hidden" name="cx" value={{ searchKey }} />
+		<input type="hidden" name="ie" value="UTF-8"/>
+		<div class="flex justify-end">
+			<input type="search" class="flex-1 max-w-xs px-1 text-base border-black border-1 rounded-xs" name="q" placeholder="{{ 'Naar wat ben je op zoek?'|t }}"/>
+			<button type="submit" class="ml-4">
+				<span class="sr-only">{{ 'Zoeken'|t }}</span>
+				<svg class="text-xl icon text-primary hover:text-primary-hover" aria-hidden="true">
+					<use xlink:href="/icon/sprite.svg#search"></use>
+				</svg>
+			</button>
+			<button class="hidden ml-4 js-search-close md:block" tabindex="0">
+				<span class="sr-only">{{ 'Sluit zoeken'|t }}</span>
+				<svg class="text-xl icon text-primary hover:text-primary-hover" aria-hidden="true">
+					<use xlink:href="/icon/sprite.svg#clear"></use>
+				</svg>
+			</button>
+		</div>
+	</form>
+{% endif %}

@@ -1,0 +1,169 @@
+fieldLayouts:
+  e78c3c1b-30bb-4442-af32-187aff44a004:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: c902bf28-0571-4d3e-ac8f-9988bdfe36a4
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 5ab23816-2bad-4516-94f9-08d16d7814d4 # Date
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bdcd46fe-f977-4afe-afee-a8b82232c1e3
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 54ece3f4-5ab1-467e-b418-3888182bce09 # Product Category
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 70ec9beb-e329-452b-839d-3bbb66e5e534
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 5b03286b-bf14-4e8f-8d82-3efdc5be5ce2 # Repair Status
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9d2a6f5f-9a4e-449e-b0e1-d69b0ed1bc4c
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            heading: 'Contact Details'
+            type: craft\fieldlayoutelements\Heading
+            uid: 65a8f53c-0832-4cbc-8c12-a765320b7722
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: d43be114-0a80-477d-9c95-10fd3944f427 # First Name
+            instructions: null
+            label: Name
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: be1a9a20-7cbd-4fe7-84c1-669b90051cdf
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 072209d1-1c68-4ee5-9a66-a209b518da6d # Mail
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 30fa2008-47c2-4956-977e-49014e80a055
+            userCondition: null
+            warning: null
+            width: 50
+        name: Content
+        uid: d07bbd1b-dcd4-439f-9777-96c6c2e72bd7
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 4a2bad07-8d89-4689-b0bf-774eed764660 # Overview title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c7f054f0-a99f-494d-86dd-e44d637906a2
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 2f8a6ddc-4ab7-4f9f-a2ea-72c6cb387f38 # Overview description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: df6ccd8e-e509-4448-8140-ebc5ab96e656
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 15ed2b72-8955-4cec-93f8-9736a9e50e80 # Overview image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2eab1362-02bd-4c6e-a9a1-e3f0f2871514
+            userCondition: null
+            warning: null
+            width: 100
+        name: Overview
+        uid: 9651982d-ea94-41f1-b874-42ea0bacf327
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 685530fc-e1f1-4be1-813b-ebf9ac3aa108 # SEO
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c7765a2a-dbdb-46c7-bde8-2ab41188d164
+            userCondition: null
+            warning: null
+            width: 100
+        name: SEO
+        uid: 2c9dddb1-09b0-429a-b6e3-551da49984b4
+        userCondition: null
+handle: repair
+hasTitleField: false
+name: Repair
+section: fdde9cc3-a5b8-4fe1-9486-e1e7fc5528a9 # All DIY Repairs
+sortOrder: 1
+titleFormat: 'DIY Repair - {now|date(''d m Y H:i'')}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

@@ -1,0 +1,17 @@
+/* purgecss start ignore */
+.section {
+  @apply py-12;
+}
+
+.section--default + .section--default {
+  padding-top: 0 !important;
+}
+
+.section--light {
+  @apply bg-light;
+}
+
+.section--light + .section--light {
+  padding-top: 0 !important;
+}
+/* purgecss end ignore */

@@ -1,0 +1,11 @@
+description: null
+handle: repairHeroesLouvainLaNeuve
+name: 'Repair heroes Louvain-La-Neuve'
+permissions:
+  - 'assignusergroup:e8eda379-a954-411d-a7ce-6693810139a2' # Repair heroes Louvain-La-Neuve
+  - 'createentries:5fde66b3-825c-4efc-b013-f877eae296a3' # Repair Stories
+  - 'createentries:7801d79f-ad8f-4f1b-8e2f-ac3747b72114' # Events
+  - 'editsite:51cad071-cea3-48ce-8809-1681b032cbd6' # Louvain La Neuve FR
+  - editusers
+  - 'viewentries:5fde66b3-825c-4efc-b013-f877eae296a3' # Repair Stories
+  - 'viewentries:7801d79f-ad8f-4f1b-8e2f-ac3747b72114' # Events

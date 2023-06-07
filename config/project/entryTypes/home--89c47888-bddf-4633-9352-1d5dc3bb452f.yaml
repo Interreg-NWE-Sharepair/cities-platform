@@ -1,0 +1,217 @@
+fieldLayouts:
+  3ae7bc1a-3549-4cf7-b582-b14850d82009:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 94462b6d-8def-48ce-9a56-fa9867cf589e # Home hero
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 47e2fe96-019a-4921-903b-08ce5a8e5950
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 52300c39-98b2-4c0e-8021-31ad8d6a82d0 # Start Number Café
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 06dfcb3c-5580-4f71-a52b-a8db6e8f4d37
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 1f3e870a-ca49-49ab-a2aa-119d2a877394 # Number Repairs Café
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d6849290-dada-417a-af89-b0fcc688cff3
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\elements\conditions\SiteConditionRule
+                  operator: in
+                  uid: 72aa44d6-ec88-4beb-8599-538a0dbfe4ce
+                  values:
+                    - 51cad071-cea3-48ce-8809-1681b032cbd6 # Louvain La Neuve FR
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: 56d715d0-6a9d-4562-9c66-e5b4caad7f44 # Content Builder
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f1aa5b3b-3391-4e50-8844-ee35ded7fa47
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 1620eeee-116e-4a05-8fd6-23261ce30266 # Call To Action Start Repairing
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4ba8a340-b70d-4120-a8b9-7885ab9133b2
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 2b66c84f-5b06-4222-b0c4-10288b90068e # Quote
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4b415eae-4650-4838-a700-dadb045e6083
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dismissible: false
+            elementCondition: null
+            style: tip
+            tip: 'In this place, the latest repair stories will automatically be shown'
+            type: craft\fieldlayoutelements\Tip
+            uid: 07eaac94-820b-462b-9af0-febe638e7178
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: 5be8b7ef-255a-4e3f-a998-76b8ea638924 # Call To Action Repair In
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4f76d8d3-08d9-4ce9-a920-c5a4f51d804f
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: a5a75022-d8bf-4689-a25f-fde7cb280dbf # What can you do?
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6e3fdd9a-0af9-4e10-991b-4151ba5bf484
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: f63b488c-8250-41ba-9d18-572246c85fe7
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 4a2bad07-8d89-4689-b0bf-774eed764660 # Overview title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 885fc30b-a7bf-4432-af89-4d894507baf1
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 2f8a6ddc-4ab7-4f9f-a2ea-72c6cb387f38 # Overview description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5d538b83-3ad3-4972-b3e9-464ddf171a71
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 15ed2b72-8955-4cec-93f8-9736a9e50e80 # Overview image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f6543377-77ab-4da2-b1f6-355534a7efa4
+            userCondition: null
+            warning: null
+            width: 100
+        name: Overview
+        uid: 6e57f8c0-20fd-4f86-b64a-c5ce75ec922e
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 9e3a21f6-9746-439f-b7af-beecc205ac86
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 685530fc-e1f1-4be1-813b-ebf9ac3aa108 # SEO
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 071233a7-89df-40a0-bbb7-15a7d4e677a3
+            userCondition: null
+            warning: null
+            width: 100
+        name: SEO
+        uid: 6aeb0a8a-81e5-499a-80ea-0d8e0b394862
+        userCondition: null
+handle: home
+hasTitleField: true
+name: Home
+section: 5611e98d-93ec-4bd4-95dd-18f282b8c5e8 # Home
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

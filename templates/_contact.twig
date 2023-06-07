@@ -1,0 +1,32 @@
+{% extends "_layout.twig" %}
+
+{% set breadcrumbs = [
+    entry,
+] %}
+
+{% block content %}
+
+	{% include ['_snippet/_global/_hero/_' ~ currentSite.handle ~'.twig', '_snippet/_global/_hero/_default.twig'] %}
+
+	<div class="section section--light">
+		<div class="container">
+			{% set form = craft.freeform.form('contactForm_' ~ currentSite.handle) %}
+			{% if form|length %}
+				<div class="w-full md:w-2/3">
+					{{ craft.freeform.form('contactForm_' ~ currentSite.handle, {
+						submitClass: "btn btn--secondary btn--ext"
+					}).render() }}
+				</div>
+			{% endif %}
+		</div>
+	</div>
+
+	{% include ['_snippet/_content/_contentBuilder/_' ~ currentSite.handle ~'.twig', '_snippet/_content/_contentBuilder/_default.twig']
+        with {
+        settings : {
+            section: 'section',
+            container: 'container',
+        }
+    } %}
+
+{% endblock %}

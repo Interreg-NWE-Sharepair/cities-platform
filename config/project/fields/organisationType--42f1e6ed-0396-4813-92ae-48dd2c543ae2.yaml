@@ -1,0 +1,23 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: d45680a5-3f22-46ee-87ca-99d226b4c7bf # Organisations
+handle: organisationType
+instructions: null
+name: 'Organisation Type'
+searchable: true
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  localizeRelations: false
+  maintainHierarchy: true
+  maxRelations: null
+  minRelations: null
+  selectionLabel: null
+  showSiteMenu: false
+  source: 'group:78980b31-345c-423c-af14-a9cab3b589fd' # Organisation Type
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Categories

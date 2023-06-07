@@ -1,0 +1,69 @@
+defaultPlacement: end
+enableVersioning: true
+handle: cookiePolicy
+name: 'Cookie policy'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primaire invoer-pagina'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  6de046f0-6167-4af1-aa91-ffaf83e36a14: # Platform
+    enabledByDefault: true
+    hasUrls: true
+    template: _contentPage
+    uriFormat: cookie-policy
+  8aa67b04-5a77-45c2-a2ac-d1f65698459f: # 3D Repair FR
+    enabledByDefault: true
+    hasUrls: true
+    template: _contentPage
+    uriFormat: politique-sur-les-cookies
+  047f745f-3685-4496-8e78-bd0b667af2e0: # 3D Repair EN
+    enabledByDefault: true
+    hasUrls: true
+    template: _contentPage
+    uriFormat: cookie-policy
+  51cad071-cea3-48ce-8809-1681b032cbd6: # Louvain La Neuve FR
+    enabledByDefault: true
+    hasUrls: true
+    template: _contentPage
+    uriFormat: politique-sur-les-cookies
+  583f2eba-5ad5-4741-b9a2-132b67b3bcaf: # 3D Repair NL
+    enabledByDefault: true
+    hasUrls: true
+    template: _contentPage
+    uriFormat: cookiebeleid
+  9194d239-4539-4912-ad6a-0c181ecfb860: # Leuven EN
+    enabledByDefault: true
+    hasUrls: true
+    template: _contentPage
+    uriFormat: cookie-policy
+  74572bf4-408d-451b-bdd2-d2367f83a598: # Apeldoorn NL
+    enabledByDefault: true
+    hasUrls: true
+    template: _contentPage
+    uriFormat: cookiebeleid
+  780304c4-c532-4a30-8dc2-6890f5d60517: # Leuven NL
+    enabledByDefault: true
+    hasUrls: true
+    template: _contentPage
+    uriFormat: cookiebeleid
+  cd22acbb-24d6-4b36-94b8-5addbd7bd365: # 3D Repair DE
+    enabledByDefault: true
+    hasUrls: true
+    template: _contentPage
+    uriFormat: cookie-policy
+  fc9c5d93-393d-4dfd-8d21-c9ff35643fb4: # Roeselare NL
+    enabledByDefault: true
+    hasUrls: true
+    template: _contentPage
+    uriFormat: cookiebeleid
+type: single

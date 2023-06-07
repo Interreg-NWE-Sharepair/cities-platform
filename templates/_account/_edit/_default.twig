@@ -1,0 +1,129 @@
+{% extends "_layout.twig" %}
+
+{% set breadcrumbs = [
+    {
+        'title' : "Mijn profiel"|t,
+        'url' : entry.url
+    }
+] %}
+
+{% set settings = '{
+    "buttons": ["bold","italic","link"],
+    "pasteLinks": false,
+    "pasteImages": false
+}' %}
+{% do view.registerAssetBundle("craft\\redactor\\assets\\redactor\\RedactorAsset") %}
+
+{% set user = currentUser %}
+
+{% block content %}
+	{% requireLogin %}
+	<div class="section section--light">
+		<div class="container">
+			<div class="flex flex-wrap -mx-4">
+				<div class="w-full px-4 sm:w-2/3">
+					<div class="pb-5">
+						{% include '_snippet/_nav/_breadcrumb.twig' %}
+					</div>
+					<div class="flex items-center mb-4">
+						<h1 class="mb-0">{{"Bewerk profiel:"|t}} {{ user.firstName }}
+							{{ user.lastName }}</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="section section--light">
+		<div class="container">
+			<form method="POST" enctype="multipart/form-data">
+				{{ csrfInput() }}
+				{{ actionInput('users/save-user') }}
+				{{ hiddenInput('userId', currentUser.id) }}
+				{{ redirectInput(craft.entries.section('profile').one().url) }}
+
+				<div class="flex flex-wrap -mx-4">
+					<div class="w-full px-4 md:w-2/3">
+						<div>
+							<label class="form__label" for="firstName">{{ "Voornaam"|t }}</label>
+							<input class="form__input" type="text" name="firstName" id="firstName" value="{{ currentUser.firstName }}">
+							<label class="form__label" for="lastName">{{ "Achternaam"|t }}</label>
+							<input class="form__input" type="text" name="lastName" id="lastName" value="{{ currentUser.lastName }}">
+						</div>
+						<div>
+							<label class="form__label" for="intro">{{ "Intro"|t }}</label>
+							<textarea class="form__input" name="fields[intro]" id="intro" rows="4" cols="50">{{ currentUser.intro }}</textarea>
+							{% set script = "$('#intro').redactor(" ~ settings ~ ");" %}
+    						{% do view.registerJs(script) %}
+						</div>
+						<div class="my-4">
+							<label class="form__label" for="favoriteRepairTool">{{ "Favoriete repair tool?"|t }}</label>
+							<textarea class="form__input" type="text" name="fields[favoriteRepairTool]" id="favoriteRepairTool" rows="4" cols="50">{{ currentUser.favoriteRepairTool }}</textarea>
+							{% set script = "$('#favoriteRepairTool').redactor(" ~ settings ~ ");" %}
+    						{% do view.registerJs(script) %}
+						</div>
+						<div class="my-4">
+							<label class="form__label" for="oldestMemory">{{ "Jouw oudste herinnering gerelateerd aan repareren?"|t }}</label>
+							<textarea class="form__input" type="text" name="fields[oldestMemory]" id="oldestMemory" rows="4" cols="50">{{ currentUser.oldestMemory }}</textarea>
+							{% set script = "$('#oldestMemory').redactor(" ~ settings ~ ");" %}
+    						{% do view.registerJs(script) %}
+						</div>
+						<div class="my-4">
+							<label class="form__label" for="repairTip">{{ "Nummer 1 repareer tip?"|t }}</label>
+							<textarea class="form__input" type="text" name="fields[repairTip]" id="repairTip" rows="4" cols="50">{{ currentUser.repairTip }}</textarea>
+							{% set script = "$('#repairTip').redactor(" ~ settings ~ ");" %}
+    						{% do view.registerJs(script) %}
+						</div>
+					</div>
+
+					<div class="w-full px-4 sm:w-1/2 md:w-1/3">
+						<div class="overflow-hidden bg-white rounded-card">
+							<div id="userPhotoPreview">
+							{% if currentUser.photo|length %}
+								{% set optimizedImage = currentUser.photo.optimizedTextImage %}
+								<picture>
+									{% if craft.imageOptimize.serverSupportsWebP() and currentUser.photo.extension != 'svg' %}
+										<source data-srcset="{{ optimizedImage.srcsetWebP() }}" sizes="(max-width: 479px) 95vw, (min-width: 480px) and (max-width: 659px) 448px, (min-width: 660px) and (max-width: 819px) 628px, (min-width: 820px) and (max-width: 979px) 378px, (min-width: 980px) and (max-width: 1199px) 458px, (min-width: 1200px) 568px" type="image/webp"/>
+									{% endif %}
+									<img src="{{ optimizedImage.placeholderBox() }}"
+											data-srcset="{{ optimizedImage.srcset() }}"
+											sizes="(max-width: 479px) 95vw, (min-width: 480px) and (max-width: 659px) 448px, (min-width: 660px) and (max-width: 819px) 628px, (min-width: 820px) and (max-width: 979px) 378px, (min-width: 980px) and (max-width: 1199px) 458px, (min-width: 1200px) 568px"
+											alt="{{ currentUser.photo|first.imageCaption ?? currentUser.photo|first.title ?? currentUser.lastName }}"
+											class="lazyload"/>
+								</picture>
+							{% endif %}
+							</div>
+							<div class="p-6">
+								<div>
+									<label class="flex items-center" for="userPhoto">
+										<svg class="mr-2 icon text-primary" aria-hidden="true"><use xlink:href="/icon/sprite.svg#photo-camera"></use></svg>
+										<span class="inline-block text-base border-b-1 border-divider">{{"Wijzig foto"|t}}</span>
+									</label>
+									<input type="file" name="photo" id="userPhoto" value="Upload" accept=".png,.jpg,.jpeg" class="sr-only form__input" data-show-images-in="userPhotoPreview"/>
+								</div>
+								<div class="my-2 italic opacity-75">{{"of"|t}}</div>
+								<div class="delete-photo">
+									{{ input('checkbox', 'deletePhoto', '1', {
+										id: 'delete-photo',
+										class: 'sr-only'
+									}) }}
+									<label for="delete-photo" class="">
+										<svg class="mr-2 icon text-primary" aria-hidden="true"><use xlink:href="/icon/sprite.svg#remove-circle-outline"></use></svg>
+										<span class="inline-block text-base border-b-1 border-divider">{{ 'Verwijder foto'|t }}</span>
+									</label>
+								</div>
+								<div class="mt-6">
+									<label class="form__label" for="function">{{ "Functie"|t }}</label>
+									<input class="form__input" type="text" name="fields[function]" id="function" value="{{ currentUser.function }}">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="mt-6">
+					<input class="btn btn--primary btn--ext" type="submit" value="{{ 'Wijzigingen opslaan'|t }}">
+				</div>
+			</form>
+		</div>
+	</div>
+{% endblock %}

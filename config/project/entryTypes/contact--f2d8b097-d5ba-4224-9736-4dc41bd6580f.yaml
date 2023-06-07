@@ -1,0 +1,139 @@
+fieldLayouts:
+  8dcbda1a-c185-4163-aeaf-796a6cda5b36:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 932a4d25-e445-479c-a020-680e9497a37f
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: b5de6dcf-80e6-48e2-b846-0dab7f35c4c8 # Intro Text
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4149db4f-0ccf-4d5e-aff1-5a90b2e8ddca
+            userCondition: null
+            warning: null
+            width: 75
+          -
+            elementCondition: null
+            fieldUid: 54457e18-21e3-4699-9428-aeb45c2aee5f # Hero image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 72e4451d-05d5-4d25-af77-1caa5c8e0216
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: 56d715d0-6a9d-4562-9c66-e5b4caad7f44 # Content Builder
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: eae731ae-2d82-4d98-8375-dea221739076
+            userCondition: null
+            warning: null
+            width: 100
+        name: Contact
+        uid: 76e4b28f-a641-4907-a986-4ad2d700d501
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 4a2bad07-8d89-4689-b0bf-774eed764660 # Overview title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: cbc88848-256e-4f5b-8b16-5673a0faf5f7
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 2f8a6ddc-4ab7-4f9f-a2ea-72c6cb387f38 # Overview description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 35fb38be-6d89-4f64-9670-9d33e47732d6
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 15ed2b72-8955-4cec-93f8-9736a9e50e80 # Overview image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: aeb3e0d5-4059-4795-9e1a-87c8a8d80d9b
+            userCondition: null
+            warning: null
+            width: 100
+        name: Overview
+        uid: 0edbda3b-dd20-49bc-b883-94a29e62c338
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 685530fc-e1f1-4be1-813b-ebf9ac3aa108 # SEO
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 516cecfc-f2d5-4a2a-bb91-2062f75645b0
+            userCondition: null
+            warning: null
+            width: 100
+        name: SEO
+        uid: c429287e-80be-41a2-9c67-50afd397644b
+        userCondition: null
+handle: contact
+hasTitleField: true
+name: Contact
+section: 5d236e94-b6a8-472c-9296-a5c992cdd49a # Contact
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

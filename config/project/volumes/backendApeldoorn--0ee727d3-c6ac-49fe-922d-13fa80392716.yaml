@@ -1,0 +1,103 @@
+fieldLayouts:
+  6353f407-1ff6-4b91-ab12-005922ee5b84:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AssetTitleField
+            uid: 5b79cb2f-51a6-4ef3-a616-5d8b8c103d2b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 39f07216-d49a-4917-b05e-bec26f425843 # Image Caption
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bc682e27-abb4-4354-9a50-33375d581519
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 5a25f3e9-a180-4a29-aa41-8721fbf815b9 # Optimized Content
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1d9f10b5-0ac4-4fe8-8837-5c82f90c5203
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 0207f1a0-8ec0-4b87-9197-c1d5a9a7b61d # Optimized Overview
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2195afbb-379a-4dd9-bf52-b3c7db76ccb5
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 60b48ff5-1ab2-471b-8592-cdc623e0882c # Optimized Text Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4a407bd8-bd4d-451e-93ec-1e378ba8e223
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 197566c6-94bb-4e67-86d7-8945f2589a1d # Optimized Hero
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 21ed19fa-ba5b-4849-aa62-a28a8ad09567
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 4bbb34c3-7207-44f6-913f-665870092585
+        userCondition: null
+fs: backendApeldoorn
+handle: backendApeldoorn
+name: 'Backend Apeldoorn'
+sortOrder: 0
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+transformFs: null
+transformSubpath: ''

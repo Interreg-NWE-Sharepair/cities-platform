@@ -1,0 +1,103 @@
+fieldLayouts:
+  278d15f4-e3a3-45ce-bfea-a0f507eb6b38:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AssetTitleField
+            uid: 49079172-3db2-4330-81bf-0760ac83d1b3
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 39f07216-d49a-4917-b05e-bec26f425843 # Image Caption
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8ff4d3d9-ea2e-4b15-aeb2-7d67b92658fa
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 5a25f3e9-a180-4a29-aa41-8721fbf815b9 # Optimized Content
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1651c1c8-aa6f-4906-842d-25ddc5eff32b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 0207f1a0-8ec0-4b87-9197-c1d5a9a7b61d # Optimized Overview
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 936d1222-e46b-45be-878c-9875d5636e7d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 60b48ff5-1ab2-471b-8592-cdc623e0882c # Optimized Text Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5d8d90a1-9e50-40ad-b19f-804d799a8bd4
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 197566c6-94bb-4e67-86d7-8945f2589a1d # Optimized Hero
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e21941e8-3dbd-49e1-b358-7fbae7ddcec2
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: a44c1e41-651c-4132-83ba-a0596123e8c8
+        userCondition: null
+fs: backendLouvainLaNeuve
+handle: backendLouvainLaNeuve
+name: 'Backend Louvain-La-Neuve'
+sortOrder: 0
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+transformFs: null
+transformSubpath: ''

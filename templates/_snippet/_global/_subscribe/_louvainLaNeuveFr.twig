@@ -1,0 +1,32 @@
+<div class="p-5 text-black bg-white">
+    <form method="post" action="https://newsletter.infomaniak.com/external/submit" class="inf-form" target="_blank">
+        <input type="email" name="email" style="display:none"/>
+        <input type="hidden" name="key" value="eyJpdiI6IkV1XC9oaFVJcytlb2FTMG82Rk5NTWdQalF2MXpZRnFnUVI2OU9XSUQyZEdFPSIsInZhbHVlIjoiRVArcnR1T2U1MEIwdlwvZ1ZYWnRwV2Y4WDVJc1RoQzFTVlhITGJTVWNGQkE9IiwibWFjIjoiZDNmMDI1ZmUzOTFmNWM5OGViN2U3MWRkNDg2NmFjNGNhNjc5NTFmMDFmYzQ0YWZkZDA3ODkzOGM0ZTEyMjJkNiJ9">
+        <input type="hidden" name="webform_id" value="11863">
+        <div class="inf-main_fb9832b8314f9837e60b326ced8a256c">
+            <h2 class="text-3xl text-secondary">{{ "S'inscrire sur notre newsletter"|t }}</h2>
+            <span class="mb-4">{{ 'Entrez une adresse e-mail pour vous inscrire à la newsletter.'|t }}</span>
+            <div class="inf-success" style="display:none"><h4>You have successfully registered!</h4>
+                <p><a href="#" class="inf-btn">&laquo;</a></p></div>
+            <div class="inf-content">
+                <div class="inf-input inf-input-text form__field">
+                    <input class="form__input" type="text" name="inf[1]" data-inf-meta="1"
+                           data-inf-error="Please give an email address"
+                           required="required" placeholder="{{ "Addresse e-mail"|t }}">
+                </div>
+                <div class="form__field">
+                    <label for="terms" class="flex items-baseline">
+                        <input class="mr-2" type="checkbox" name="terms" id="terms" required="" data-unique-id="s-validate-1-6">
+                        <span class="text-sm">
+					        {% set privacyPage = craft.entries.section('privacyPolicy').one().url %}
+                            {{ 'Ik ga akkoord met de <a href="{privacyPage}" class="underline text-primary hover:no-underline">privacy voorwaarden</a>.'|t({privacyPage : privacyPage})|raw }}
+				        </span>
+                    </label>
+                </div>
+                <div class="inf-submit">
+                    <input class="btn btn--secondary btn--ext" type="submit" name="" value="S'inscrire">
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

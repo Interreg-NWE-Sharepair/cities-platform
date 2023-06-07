@@ -1,0 +1,90 @@
+{% import "_macro/_form.twig" as forms %}
+
+{% if required is not defined %}
+	{% set required = false %}
+{% endif %}
+{% if draftId is not defined %}
+	{% set draftId = false %}
+{% endif %}
+
+{% set settings = '{
+    "buttons": ["format","bold","italic","lists","link"],
+    "formatting": ["p", "h2", "h3", "h4", "h5"],
+    "pasteLinks": false,
+    "pasteImages": false
+}' %}
+{% do view.registerAssetBundle("craft\\redactor\\assets\\redactor\\RedactorAsset") %}
+
+<div>
+	<label class="form__label" for="title">{{ 'Titel'|t }}</label>
+	<input class="form__input" type="text" name="fields[title]" id="title" value="{% if story is defined %} {{ story.title }} {% endif %} {% if draftId %}{{ draft.title }}{% endif %}" {% if required %} required {% endif %}>
+	{% if story is defined %}
+		{{ forms.errorList(story.getErrors('title')) }}
+	{% endif %}
+</div>
+<div>
+	<label class="form__label" for="intro">{{ 'Introductie'|t }}</label>
+	<div class="mb-2 text-base">{{ 'Schrijf 3 introductieregels voor jouw reparatieverhaal.'|t }}</div>
+	<textarea class="form__input" rows="3" type="text" name="fields[intro]" id="intro" {% if required %} required {% endif %}>{% if story is defined %} {{ story.intro }} {% endif %} {% if draftId %}{{ draft.intro }}{% endif %}</textarea>
+	{% if story is defined %}
+		{{ forms.errorList(story.getErrors('intro')) }}
+	{% endif %}
+</div>
+<div>
+	<label class="form__label" for="body">{{ 'Body tekst'|t }}</label>
+	<div class="mb-2 text-base">{{ 'U kunt hier de daadwerkelijke inhoud van uw verhaal plaatsen, met behulp van kopteksten, vetgedrukte/cursieve stijlen, enz. om uw artikel te structureren.'|t }}</div>
+	<textarea class="form__input" name="fields[body]" id="body" {% if required %} required {% endif %}>{% if story is defined %} {{ story.body }} {% endif %} {% if draftId %}{{ draft.body|raw }}{% endif %}</textarea>
+	{% set script = "$('#body').redactor(" ~ settings ~ ");" %}
+	{% do view.registerJs(script) %}
+	{% if story is defined %}
+		{{ forms.errorList(story.getErrors('body')) }}
+	{% endif %}
+</div>
+<div class="mt-4">
+	<div class="form__label">{{ 'Hoofdafbeelding'|t }}</div>
+	<label class="flex items-center" for="mainImage">
+		<svg class="mr-2 icon text-primary" aria-hidden="true"><use xlink:href="/icon/sprite.svg#photo-camera"></use></svg>
+		<span class="inline-block text-base border-b-1 border-divider">{{ "Selecteer een foto"|t }}</span>
+	</label>
+	<div class="mt-4 mb-2 text-base">{{ 'Kies een afbeelding die wordt weergegeven als hoofdafbeelding voor je verhaal.'|t }}</div>
+	<div class="image-upload-preview" id="mainImagePreview">
+	{% if draftId %}
+		{% if draft.mainImage|length %}
+			<div>
+				<img src="{{draft.mainImage|first.url}}" alt=""/>
+			</div>
+		{% endif %}
+	{% endif %}
+	</div>
+	<input type="file" name="fields[mainImage]" id="mainImage" value="{% if draftId %}{{ draft.mainImage }}{% endif %}" accept=".png,.jpg,.jpeg" class="sr-only form__input" data-show-images-in="mainImagePreview"/>
+	{% if story is defined %}
+		{{ forms.errorList(story.getErrors('mainImage')) }}
+	{% endif %}
+</div>
+<div class="mt-4">
+	<div class="form__label">{{ 'Bijkomende afbeeldingen'|t }}</div>
+	<label class="flex items-center" for="additionalImage">
+		<svg class="mr-2 icon text-primary" aria-hidden="true"><use xlink:href="/icon/sprite.svg#photo-camera"></use></svg>
+		<span class="inline-block text-base border-b-1 border-divider">{{ "Selecteer extra foto's"|t }}</span>
+	</label>
+	<div class="mt-4 mb-2 text-base">{{ 'Laad tot 3 afbeeldingen op die zullen getoond worden in een gallerij onder de hoofdafbeelding.'|t }}</div>
+	<div class="image-upload-preview" id="additionalImagePreview">
+	{% if draftId %}
+		{% if draft.additionalImage|length %}
+			<div class="flex flex-wrap items-start">
+				{% for image in draft.additionalImage.all() %}
+					<img src="{{ image.url }}" class="sm:w-1/2 md:w-1/3">
+				{% endfor %}
+			</div>
+		{% endif %}
+	{% endif %}
+	</div>
+	<input type="file" name="fields[additionalImage][]" id="additionalImage"
+		   multiple value="{% if draftId %}{{ draft.mainImage }}{% endif %}"
+		   accept=".png,.jpg,.jpeg" class="sr-only form__input"
+		   data-show-images-in="additionalImagePreview"
+	/>
+	{% if story is defined %}
+		{{ forms.errorList(story.getErrors('additionalImage')) }}
+	{% endif %}
+</div>

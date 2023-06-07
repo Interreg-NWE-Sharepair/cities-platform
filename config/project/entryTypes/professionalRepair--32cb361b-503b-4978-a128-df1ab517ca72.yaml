@@ -1,0 +1,147 @@
+fieldLayouts:
+  d81f115e-bb6f-47d4-86d1-1ccf418106dd:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: a935f149-71a4-497f-9b90-a4addba5f19b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: b5de6dcf-80e6-48e2-b846-0dab7f35c4c8 # Intro Text
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3b14e8cb-709f-45f2-a0a3-f839d42780dc
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dismissible: false
+            elementCondition: null
+            style: tip
+            tip: 'The repair registration form will be rendered below the intro.'
+            type: craft\fieldlayoutelements\Tip
+            uid: 2a92f05e-1c75-4178-8bf0-0b88c10432dc
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: b8691cd7-cac5-4aa2-82a1-a8c4d6da948b # Form Title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 61b67c3a-c86b-4354-b400-f3cbe5fc3f2f
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 6f1e2995-beeb-42e1-8534-60d482013514 # Redirect page
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 105998b9-631a-47ad-ba67-4f2ac64e449b
+            userCondition: null
+            warning: null
+            width: 50
+        name: Content
+        uid: dc570fb9-056b-4ea1-a347-dc421c5a2398
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 4a2bad07-8d89-4689-b0bf-774eed764660 # Overview title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 86d8ed59-1687-43d1-8328-680c84328898
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 2f8a6ddc-4ab7-4f9f-a2ea-72c6cb387f38 # Overview description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e8f858a6-2663-4a98-8abb-7a85b6923ee5
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 15ed2b72-8955-4cec-93f8-9736a9e50e80 # Overview image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bfcf4fc0-cb5b-4ab1-ab31-4483d6658393
+            userCondition: null
+            warning: null
+            width: 100
+        name: Overview
+        uid: 9fec0854-643a-4d92-a0f4-8b3387768131
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 685530fc-e1f1-4be1-813b-ebf9ac3aa108 # SEO
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 94ba94b0-3242-4bed-9cb8-68bd44b764ba
+            userCondition: null
+            warning: null
+            width: 100
+        name: SEO
+        uid: e6b4ea0b-5638-4c11-b5c9-c975991073f6
+        userCondition: null
+handle: professionalRepair
+hasTitleField: true
+name: 'Professional Repair'
+section: d9372d4c-e9dd-46c9-bad8-0b769ca57f10 # Professional Repair
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

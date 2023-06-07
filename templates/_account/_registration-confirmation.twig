@@ -1,0 +1,18 @@
+{% extends "_layout.twig" %}
+
+{% set breadcrumbs = [
+    entry,
+] %}
+
+{% block content %}
+    <div class="section section--default">
+        <div class="container">
+            <div class="flex flex-wrap">
+                <div class="w-full md:w-3/4">
+                    {% include '_snippet/_content/_pageTitle/_default.twig' %}
+                    {% include '_snippet/_content/_intro/_default.twig' %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,9 @@
+baseUrl: '@baseUrlApeldoorn'
+enabled: '1'
+handle: apeldoornNl
+hasUrls: true
+language: nl-BE
+name: 'Apeldoorn NL'
+primary: false
+siteGroup: ec016af9-5f31-4985-93eb-804adda2f006 # Apeldoorn
+sortOrder: 4

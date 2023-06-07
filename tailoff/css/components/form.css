@@ -1,0 +1,52 @@
+/* purgecss start ignore */
+.form {
+  &__label {
+    @apply block mb-2 font-bold text-black;
+
+    /* Make the label of the form white for the repair map */
+    #repair-map & {
+      @apply text-white;
+    }
+  }
+
+  &__input {
+    @apply block w-full px-3 py-2 mb-3 leading-tight text-black bg-white border border-black rounded-sm appearance-none;
+
+    &:focus {
+      @apply outline-none border-primary-hover;
+    }
+  }
+
+  &__select {
+    @apply relative;
+    @mixin icon chevron-down;
+
+    select {
+      @apply pr-10;
+    }
+
+    &::after {
+      @apply absolute top-0 right-0 mt-2 mr-2 text-2xl;
+    }
+  }
+
+  &__error {
+    @apply bg-red-100 border-red-600;
+  }
+
+  &__msg-error {
+    @apply text-sm text-red-600;
+  }
+}
+
+form {
+  select.has-error,
+  textarea.has-error,
+  input.has-error {
+    @apply bg-red-300 border-2 border-red-600;
+  }
+  .redactor-box.redactor-styles-on {
+    @apply border border-black rounded-sm;
+  }
+}
+/* purgecss end ignore */

@@ -1,0 +1,1007 @@
+dateModified: 1682317947
+elementSources:
+  craft\elements\Asset:
+    -
+      defaultSort:
+        - dateCreated
+        - desc
+      disabled: false
+      key: 'volume:979c3eeb-f99a-4ca1-bcbe-ce9298a4e4ca' # Files
+      tableAttributes:
+        - filename
+        - size
+        - dateModified
+        - uploader
+        - currentUsage
+        - link
+      type: native
+    -
+      defaultSort:
+        - dateCreated
+        - desc
+      disabled: false
+      key: 'volume:8fb344e5-c6e1-47f1-8bae-03510769a2d0' # Backend Roeselare
+      tableAttributes:
+        - filename
+        - size
+        - dateModified
+        - uploader
+        - currentUsage
+        - link
+      type: native
+    -
+      defaultSort:
+        - dateCreated
+        - desc
+      disabled: false
+      key: 'volume:24f78479-5082-43fd-82d7-cd0227dd8b25' # Backend Louvain-La-Neuve
+      tableAttributes:
+        - filename
+        - size
+        - dateModified
+        - uploader
+        - currentUsage
+        - link
+      type: native
+    -
+      defaultSort:
+        - dateCreated
+        - desc
+      disabled: false
+      key: 'volume:f90a0546-bd7e-476e-8784-3b52a85b66f5' # Backend Leuven
+      tableAttributes:
+        - filename
+        - size
+        - dateModified
+        - uploader
+        - currentUsage
+        - link
+      type: native
+    -
+      defaultSort:
+        - dateCreated
+        - desc
+      disabled: false
+      key: 'volume:15d0b6ac-6fae-4d64-abf2-3a53ea5348ca' # Frontend
+      tableAttributes:
+        - filename
+        - size
+        - dateModified
+        - uploader
+        - currentUsage
+        - link
+      type: native
+    -
+      defaultSort:
+        - dateCreated
+        - desc
+      disabled: false
+      key: 'volume:0ee727d3-c6ac-49fe-922d-13fa80392716' # Backend Apeldoorn
+      tableAttributes:
+        - filename
+        - size
+        - dateModified
+        - uploader
+        - currentUsage
+        - link
+      type: native
+    -
+      defaultSort:
+        - dateCreated
+        - desc
+      disabled: false
+      key: 'volume:41922f26-ec6a-4773-bc8b-9aef8d832f8c' # Backend 3D
+      tableAttributes:
+        - filename
+        - size
+        - dateModified
+        - uploader
+        - currentUsage
+        - link
+      type: native
+    -
+      defaultSort:
+        - dateCreated
+        - desc
+      disabled: false
+      key: 'folder:a7e48c5a-02c6-4f4b-820b-af4b00111502'
+      tableAttributes:
+        - filename
+        - size
+        - dateModified
+        - uploader
+        - currentUsage
+        - link
+      type: native
+  craft\elements\Entry:
+    -
+      key: '*'
+      tableAttributes:
+        - section
+        - author
+        - link
+        - dateUpdated
+        - revisionCreator
+        - slug
+      type: native
+    -
+      heading: General
+      type: heading
+    -
+      key: 'single:68926962-527f-44bb-b721-08cde7220c82' # Home Sharepair
+      tableAttributes:
+        - link
+        - dateUpdated
+        - revisionCreator
+        - slug
+      type: native
+    -
+      key: 'single:5611e98d-93ec-4bd4-95dd-18f282b8c5e8' # Home
+      tableAttributes:
+        - link
+        - slug
+      type: native
+    -
+      key: 'section:45b7c78f-587d-441b-bbd1-605ca629d0bd' # Pages
+      tableAttributes:
+        - link
+        - slug
+        - revisionCreator
+        - dateUpdated
+      type: native
+    -
+      key: 'single:5d236e94-b6a8-472c-9296-a5c992cdd49a' # Contact
+      tableAttributes:
+        - link
+        - slug
+        - dateUpdated
+        - revisionCreator
+      type: native
+    -
+      heading: 'Repair heroes'
+      type: heading
+    -
+      key: 'single:eb3d6a1e-5d53-4c56-9987-fb42d0fa27bd' # Repair Heroes Overview
+      tableAttributes:
+        - link
+        - slug
+      type: native
+    -
+      key: 'single:684ece64-c23a-4abf-9574-f2c053d496e8' # Register
+      tableAttributes:
+        - link
+        - slug
+      type: native
+    -
+      key: 'single:d0806258-9281-4187-9b48-a8b770c43316' # Nominate
+      tableAttributes:
+        - link
+        - slug
+      type: native
+    -
+      heading: 'Repair Stories'
+      type: heading
+    -
+      key: 'single:9d5ffe8b-eae4-4957-9758-28b1fd0d2c68' # Repair Stories Overview
+      tableAttributes:
+        - link
+        - slug
+      type: native
+    -
+      key: 'section:5fde66b3-825c-4efc-b013-f877eae296a3' # Repair Stories
+      tableAttributes:
+        - link
+        - slug
+        - 'field:15ed2b72-8955-4cec-93f8-9736a9e50e80' # Overview image
+      type: native
+    -
+      key: 'single:c4a0336c-284c-4275-af4a-7a0b597fae07' # Submit Repair Story
+      tableAttributes:
+        - link
+        - slug
+      type: native
+    -
+      key: 'single:82a743d4-a8a9-44f2-9cc0-1e05f8c41804' # Create repair story
+      tableAttributes:
+        - link
+        - slug
+      type: native
+    -
+      heading: Events
+      type: heading
+    -
+      key: 'single:defcf5bd-5207-471b-9e12-68ada21b246c' # Events Overview
+      tableAttributes:
+        - link
+        - slug
+      type: native
+    -
+      key: 'section:7801d79f-ad8f-4f1b-8e2f-ac3747b72114' # Events
+      tableAttributes:
+        - link
+        - slug
+        - 'field:51fd0e88-84cc-4a5e-8265-7f9959981389' # Category
+        - 'field:5ab23816-2bad-4516-94f9-08d16d7814d4' # Date
+        - 'field:38918214-5289-4e64-9302-c6a135082ce9' # Main Image
+        - dateUpdated
+        - revisionCreator
+      type: native
+    -
+      key: 'single:3e25ba53-21e0-4c7c-abf5-1b1adccb8808' # Create Event
+      tableAttributes:
+        - link
+        - slug
+      type: native
+    -
+      heading: News
+      type: heading
+    -
+      key: 'single:4c32edae-2824-4f0f-b38b-2477d2500dfe' # News Overview
+      tableAttributes:
+        - link
+        - slug
+        - dateUpdated
+        - revisionCreator
+      type: native
+    -
+      key: 'section:c576870d-abd8-46aa-8fe5-cdd12c40dfa8' # News
+      tableAttributes:
+        - link
+        - slug
+        - dateUpdated
+        - revisionCreator
+      type: native
+    -
+      heading: Map
+      type: heading
+    -
+      key: 'single:50902bed-57c4-4fac-86a7-24e875920867' # Repair in
+      tableAttributes:
+        - link
+        - slug
+      type: native
+    -
+      key: 'section:7e2be3d2-532d-4b69-bcbd-9f23653a0471' # Organisations
+      tableAttributes:
+        - link
+        - slug
+        - dateUpdated
+      type: native
+    -
+      heading: Account
+      type: heading
+    -
+      key: 'single:c25b1e19-dca6-4ab5-a776-a043f6ee4c82' # Login
+      tableAttributes:
+        - link
+        - slug
+      type: native
+    -
+      key: 'single:361daec5-5ea3-4d9f-957f-f39c78bb595e' # Profile
+      tableAttributes:
+        - link
+        - slug
+      type: native
+    -
+      key: 'single:550ddd6d-8487-42a8-ae38-a84c4b865e2a' # Edit Profile
+      tableAttributes:
+        - link
+        - slug
+      type: native
+    -
+      key: 'single:dca2ac05-7833-41de-b7b4-a737c090575c' # Confirm your account
+      tableAttributes:
+        - link
+        - slug
+      type: native
+    -
+      key: 'single:4703bf34-5e13-4da1-aff6-d04c0bba024b' # Set Password Confirmation
+      tableAttributes:
+        - link
+        - slug
+      type: native
+    -
+      key: 'single:1c4e3f0f-ca9b-474d-a460-48f45133c763' # Forgot Password
+      tableAttributes:
+        - link
+        - slug
+      type: native
+    -
+      key: 'single:53c1af4c-0fbd-4811-a028-67fed65195b9' # Forgot Password Confirmation
+      tableAttributes:
+        - link
+        - slug
+      type: native
+    -
+      key: 'single:d5601a1f-a33e-4c5a-b7af-1f29347149ca' # Registration completed
+      tableAttributes:
+        - link
+        - slug
+      type: native
+    -
+      heading: Other
+      type: heading
+    -
+      key: 'single:36895330-a28e-477f-9327-bdbe66dabf99' # Cookie policy
+      tableAttributes:
+        - link
+        - slug
+        - dateUpdated
+        - revisionCreator
+      type: native
+    -
+      key: 'single:0731fc69-9ba5-4022-b4e8-d26be5c12bf8' # Privacy policy
+      tableAttributes:
+        - link
+        - slug
+        - dateUpdated
+        - revisionCreator
+      type: native
+    -
+      key: 'single:4750849d-9328-4d3e-956d-9d317da5e6eb' # Page not found
+      tableAttributes:
+        - link
+        - slug
+        - dateUpdated
+        - revisionCreator
+      type: native
+    -
+      key: 'section:edafcdcc-cb6a-4636-8b06-692031d123dc' # Functionals
+      tableAttributes:
+        - link
+        - slug
+        - dateUpdated
+        - revisionCreator
+      type: native
+    -
+      key: 'single:e3bed4e1-82ae-45e8-908c-0a6669141b31' # Search results
+      tableAttributes:
+        - link
+        - slug
+      type: native
+    -
+      heading: 'Log repairs'
+      type: heading
+    -
+      key: 'single:64981bba-82ed-4e4d-859a-7043d01c2b06' # Register repairs
+      tableAttributes:
+        - postDate
+        - expiryDate
+        - author
+        - link
+      type: native
+    -
+      key: 'single:7cfd7e3b-194d-4bc6-bd9b-524569d9b44a' # DIY Repair
+      type: native
+    -
+      key: 'single:d9372d4c-e9dd-46c9-bad8-0b769ca57f10' # Professional Repair
+      tableAttributes:
+        - postDate
+        - expiryDate
+        - author
+        - link
+      type: native
+    -
+      key: 'single:40291883-407a-406f-997c-b700ede4d9e6' # Repair café repair
+      type: native
+    -
+      key: 'section:fdde9cc3-a5b8-4fe1-9486-e1e7fc5528a9' # All DIY Repairs
+      type: native
+    -
+      key: 'section:a26abf54-5427-4eaf-b0c0-acf1c3d6d9c4' # All Professional Repairs
+      type: native
+email:
+  fromEmail: no-reply@mailer.today
+  fromName: 'Repair Cities'
+  replyToEmail: null
+  template: _mail/_layout
+  transportSettings:
+    command: ''
+  transportType: craft\mail\transportadapters\Sendmail
+fs:
+  backend3d:
+    hasUrls: true
+    name: 'Backend 3D'
+    settings:
+      path: '@webroot/files/3D'
+    type: craft\fs\Local
+    url: '@baseUrl3D/files/3D/'
+  backendApeldoorn:
+    hasUrls: true
+    name: 'Backend Apeldoorn'
+    settings:
+      path: '@webroot/files/Apeldoorn'
+    type: craft\fs\Local
+    url: '@baseUrlApeldoorn/files/Apeldoorn'
+  backendLeuven:
+    hasUrls: true
+    name: 'Backend Leuven'
+    settings:
+      path: '@webroot/files/Leuven'
+    type: craft\fs\Local
+    url: '@baseUrlLeuven/files/Leuven/'
+  backendLouvainLaNeuve:
+    hasUrls: true
+    name: 'Backend Louvain-La-Neuve'
+    settings:
+      path: '@webroot/files/LouvainLaNeuve'
+    type: craft\fs\Local
+    url: '@baseUrlLouvainLaNeuve/files/LouvainLaNeuve'
+  backendRoeselare:
+    hasUrls: true
+    name: 'Backend Roeselare'
+    settings:
+      path: '@webroot/files/Roeselare'
+    type: craft\fs\Local
+    url: '@baseUrlRoeselare/files/Roeselare'
+  files:
+    hasUrls: true
+    name: Files
+    settings:
+      path: '@webroot/files'
+    type: craft\fs\Local
+    url: '@baseUrl/files/'
+  frontend:
+    hasUrls: true
+    name: Frontend
+    settings:
+      path: '@webroot/uploads/frontend'
+    type: craft\fs\Local
+    url: '@baseUrl/uploads/frontend'
+meta:
+  __names__:
+    0a09e0ac-279c-4be8-9168-318e435c29cb: Title # Title
+    0dc288fc-f1dd-4a90-8754-444768769c4c: Title # Title
+    0dfb5d02-8b35-4f81-aa19-4ddc8bc6e241: 'DIY Repair' # DIY Repair
+    0e04b48d-cb94-461f-a1ff-25eb5013aa74: 'Name Partner' # Name Partner
+    0ee099ae-ee76-4cd0-b2d3-bdd784a3e672: Image # Image
+    0ee727d3-c6ac-49fe-922d-13fa80392716: 'Backend Apeldoorn' # Backend Apeldoorn
+    0f8387d8-20dc-48a9-adfc-01252e7c737a: 'Background Color' # Background Color
+    1a64e732-f1ae-44b6-aee3-bedc6b1ebdd2: 'Cookie policy' # Cookie policy
+    1a9703c9-1eb8-4b3a-94e1-1386e5b24f2a: Title # Title
+    1b20ec7e-5732-46dc-a07e-cb0fc0c22547: CTA # CTA
+    1bb4c3d7-b298-43ce-b45d-662d69ebecec: Highlight # Highlight
+    1c4e3f0f-ca9b-474d-a460-48f45133c763: 'Forgot Password' # Forgot Password
+    1e4267e1-8d5f-4312-8458-86b19bc17d74: 'Text (2 columns)' # Text (2 columns)
+    1f3e870a-ca49-49ab-a2aa-119d2a877394: 'Number Repairs Café' # Number Repairs Café
+    2aa8f052-22c5-47c5-88b5-96ae81befc8f: Image # Image
+    2b19be6d-9f98-4f44-b5cf-04a3bf2addf0: Code # Code
+    2b66c84f-5b06-4222-b0c4-10288b90068e: Quote # Quote
+    2b247bc0-1dcc-4ce0-8ae5-cec752c75b86: Link # Link
+    2b30056e-5ebb-44c1-8a21-9fc5506191b3: 'Call To Action Block' # Call To Action Block
+    2c770290-8edc-4f26-b846-6d99d36d7844: Common # Common
+    2d5328d3-d60f-452c-aab2-28ead4f7e29c: 'Submit Repair Story' # Submit Repair Story
+    2e4b3bb0-26e4-47d2-9445-54401a221c63: Twitter # Twitter
+    2eeee8c3-6f2e-4b49-a272-3e9ea09940d5: 3D # 3D
+    2f3c77a3-3293-43f5-8017-9f4f1bd612d7: 'Organisation Logo' # Organisation Logo
+    2f8a6ddc-4ab7-4f9f-a2ea-72c6cb387f38: 'Overview description' # Overview description
+    3a8affe4-de3d-4133-9cee-41871ec34521: 'Title FR' # Title FR
+    3e2b6360-0c98-4b32-a8ec-672d54f7a09a: Events # Events
+    3e25ba53-21e0-4c7c-abf5-1b1adccb8808: 'Create Event' # Create Event
+    3e99b79c-1ba7-4d00-ac1e-fa5fc25f4e1b: 'Call to actions' # Call to actions
+    3e5318bd-23e0-4319-8f7c-3f38350d8764: 'Background Color' # Background Color
+    03f63c8d-ce28-4d17-887e-3587aebae8d7: 'Title EN' # Title EN
+    3f418cc3-0fab-43be-baf7-9b3082b1189a: Title # Title
+    4a2bad07-8d89-4689-b0bf-774eed764660: 'Overview title' # Overview title
+    4c32edae-2824-4f0f-b38b-2477d2500dfe: 'News Overview' # News Overview
+    4c7365be-f616-49d4-9d24-1b69dd23bb9b: 'Home Sharepair' # Home Sharepair
+    4ce05044-aa3d-4bbe-ad21-be03fbc1a273: 'Background Color' # Background Color
+    4d5b4aa7-5175-472b-9c87-6279e2a1e871: 'Call to action' # Call to action
+    4d1805fd-5f50-40b1-b76c-58e43a305161: 'Image position' # Image position
+    4dbb96b9-9d9a-4119-84e5-d5d8ce74f5e9: Image # Image
+    4ddfce17-1979-43d4-a2a0-bee4327b9323: 'Call to actions' # Call to actions
+    4e8cd989-0c96-4ce4-89c4-7c4b27d9fad6: Age # Age
+    4ee2e952-85b2-4ede-b28e-5fa17fcf85de: Block # Block
+    04f0b8c6-c108-4e77-bfb9-7b72c25f6469: 'Active repairers' # Active repairers
+    4fca2fd7-5272-406a-9398-1cd05d98c731: Organisations # Organisations
+    5a067099-5a42-4774-b468-8f1a7088cea6: 'Street + Number' # Street + Number
+    5a25f3e9-a180-4a29-aa41-8721fbf815b9: 'Optimized Content' # Optimized Content
+    5ab23816-2bad-4516-94f9-08d16d7814d4: Date # Date
+    5b03286b-bf14-4e8f-8d82-3efdc5be5ce2: 'Repair Status' # Repair Status
+    5b8362b6-f4a8-4570-8e8b-29fa181cb510: 'Repair tip' # Repair tip
+    5be8b7ef-255a-4e3f-a998-76b8ea638924: 'Call To Action Repair In' # Call To Action Repair In
+    05bf182c-d8ef-48b3-9c76-f0bb9c8e99ee: Overview # Overview
+    5d3f9f3d-7382-4e6a-ab5a-e51b78e7f509: 'Event Type' # Event Type
+    5d236e94-b6a8-472c-9296-a5c992cdd49a: Contact # Contact
+    5e9cb47a-530d-4aa9-a98f-5049e6d0eb9e: Title # Title
+    5f87e29c-269c-47bd-b6bc-5439a2f855c8: Register # Register
+    5fde66b3-825c-4efc-b013-f877eae296a3: 'Repair Stories' # Repair Stories
+    6d99d3e8-e687-44e6-9e4f-8724da1c5123: Link # Link
+    6de046f0-6167-4af1-aa91-ffaf83e36a14: Platform # Platform
+    6ef41c40-320d-439f-b282-9b14291556c2: 'Call to action' # Call to action
+    6f1e2995-beeb-42e1-8534-60d482013514: 'Redirect page' # Redirect page
+    6fe614c5-400f-4012-9e8f-c700fc1181fa: Louvain-La-Neuve # Louvain-La-Neuve
+    6ff32011-12f8-457f-92bb-8433465153a6: 'Content Managers Apeldoorn' # Content Managers Apeldoorn
+    7abdbd01-3082-4476-aef1-5415c03addac: Legende # Legende
+    7afbab61-9ccf-44a2-8872-17b2d77cbb75: Link # Link
+    7cfd7e3b-194d-4bc6-bd9b-524569d9b44a: 'DIY Repair' # DIY Repair
+    7e2be3d2-532d-4b69-bcbd-9f23653a0471: Organisations # Organisations
+    7e4ed55f-00f6-4e9a-a961-17cf41c1a368: Title # Title
+    7e9d22e1-d30e-400e-a57d-1c8ba8f8df41: 'Map Zoom' # Map Zoom
+    7e23c327-4825-4f8b-815a-6f07dae99dd2: 'Call to actions' # Call to actions
+    7e31e194-fc15-495f-aaef-d2906c3cc267: link # link
+    7eafeaef-a261-4ba9-8b53-653047466f50: 'Info URL' # Info URL
+    7f3281d3-5442-4d29-a1f4-f7460645b4d4: CTA # CTA
+    8aa67b04-5a77-45c2-a2ac-d1f65698459f: '3D Repair FR' # 3D Repair FR
+    8bb6e44c-1f52-45cc-baf1-4184fc832739: Embed # Embed
+    8ced0bcc-800f-4ff2-a1f8-0a0200a8bd09: Text # Text
+    8f0da589-76b2-4663-9209-ba978821ca83: 'Set Password Confirmation' # Set Password Confirmation
+    8fa3e75a-c69d-4482-9083-e416986b4788: Table # Table
+    8fb344e5-c6e1-47f1-8bae-03510769a2d0: 'Backend Roeselare' # Backend Roeselare
+    9a0dd6a8-9ebb-44f8-a62a-03f12bf2a504: Author # Author
+    9ac892e9-fcb4-43e4-9261-105f5b5cf1c2: 'Spare part used' # Spare part used
+    9b825b00-aa1c-4ad2-b013-e29ee855e551: Text # Text
+    9b465961-d787-42e4-a784-0e719b818891: Image # Image
+    9bc4b9f2-7fc6-48b0-a3df-8e9c061a70c6: Instagram # Instagram
+    9cc4a29b-8905-4ab3-98d5-b4257ff710ba: Location # Location
+    9cd2628e-ebc8-4959-b399-e0dfb7967102: 'Call To Action' # Call To Action
+    09d5bef7-e37e-4497-9807-92703cd2807f: 'Profile Picture' # Profile Picture
+    9d5ffe8b-eae4-4957-9758-28b1fd0d2c68: 'Repair Stories Overview' # Repair Stories Overview
+    9d4490ff-3288-44c5-8d66-15a7c7f91136: 'Content Managers Louvain-La-Neuve' # Content Managers Louvain-La-Neuve
+    9d71208b-cf9b-46cd-8218-7a59f3ece138: 'Call To Action' # Call To Action
+    9f39fdda-793c-4506-9dd4-e764d46cad28: Pages # Pages
+    9faf6a00-afea-4a29-a217-e6af774f6b55: 'Call to action' # Call to action
+    10b06d85-e857-47c8-9f40-c20106d1ac86: Events # Events
+    10ca0503-675f-41f5-8e3b-af2cbdf260cc: 'Call to action(s)' # Call to action(s)
+    10fdc148-c0a4-486b-a5d1-3d36f2862352: 'Social Media' # Social Media
+    12e6be53-916a-4aaa-b1cf-4846f1eeb668: Text # Text
+    12f7045c-1ea8-4350-b092-5d460f1165c5: 'Additional Images' # Additional Images
+    13cbb5a5-fb28-4fe2-a849-ddbf7b864dfd: Link # Link
+    14da0492-1ad3-4fda-ada3-eed83f6ab250: 'Content Managers Roeselare' # Content Managers Roeselare
+    14f75af0-1068-4c5d-985d-7aaecb571128: Logo # Logo
+    15d0b6ac-6fae-4d64-abf2-3a53ea5348ca: Frontend # Frontend
+    15ed2b72-8955-4cec-93f8-9736a9e50e80: 'Overview image' # Overview image
+    18dc6e60-ce7f-497d-b9c3-e25081a31142: Text # Text
+    24be1cb8-144b-4601-a8e0-daf63a2a8c52: 'Image Position' # Image Position
+    24f78479-5082-43fd-82d7-cd0227dd8b25: 'Backend Louvain-La-Neuve' # Backend Louvain-La-Neuve
+    29ce1a5b-53b3-4361-96e4-20fc58e90dac: SEO # SEO
+    32cb361b-503b-4978-a128-df1ab517ca72: 'Professional Repair' # Professional Repair
+    32fb962b-6278-43e9-812f-dc9f5e33c1ab: 'Forgot Password' # Forgot Password
+    39b3406d-d1bb-4a84-a13a-bce5cc293238: Globals # Globals
+    39f07216-d49a-4917-b05e-bec26f425843: 'Image Caption' # Image Caption
+    40e14f90-0640-452d-9c8a-9f30f73bacbb: 'Image position' # Image position
+    042d2586-dd9b-4026-ba79-40d140b7b034: Block # Block
+    42f1e6ed-0396-4813-92ae-48dd2c543ae2: 'Organisation Type' # Organisation Type
+    43fe5995-68e1-4d4e-aa98-1307c93de1f8: 'Organisation Intro' # Organisation Intro
+    44e3373a-9b91-49a0-a4f9-66bd712c098f: 'Content Managers Leuven' # Content Managers Leuven
+    45b7c78f-587d-441b-bbd1-605ca629d0bd: Pages # Pages
+    46dce88b-f8ae-428a-a452-f99697a5aac5: 'Repair heroes Roeselare' # Repair heroes Roeselare
+    47a0df54-7864-4425-b23d-c467dd50c435: 'Phone Number' # Phone Number
+    047f745f-3685-4496-8e78-bd0b667af2e0: '3D Repair EN' # 3D Repair EN
+    49d88da6-151c-4347-82b6-c21c12e39c0d: Image # Image
+    51c38a56-91aa-4fe7-99b6-b72c51892fa0: 'Last Name' # Last Name
+    51cad071-cea3-48ce-8809-1681b032cbd6: 'Louvain La Neuve FR' # Louvain La Neuve FR
+    51fd0e88-84cc-4a5e-8265-7f9959981389: Category # Category
+    53c1af4c-0fbd-4811-a028-67fed65195b9: 'Forgot Password Confirmation' # Forgot Password Confirmation
+    54ece3f4-5ab1-467e-b418-3888182bce09: 'Product Category' # Product Category
+    56d715d0-6a9d-4562-9c66-e5b4caad7f44: 'Content Builder' # Content Builder
+    57b1a2d9-34d8-4325-a5b9-aa98d2b84d6a: 'Number Repairs City' # Number Repairs City
+    58db762f-53fe-409f-8ebf-97ac4660ef7e: Nominate # Nominate
+    60b48ff5-1ab2-471b-8592-cdc623e0882c: 'Optimized Text Image' # Optimized Text Image
+    61b9a78d-f3c0-4c99-8e91-d97e9768023c: 'Optimized Images' # Optimized Images
+    61cbb04c-ab3f-421e-bb8f-9e81ecc0da41: Platform # Platform
+    65bbc18f-6252-4436-ba05-8d63d66865a9: 'Organisation Name' # Organisation Name
+    69c08315-5cc7-4864-8624-37424b8bffac: Illustration # Illustration
+    71a7d521-3217-4254-8b3f-f778279d342c: Title # Title
+    071b3b21-f83e-408d-adf6-ca45435c9fc9: Link # Link
+    74a30650-eb90-462f-a104-de1d41ac8221: Form # Form
+    82a743d4-a8a9-44f2-9cc0-1e05f8c41804: 'Create repair story' # Create repair story
+    84a6a70f-85ce-43a5-ad74-738a0cbea388: 'CTA Column 2' # CTA Column 2
+    86c7969c-4689-42ce-9439-e8c63dcd9452: Options # Options
+    88badc6e-4cfa-4f05-94af-e548f96f5228: 'Professional Repair Submission' # Professional Repair Submission
+    89c47888-bddf-4633-9352-1d5dc3bb452f: Home # Home
+    94af0afe-c48b-4684-9a65-8fc0588b743c: Text # Text
+    94ee0a59-b60e-4780-8580-0c42534a98aa: Leuven # Leuven
+    96b6eb14-91c4-47cc-9128-036932387daf: CTA # CTA
+    97e1c649-ce58-4388-bbc1-1f4e41d938b6: Link # Link
+    109f5d44-e366-49e7-826d-6b13de779861: News # News
+    111dbcc7-d429-41a7-9432-5f7b7b47b612: 'Repair heroes Apeldoorn' # Repair heroes Apeldoorn
+    132b2364-c064-47f3-9187-3d5b4bd10cdb: 'Repair heroes' # Repair heroes
+    178de72f-3fb5-4a4d-bc0c-083e456b3184: Professional # Professional
+    0187d268-2643-4a0d-9cf9-b8847480bf9a: 'Confirm your account' # Confirm your account
+    0207f1a0-8ec0-4b87-9197-c1d5a9a7b61d: 'Optimized Overview' # Optimized Overview
+    217b1649-9618-4a41-b4f9-3c6c2294aabf: 'Register repairs' # Register repairs
+    268a9e55-0edb-459a-9bde-e44e3f6e7fcd: 'Call To Action' # Call To Action
+    302aeb89-2e5c-42f2-a735-98e504b28a37: 'Call to action' # Call to action
+    319bca71-273c-4de4-bb42-8f1a1bb6912f: 'Repair Types' # Repair Types
+    361daec5-5ea3-4d9f-957f-f39c78bb595e: Profile # Profile
+    0396f80c-a192-4beb-a6e7-075075cf0f70: Image # Image
+    432a5188-0a1a-4e35-8d14-3d457c9b308a: Events # Events
+    434fadee-fb0a-4f48-874c-6b2a24644b8e: 'Postal Code' # Postal Code
+    441d6c82-7169-4825-ba97-16d39b15e874: 'Repaired devices' # Repaired devices
+    450ada13-3703-4b13-bf51-d5c0d4f1f7be: Intro # Intro
+    493bdf75-476a-4b8c-b931-3cf3bbea7b9b: Title # Title
+    550ddd6d-8487-42a8-ae38-a84c4b865e2a: 'Edit Profile' # Edit Profile
+    575f15fb-9398-4081-87d2-55b77a509892: 'Repair heroes Leuven' # Repair heroes Leuven
+    583f2eba-5ad5-4741-b9a2-132b67b3bcaf: '3D Repair NL' # 3D Repair NL
+    607a5c9a-c852-4ade-9555-46b2bc3c6e12: 'Repair café repair' # Repair café repair
+    655f544a-8b6e-4b30-a45a-c02b603686dc: Text # Text
+    684ece64-c23a-4abf-9574-f2c053d496e8: Register # Register
+    716e4e23-f568-4682-865c-f990a262c66f: 'Event entries' # Event entries
+    0731fc69-9ba5-4022-b4e8-d26be5c12bf8: 'Privacy policy' # Privacy policy
+    749e41f9-09e7-48d5-a46b-2305e35e6132: Link # Link
+    776fa716-10bb-48bb-ae08-28870f9d77e7: Entries # Entries
+    837ab465-9962-421d-ac70-d2f44d64cc77: 'Call to action' # Call to action
+    932fc8b1-5d6f-4604-8fd2-947498371632: Image # Image
+    933f619e-82e4-4b3d-a27f-9d7d9cce42b8: Text # Text
+    936d2443-3176-4e84-abd9-a14eba899a3b: Text # Text
+    938a7b88-418c-4c5d-971d-3cbec650aa93: Text # Text
+    979c3eeb-f99a-4ca1-bcbe-ce9298a4e4ca: Files # Files
+    993edc82-f2c4-4e86-baf2-17a7cb72b6e1: Link # Link
+    1277e8c8-de25-47c0-9360-82e64c2ee4a3: 'Number Repairs DIY' # Number Repairs DIY
+    1336a491-e09c-44ad-bb66-015e47a50d31: Latitude # Latitude
+    1620eeee-116e-4a05-8fd6-23261ce30266: 'Call To Action Start Repairing' # Call To Action Start Repairing
+    1632f44d-6203-4501-8ec3-0b1b90a0da71: 'Call To Action' # Call To Action
+    1959f391-fd3f-4955-ba81-3ef7d98d633a: Link # Link
+    2561c4fb-34b5-49e6-ade6-f774411e48ba: Video # Video
+    3062f250-5f46-4114-aad9-41b657d96422: Title # Title
+    3196b984-5af4-44dd-a6db-ac2c8f7924d9: 'Content Managers' # Content Managers
+    4389ba83-8e69-4edb-b3c3-ca0ba89617c1: 'Background Color' # Background Color
+    4666d048-0521-4d0f-9a4a-208e6182fb85: Fallback # Fallback
+    4703bf34-5e13-4da1-aff6-d04c0bba024b: 'Set Password Confirmation' # Set Password Confirmation
+    4769bfc3-3064-404b-baa5-1bd5c5ff2acf: Title # Title
+    5611e98d-93ec-4bd4-95dd-18f282b8c5e8: Home # Home
+    5647c5ca-4483-4df9-ab37-7910d1f5794e: Illustration # Illustration
+    6053fd2d-3bb6-419f-83c0-5e257367f254: 'Repair Stories Overview' # Repair Stories Overview
+    6221c006-75b9-4fa5-a352-4cd4317fb5d7: Youtube # Youtube
+    6283de1f-ccfe-4ae9-8787-e62e6d4a79ae: Link # Link
+    6982b586-8426-45bb-8b0c-51e56c8fdc09: Block # Block
+    6983c563-8642-4e33-9653-30a8b404ce9d: Image # Image
+    7240bf66-bb0f-4cf7-8d5d-9502755d74aa: Title # Title
+    7256a782-20ff-4771-9d85-ed3f49e13ef4: Quote # Quote
+    7723e7fe-e015-46e5-9d0a-d7064f5b9d1b: Title # Title
+    7801d79f-ad8f-4f1b-8e2f-ac3747b72114: Events # Events
+    7872a2bd-be0b-4708-8614-899a57483712: Options # Options
+    8820e5ca-9147-4012-81a7-822b66347c95: Text # Text
+    9171d777-0d41-4369-8b33-67214837a2e8: CTA # CTA
+    9194d239-4539-4912-ad6a-0c181ecfb860: 'Leuven EN' # Leuven EN
+    9296ab4f-6148-41cc-a0dd-f98c80a1e15c: Text # Text
+    9764dd10-ec98-4f88-bf35-429dc8b71e40: Profile # Profile
+    24983cba-9d55-413d-80dc-0374abd19ec0: 'Title Column 1' # Title Column 1
+    41922f26-ec6a-4773-bc8b-9aef8d832f8c: 'Backend 3D' # Backend 3D
+    50902bed-57c4-4fac-86a7-24e875920867: 'Repair in' # Repair in
+    52300c39-98b2-4c0e-8021-31ad8d6a82d0: 'Start Number Café' # Start Number Café
+    54457e18-21e3-4699-9428-aeb45c2aee5f: 'Hero image' # Hero image
+    64981bba-82ed-4e4d-859a-7043d01c2b06: 'Register repairs' # Register repairs
+    66564b95-f024-402f-bf55-e4715288b763: 'Organisation City' # Organisation City
+    072209d1-1c68-4ee5-9a66-a209b518da6d: Mail # Mail
+    74572bf4-408d-451b-bdd2-d2367f83a598: 'Apeldoorn NL' # Apeldoorn NL
+    75143cbf-edc5-4f30-8538-a97fac45c977: Email # Email
+    78980b31-345c-423c-af14-a9cab3b589fd: 'Organisation Type' # Organisation Type
+    79237bee-65b8-4e18-b318-42c46b746356: CTA # CTA
+    81888e44-c2f3-4bc0-bd71-837e7ff7e66d: 'Organisation Name' # Organisation Name
+    83568fdb-b819-4743-9c0a-c1a432b36feb: Login # Login
+    94462b6d-8def-48ce-9a56-fa9867cf589e: 'Home hero' # Home hero
+    99055d2f-154b-4254-9594-9fa667fb15d5: Image # Image
+    197566c6-94bb-4e67-86d7-8945f2589a1d: 'Optimized Hero' # Optimized Hero
+    209777db-293c-48b6-9897-1fe97b278510: Video # Video
+    583116e3-59c5-462b-9ba0-adda934aac7d: Author # Author
+    685530fc-e1f1-4be1-813b-ebf9ac3aa108: SEO # SEO
+    761684e3-a5b1-45a7-aed0-32607ee71b0b: Title # Title
+    780304c4-c532-4a30-8dc2-6890f5d60517: 'Leuven NL' # Leuven NL
+    1675414a-8c9c-4aa3-b509-a9b46f5c1233: Block # Block
+    4750849d-9328-4d3e-956d-9d317da5e6eb: 'Page not found' # Page not found
+    9644520a-f59e-47e6-bf8a-411201fefb87: Title # Title
+    36895330-a28e-477f-9327-bdbe66dabf99: 'Cookie policy' # Cookie policy
+    38918214-5289-4e64-9302-c6a135082ce9: 'Main Image' # Main Image
+    40291883-407a-406f-997c-b700ede4d9e6: 'Repair café repair' # Repair café repair
+    40644995-86fb-4273-a5c9-51c341a74b8d: 'Call To Action' # Call To Action
+    41398197-b27d-4823-b251-100fdd176a3d: Function # Function
+    44892534-cded-42f8-ae58-1f901513753f: 'Register URL' # Register URL
+    56162141-008d-4130-95a9-dba0b5eb9f8a: Roeselare # Roeselare
+    68926962-527f-44bb-b721-08cde7220c82: 'Home Sharepair' # Home Sharepair
+    71358250-2205-4544-a9f5-a1847cb7159d: 'Edit Profile' # Edit Profile
+    88823369-72c4-4751-92df-a430c2f5784b: Profile # Profile
+    89423632-3653-4d19-8a9d-c9c8de51c5a9: Image # Image
+    92932144-18dc-4910-b247-d497a258fbf8: Longitude # Longitude
+    95920915-f806-4fbc-9c22-979ec9085fe8: 'Text + Video' # Text + Video
+    a027958b-bb1c-4e57-98e4-c7f7a4388921: Title # Title
+    a2d7684e-6737-4123-ad14-2c4e4221bbdd: 'Text Column 2' # Text Column 2
+    a5a75022-d8bf-4689-a25f-fde7cb280dbf: 'What can you do?' # What can you do?
+    a5c5b738-ae52-4b69-a209-d515d2e7b71a: 'Public Schema' # Public Schema
+    a26abf54-5427-4eaf-b0c0-acf1c3d6d9c4: 'All Professional Repairs' # All Professional Repairs
+    a66c0dc0-5fd9-4079-a773-816c9092a837: 'Repair Stories' # Repair Stories
+    a138d15e-cf83-46fe-af37-05a999ca33dd: Text # Text
+    a362e6b3-56f4-4b4f-8b52-932ee3dadd80: CTA # CTA
+    a745bf1f-8353-4382-8918-afeede3a4628: 'Repair in' # Repair in
+    a7276cae-d383-4ebd-8f96-6dd25e1b5f68: 'Content Manager Platform' # Content Manager Platform
+    a9118c75-3e2c-4625-bfc9-48f994a65b76: 'Call to Action' # Call to Action
+    a16348a9-07b9-433a-9f5b-c1cc61d632eb: 'Site Specific Info' # Site Specific Info
+    a44287f8-d6ed-4f2c-8a63-0c1312ef236e: Image # Image
+    aa047bda-dfe4-4841-b66b-18cda7303496: 'Background Color' # Background Color
+    aa1b29ec-8a0e-4be8-94e7-12f1efb06317: 'Organisation Images' # Organisation Images
+    aac522be-8926-4b5e-ae63-cb77840a69c9: 'Registration completed' # Registration completed
+    abdfd1d2-0eda-45d7-b016-c468bda7b5fd: 'Title NL' # Title NL
+    ada64ed7-985b-4cd8-a6b8-a28ced733cf3: Warranty # Warranty
+    ae73d04c-119e-4cc7-a3fc-bf41d36c5510: 'Background Color' # Background Color
+    b0e69444-f248-4b78-b63f-e3d41350bc15: Body # Body
+    b0971e36-d3fd-42a2-8760-fcf60eb99932: Author # Author
+    b1cd3558-d939-48d0-8628-239236ff699c: 'Text Column 1' # Text Column 1
+    b3b6a956-e5ed-4160-aa14-08330f9a37a9: Country # Country
+    b3d4193d-a05b-4ef5-b5ba-0d16373f7029: Text # Text
+    b4c0b2a7-d417-4d92-8282-11ebf9edf44f: Link # Link
+    b5a742d9-58a3-4e22-877b-2cffa358be21: Link # Link
+    b5de6dcf-80e6-48e2-b846-0dab7f35c4c8: 'Intro Text' # Intro Text
+    b7f4d45f-3f16-4424-bf30-a5167bb30e47: 'Oldest memory' # Oldest memory
+    b8bf7de4-8025-4da7-9040-09ec8b731016: Text # Text
+    b13fc4bd-af47-4f5c-b349-05e9e24dfecc: 'Search results' # Search results
+    b30ac6eb-185d-422a-9d39-35047e0b628c: Functionals # Functionals
+    b61b54a0-b2e4-4a80-9fae-ad213cceb746: 'Favorite repair tool' # Favorite repair tool
+    b84e038e-0dfb-4cee-beb6-f44d0449d9c6: Title # Title
+    b123b2df-32b7-436e-9914-7232a28b194a: 'Title DE' # Title DE
+    b644d711-5b7a-4c44-84ba-8c1f22a44601: Picture # Picture
+    b8691cd7-cac5-4aa2-82a1-a8c4d6da948b: 'Form Title' # Form Title
+    b50199e6-c1e1-41c0-8056-2dc94298f927: Repair # Repair
+    bb71be13-625f-43ab-8e2f-2e3c62e41b39: Title # Title
+    bb9385fe-249e-4f2c-8305-d55060448917: 'Category ID' # Category ID
+    bcf87482-b5f3-4be6-9a63-153f0458466b: 'Image Copyright' # Image Copyright
+    bd732ee5-59bb-41a5-81e1-b0de29ca7146: 'Background Color' # Background Color
+    bde7c3e4-1530-4cdf-94a4-6ac068e88c8a: 'CTA Column 1' # CTA Column 1
+    be8c0ed1-8b8b-4cfe-bcca-d4f54be7bfff: 'Page not found' # Page not found
+    beb2b614-c861-4743-8dd9-fa278e7b8b24: Link # Link
+    bfa2f99e-1c8c-4348-8f89-00708397a119: Content # Content
+    c028da1c-8b47-42c5-be98-6d4bdbf43604: Intro # Intro
+    c090299f-0913-420f-b194-e483e0039781: Link # Link
+    c3f535e9-477b-46c2-ac80-eb79fa4726cf: 'Short bio' # Short bio
+    c4a0336c-284c-4275-af4a-7a0b597fae07: 'Submit Repair Story' # Submit Repair Story
+    c6b2430a-bff1-4de7-848c-03d33a6d633c: Entries # Entries
+    c7f05fcd-6b9c-44dd-baee-f3e9cd0c47ac: 'News Category' # News Category
+    c25b1e19-dca6-4ab5-a776-a043f6ee4c82: Login # Login
+    c74db584-8982-4131-acaf-8448f5d1af9b: 'Forgot Password Confirmation' # Forgot Password Confirmation
+    c75d1896-25e8-4fbd-bb41-6dd2264af513: 'Number Repairs Café' # Number Repairs Café
+    c5101d08-5136-43d0-bce4-d010233a5a83: Titel # Titel
+    c8533e19-1c6c-4d33-8e50-71babb409313: 'Video position' # Video position
+    c576870d-abd8-46aa-8fe5-cdd12c40dfa8: News # News
+    c2329983-8b45-4b96-a0a0-672758ce6dc2: 'Repair Heroes Overview' # Repair Heroes Overview
+    c5426300-6b72-4744-ae0f-7d2e66a409c3: Link # Link
+    c5433317-7d49-4535-8c7b-894b8be40653: Home # Home
+    ca8bb389-d0f3-4dbb-af40-e2f6ef211040: 'Call to action' # Call to action
+    cad63518-edd0-417a-aec5-aff699712c64: 'Create repair story' # Create repair story
+    cb9d7d4f-d222-4875-9880-4e8a5e62e8e8: 'Call To Action' # Call To Action
+    cb167b2c-c73f-4992-8547-31549fa51008: CTA # CTA
+    cbd673d3-e753-4ff3-a574-a937735dce2e: 'Name City' # Name City
+    cbe51a58-f675-4583-82fe-69a087273fa0: CTA # CTA
+    cd22acbb-24d6-4b36-94b8-5addbd7bd365: '3D Repair DE' # 3D Repair DE
+    cd736fb3-c9b7-4ce1-88a8-da8b64249eb1: Image # Image
+    ce1fab3c-0b02-49d8-8d8f-1bab2d7c05e2: LinkedIn # LinkedIn
+    ce78e94c-276c-4354-884b-e9080c353bb5: Image # Image
+    ceb9e91e-607f-478d-96b5-3228f1a24d46: Color # Color
+    cf53da19-1db3-45d0-a75d-5737ebde27de: 'Create Event' # Create Event
+    d0806258-9281-4187-9b48-a8b770c43316: Nominate # Nominate
+    d3b383b6-5ad7-494f-bc13-c06a53a5e5e9: 'News Overview' # News Overview
+    d3d1b2c5-6d3b-444d-8ccc-1c8475e98c6f: 'Organisation URL' # Organisation URL
+    d6d6ebcb-f2ac-4b5d-ad67-7d533a50ae69: 'Partner Logo' # Partner Logo
+    d8d1d5d4-1fab-4aaa-b9e7-0eca37062865: Text # Text
+    d43be114-0a80-477d-9c95-10fd3944f427: 'First Name' # First Name
+    d59c1191-e655-4961-a9c8-660cd98d608c: 'Partner URL' # Partner URL
+    d66ffcef-8ccc-4e89-9e36-bce49e0dd17a: Video # Video
+    d82accf8-9252-4947-9ec0-46e7d3e553d2: 'Target Audience' # Target Audience
+    d85a59f3-f2aa-4360-b91f-2c6ad364a049: Title # Title
+    d808c207-d862-4cb1-8b04-f256a30a9e0b: Options # Options
+    d840d251-b1ca-48df-b743-db61bb7068ec: Brand # Brand
+    d5601a1f-a33e-4c5a-b7af-1f29347149ca: 'Registration completed' # Registration completed
+    d9372d4c-e9dd-46c9-bad8-0b769ca57f10: 'Professional Repair' # Professional Repair
+    d45680a5-3f22-46ee-87ca-99d226b4c7bf: Organisations # Organisations
+    d86336d6-7efa-44f9-9a10-8619c79beeca: 'Text (+ Image)' # Text (+ Image)
+    da815f1f-3b85-49ec-b3cd-6a06c74d4a61: Block # Block
+    dc98f861-ad35-498d-b0d3-22d8999e1b24: 'Background Color' # Background Color
+    dca2ac05-7833-41de-b7b4-a737c090575c: 'Confirm your account' # Confirm your account
+    dd55b217-0487-4941-ac1b-a2b64663822e: 'Events Overview' # Events Overview
+    dd337e5e-443b-43fe-ba3c-8707e7b3b31d: 'Product Category' # Product Category
+    ddfaaee8-2871-4539-9ccd-8c6b8dba54c0: Block # Block
+    de13f26c-3d86-4593-a204-d3aa632c85ed: Author # Author
+    de98566d-8a2c-4a78-b427-bc2c1045c964: 'Repair Stories' # Repair Stories
+    dec0e89d-38ee-4f11-85d8-7057c5437993: Image # Image
+    defcf5bd-5207-471b-9e12-68ada21b246c: 'Events Overview' # Events Overview
+    dfe3ecc7-6cc5-4af5-be58-b3fdc2f5ce05: Text # Text
+    e1b98e4c-30ee-40dd-9d1b-23ddda0b0423: Subtitle # Subtitle
+    e2a70a58-4ca0-4912-b443-f6a57ae66e03: Title # Title
+    e3bed4e1-82ae-45e8-908c-0a6669141b31: 'Search results' # Search results
+    e3f4e086-8f5f-427c-9819-19570a1ea94e: 'Privacy policy' # Privacy policy
+    e8d8c9b7-2370-4a54-adb6-049b1f0c90bc: 'Repair status' # Repair status
+    e8eda379-a954-411d-a7ce-6693810139a2: 'Repair heroes Louvain-La-Neuve' # Repair heroes Louvain-La-Neuve
+    e73dd38a-5d76-40ba-99eb-25ee65bf7ab5: 'Title Column 2' # Title Column 2
+    e91cb91c-9cb1-4bdb-a134-f6035c068374: Text # Text
+    e144f63a-3970-422f-b463-c789ee2cb319: City # City
+    e146c4cc-5c7a-4b9c-a01b-6ac2247953bf: 'Organisation URL' # Organisation URL
+    e748a9e9-20a3-4995-8e2f-bf2ea91b50d0: 'Call to actions' # Call to actions
+    e5151f73-1061-48e4-b1bc-f2c53ed9837b: Title # Title
+    e6665f06-bacd-4421-bd2e-cdf693c23eaf: Title # Title
+    e9218327-8360-4a72-aae4-ff2db8be2c18: Overview # Overview
+    ea47ff3a-c705-483f-895b-b57c76b061cb: Partners # Partners
+    eaed2a9f-28fd-4f6a-b296-367ff2c606d3: CTA # CTA
+    eb3d6a1e-5d53-4c56-9987-fb42d0fa27bd: 'Repair Heroes Overview' # Repair Heroes Overview
+    ec016af9-5f31-4985-93eb-804adda2f006: Apeldoorn # Apeldoorn
+    edafcdcc-cb6a-4636-8b06-692031d123dc: Functionals # Functionals
+    efb7aad9-f749-480b-aacb-0befb57a8947: 'Organisation ID' # Organisation ID
+    f0f65d9d-0ea5-4b76-b0b7-68a7efc76713: Title # Title
+    f2d8b097-d5ba-4224-9736-4dc41bd6580f: Contact # Contact
+    f2eec906-6cfb-4fc4-992c-f95c91946309: 'Number Repairs Professionals' # Number Repairs Professionals
+    f3f6d3ea-ccb1-48a5-bb33-93e1e31aff24: 'Background Color' # Background Color
+    f7e46b53-a500-47e7-a945-3b675838c53f: Titel # Titel
+    f11fbb39-2a1c-4afd-81ec-b604e4297f06: Option # Option
+    f19c6d8d-6eee-48cc-b3c3-cbfce26d2aa6: Text # Text
+    f47a85c9-1572-4bfb-81f1-e1741db557bd: Latitude # Latitude
+    f76a3408-5f35-49f1-90d1-4cd3e535ab1c: Partners # Partners
+    f90a0546-bd7e-476e-8784-3b52a85b66f5: 'Backend Leuven' # Backend Leuven
+    f407b12f-fb07-4efc-b0a8-cee12a435db3: 'Call To Action' # Call To Action
+    f694fce1-48ca-4bfe-9fba-196195547a36: Facebook # Facebook
+    f21594e6-d83e-4047-a36c-0d6b709719e1: Image # Image
+    fa0bda57-b539-4335-9141-76c456deedaa: Entries # Entries
+    fa591e98-4f90-4a8c-8ee8-c22489037fa6: Longitude # Longitude
+    faf00550-4720-4af6-b0fb-dbddf1ff9f7d: Block # Block
+    fc9b3c7f-00f8-4113-aa56-b2328011d192: Link # Link
+    fc9c5d93-393d-4dfd-8d21-c9ff35643fb4: 'Roeselare NL' # Roeselare NL
+    fca40313-aa0d-4206-a530-c638a5166f69: 'Background Color' # Background Color
+    fcdb675a-5939-451a-8252-6967cef0514a: 'Professional Repair' # Professional Repair
+    fd6fd6ba-ec39-4df3-8caf-6267267f6fca: Link # Link
+    fdde9cc3-a5b8-4fe1-9486-e1e7fc5528a9: 'All DIY Repairs' # All DIY Repairs
+    fdec3bd3-a47c-4f82-8a66-83152d5d9107: 'Content Managers 3D Printing' # Content Managers 3D Printing
+    fdf5625a-33f6-4440-92e0-f9eb4869d634: 'Logo Contrast' # Logo Contrast
+    fe2354ae-51c9-4859-a276-885bc4879969: 'Call To Action' # Call To Action
+    ffa18ce4-404a-467d-b11a-912362a201a2: Titel # Titel
+plugins:
+  assetusage:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+  config-values-field:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  cookie-banner:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  cp-field-inspect:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  cta:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 1.0.0
+    settings: null
+  dumper:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 1.0.0
+    settings: null
+  expanded-singles:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  freeform:
+    enabled: '1'
+    licenseKey: VDILJAQ26ZFY9BNSHPZXUNNZ
+    schemaVersion: 4.2.3
+    settings:
+      ajaxByDefault: ''
+      alertNotificationRecipients: null
+      autoScrollToErrors: '1'
+      badgeType: all
+      blockedEmails: ''
+      blockedEmailsError: 'Invalid Email Address'
+      blockedIpAddresses: ''
+      blockedKeywords: ''
+      blockedKeywordsError: 'Invalid Entry Data'
+      clientDigestFrequency: 1
+      clientDigestRecipients: null
+      customErrorMessage: ''
+      customHoneypotName: ''
+      defaultTemplates: '1'
+      defaultView: submissions
+      digestFrequency: 1
+      digestOnlyOnProduction: false
+      digestRecipients: null
+      displayFeed: true
+      emailTemplateDirectory: _mail/_templates
+      emailTemplateStorage: db
+      fieldDisplayOrder: name
+      fillWithGet: ''
+      footerScripts: '1'
+      formSubmitDisable: ''
+      formSubmitExpiration: ''
+      formTemplateDirectory: _freeform
+      formattingTemplate: _takeoff.twig
+      freeformHoneypot: '1'
+      freeformHoneypotEnhancement: '1'
+      hideBannerDemo: ''
+      hideBannerOldFreeform: false
+      minimumSubmitTime: ''
+      pluginName: Freeform
+      purgableSpamAgeInDays: '0'
+      purgableSubmissionAgeInDays: '0'
+      purgableUnfinalizedAssetAgeInMinutes: 180
+      recaptchaBehaviour: display_error
+      recaptchaEnabled: '1'
+      recaptchaErrorMessage: 'Please verify that you are not a robot.'
+      recaptchaKey: 6LcXqZMaAAAAANDfzgH_878vSS2icbr_DURQblo8
+      recaptchaMinScore: '0.5'
+      recaptchaSecret: 6LcXqZMaAAAAAM-xMQ89RQIYDsoB9mTGwDk7OmLX
+      recaptchaSize: normal
+      recaptchaTheme: light
+      recaptchaType: v2_checkbox
+      removeNewlines: ''
+      renderFormHtmlInCpViews: '1'
+      salesforce_client_id: null
+      salesforce_client_secret: null
+      salesforce_password: null
+      salesforce_username: null
+      scriptInsertLocation: footer
+      sessionEntryMaxCount: 50
+      sessionEntryTTL: 10800
+      showErrorsForBlockedEmails: ''
+      showErrorsForBlockedKeywords: ''
+      showTutorial: ''
+      spamFolderEnabled: '1'
+      spamProtectionBehaviour: simulate_success
+      submissionThrottlingCount: ''
+      submissionThrottlingTimeFrame: m
+      twigInHtml: true
+      twigInHtmlIsolatedMode: true
+      updateSearchIndexes: true
+  image-optimize:
+    edition: standard
+    enabled: true
+    licenseKey: N1AW4QWHBOTNF5C2HCN14SLA
+    schemaVersion: 1.0.0
+  mailchimp-subscribe:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+  navigate:
+    enabled: '1'
+    licenseKey: R3CPY6ZNWPAN90GL1LU4ZVG8
+    schemaVersion: 2.4.0
+    settings:
+      anyoneCanAdd: ''
+      pluginLabel: Navigations
+  position-fieldtype:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 1.0.0
+    settings: null
+  postmark:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.1
+  recaptcha:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+    settings:
+      secretKey: 6LcXqZMaAAAAAM-xMQ89RQIYDsoB9mTGwDk7OmLX
+      siteKey: 6LcXqZMaAAAAANDfzgH_878vSS2icbr_DURQblo8
+      validateContactForm: ''
+  redactor:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 2.3.0
+    settings: null
+  seo-fields:
+    edition: standard
+    enabled: true
+    licenseKey: ISE7A0Q95UBOMAB3QAN1FX4V
+    schemaVersion: 2.0.0
+  super-table:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 3.0.0
+    settings: null
+  translate:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 1.0.0
+    settings: null
+  video-parser:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+system:
+  edition: pro
+  live: true
+  name: $SYSTEM_NAME
+  retryDuration: null
+  schemaVersion: 4.4.0.4
+  timeZone: Europe/Brussels

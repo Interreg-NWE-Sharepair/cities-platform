@@ -1,0 +1,120 @@
+fieldLayouts:
+  45d8cb13-c024-42f1-93a5-d70646d24e05:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: cbd673d3-e753-4ff3-a574-a937735dce2e # Name City
+            instructions: 'This name will be used in emails to say in which city the form submission has happened.'
+            label: 'Name City Project'
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b6f0652f-72bf-409d-aa71-d47cbfd5b789
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: e144f63a-3970-422f-b463-c789ee2cb319 # City
+            instructions: null
+            label: 'Name City'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 68cee207-11ee-4e7c-8c92-2b6151c940ff
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: f47a85c9-1572-4bfb-81f1-e1741db557bd # Latitude
+            instructions: 'Enter the latitude for the default location on the map.'
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 28ef9418-2cb0-47c8-b8b5-36a2ba9af8c3
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: fa591e98-4f90-4a8c-8ee8-c22489037fa6 # Longitude
+            instructions: 'Enter the longitude for the default location on the map.'
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 704f36fe-0602-4890-bdbf-a7c964a19872
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: 7e9d22e1-d30e-400e-a57d-1c8ba8f8df41 # Map Zoom
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8cd0dabe-4eda-4c02-9a8f-471e0ca1aeb6
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: 14f75af0-1068-4c5d-985d-7aaecb571128 # Logo
+            instructions: 'Add your logo here. This will be used across the whole website.'
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6b4d0073-4afa-4159-9638-3e3a3592c992
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: fdf5625a-33f6-4440-92e0-f9eb4869d634 # Logo Contrast
+            instructions: 'Upload the contrast logo here. This logo will be used in the footer.'
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 02cfe78b-678c-42ec-8abf-67db70815bdf
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 75143cbf-edc5-4f30-8538-a97fac45c977 # Email
+            instructions: 'Form submissions, for forms other than the forms in ''Freeform'', will be send to this email. (More email addresses can be added, by separating them by a comma.) '
+            label: 'Email City Content Manager'
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 99d519d1-793f-4188-bc49-4a0b7516f535
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 54457e18-21e3-4699-9428-aeb45c2aee5f # Hero image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a25ebc71-3d7a-40b9-8a71-765cff09995b
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Site Info'
+        uid: 2d9b582a-b780-4e6a-9ba9-cc8d15be2655
+        userCondition: null
+handle: siteInfo
+name: 'Site Specific Info'
+sortOrder: 4

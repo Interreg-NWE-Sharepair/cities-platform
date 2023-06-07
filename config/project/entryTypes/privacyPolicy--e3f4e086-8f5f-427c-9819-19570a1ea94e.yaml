@@ -1,0 +1,127 @@
+fieldLayouts:
+  ee149b61-ac9e-4aeb-b425-244b59802bdf:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: dd0f1b9d-f686-4851-9530-ceef3e3a9947
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: b5de6dcf-80e6-48e2-b846-0dab7f35c4c8 # Intro Text
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e225c4d4-ab8a-4b3b-bcbf-a6cea6f671d1
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 56d715d0-6a9d-4562-9c66-e5b4caad7f44 # Content Builder
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2bab1cdb-ea2b-47db-84db-77cffd8c54cc
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: d43ad741-1a3d-41a3-9fc5-39552b55ceb1
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 4a2bad07-8d89-4689-b0bf-774eed764660 # Overview title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1cf49dcf-9802-442a-b97e-dff3320c1178
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 2f8a6ddc-4ab7-4f9f-a2ea-72c6cb387f38 # Overview description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2db781f0-768a-4fb6-9993-7f3dcc46736e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 15ed2b72-8955-4cec-93f8-9736a9e50e80 # Overview image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 33f0bf04-d1b6-4b91-be90-cada957dfd80
+            userCondition: null
+            warning: null
+            width: 100
+        name: Overview
+        uid: d94b66f1-a8db-428f-93e8-7af622269106
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 685530fc-e1f1-4be1-813b-ebf9ac3aa108 # SEO
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 50b27eda-26cb-4f16-9cf3-b8ad717b43bf
+            userCondition: null
+            warning: null
+            width: 100
+        name: SEO
+        uid: 12d72722-814f-40c2-b6c8-d7786b065ec0
+        userCondition: null
+handle: privacyPolicy
+hasTitleField: true
+name: 'Privacy policy'
+section: 0731fc69-9ba5-4022-b4e8-d26be5c12bf8 # Privacy policy
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

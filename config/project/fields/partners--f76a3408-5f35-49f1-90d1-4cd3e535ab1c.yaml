@@ -1,0 +1,44 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 39b3406d-d1bb-4a84-a13a-bce5cc293238 # Globals
+handle: partners
+instructions: null
+name: Partners
+searchable: false
+settings:
+  blockTypeFields: 0
+  changedFieldIndicator: null
+  columns:
+    __assoc__:
+      -
+        - 0e04b48d-cb94-461f-a1ff-25eb5013aa74 # Name Partner
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - d6d6ebcb-f2ac-4b5d-ad67-7d533a50ae69 # Partner Logo
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - d59c1191-e655-4961-a9c8-660cd98d608c # Partner URL
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+  contentTable: '{{%stc_partners}}'
+  fieldLayout: matrix
+  maxRows: null
+  minRows: null
+  propagationKeyFormat: null
+  propagationMethod: siteGroup
+  selectionLabel: null
+  staticField: null
+translationKeyFormat: null
+translationMethod: site
+type: verbb\supertable\fields\SuperTableField

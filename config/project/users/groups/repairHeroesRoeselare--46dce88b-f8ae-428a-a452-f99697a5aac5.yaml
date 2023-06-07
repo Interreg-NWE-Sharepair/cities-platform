@@ -1,0 +1,11 @@
+description: null
+handle: repairHeroesRoeselare
+name: 'Repair heroes Roeselare'
+permissions:
+  - 'assignusergroup:46dce88b-f8ae-428a-a452-f99697a5aac5' # Repair heroes Roeselare
+  - 'createentries:5fde66b3-825c-4efc-b013-f877eae296a3' # Repair Stories
+  - 'createentries:7801d79f-ad8f-4f1b-8e2f-ac3747b72114' # Events
+  - 'editsite:fc9c5d93-393d-4dfd-8d21-c9ff35643fb4' # Roeselare NL
+  - editusers
+  - 'viewentries:5fde66b3-825c-4efc-b013-f877eae296a3' # Repair Stories
+  - 'viewentries:7801d79f-ad8f-4f1b-8e2f-ac3747b72114' # Events

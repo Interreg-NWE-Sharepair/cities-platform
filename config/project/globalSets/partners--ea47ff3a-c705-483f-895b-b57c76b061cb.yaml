@@ -1,0 +1,30 @@
+fieldLayouts:
+  b432d621-1431-4a2d-a3fe-3cc6833c21f0:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            heading: 'Add your partners here. These partners will be shown on the bottom of the page.'
+            type: craft\fieldlayoutelements\Heading
+            uid: b0dfea84-c6c4-415d-b2af-6282d43bc383
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: f76a3408-5f35-49f1-90d1-4cd3e535ab1c # Partners
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 471499a6-604e-4e3c-a10a-0b7a9ef75b97
+            userCondition: null
+            warning: null
+            width: 100
+        name: Logo
+        uid: b306d620-1a09-40f7-b619-87e494ba0712
+        userCondition: null
+handle: partners
+name: Partners
+sortOrder: 3

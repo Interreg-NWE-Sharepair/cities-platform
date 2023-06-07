@@ -1,0 +1,137 @@
+/* purgecss start ignore */
+body {
+  @apply text-lg antialiased text-black font-base;
+  font-size: 18px;
+  line-height: 1.4375rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply mb-4 font-black;
+}
+
+h1 {
+  @apply text-3xl text-primary;
+}
+
+h2 {
+  @apply text-2xl text-secondary;
+}
+
+h3 {
+  @apply text-xl text-secondary;
+}
+
+h4 {
+  @apply text-lg text-secondary;
+}
+
+@screen md {
+  h1 {
+    @apply text-5xl;
+  }
+
+  h2 {
+    @apply text-4xl;
+  }
+
+  h3 {
+    @apply text-3xl;
+  }
+
+  h4 {
+    @apply text-2xl;
+  }
+}
+
+p:not(:first-of-type) {
+  @apply my-4;
+}
+p:first-of-type {
+  @apply mb-4;
+}
+p:last-of-type {
+  @apply mb-0;
+}
+
+.redactor-in ul,
+.redactor ul,
+ul.list-arrow {
+  @apply my-4;
+
+  > li {
+    @apply relative pl-5;
+
+    @mixin icon-before chevron-right;
+
+    &::before {
+      @apply absolute left-0 text-primary;
+      @apply text-base;
+      top: 4px;
+    }
+  }
+}
+
+::selection {
+  @apply text-white bg-primary-700;
+}
+
+*:focus {
+  @apply outline-none shadow-focus;
+}
+
+body:not(.user-is-tabbing) *:focus {
+  @apply shadow-none outline-none;
+}
+
+.redactor-in,
+.redactor {
+  a {
+    @apply underline text-primary;
+
+    &:hover {
+      @apply no-underline;
+    }
+  }
+
+  ol {
+    @apply p-0 my-4 ml-4;
+    list-style-type: decimal;
+
+    li {
+      @apply my-4;
+    }
+  }
+  ol li::marker {
+    @apply text-primary;
+  }
+
+  blockquote {
+    @apply pl-5 border-gray-500 border-l-3;
+  }
+
+  h3,
+  h4,
+  h5 {
+    @apply my-6;
+  }
+}
+
+b,
+strong {
+  @apply font-bold;
+}
+
+.lazyload,
+.lazyloading {
+  opacity: 0;
+}
+.lazyloaded {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+/* purgecss end ignore */

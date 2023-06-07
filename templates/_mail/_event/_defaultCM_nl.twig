@@ -1,0 +1,50 @@
+{% extends "_mail/_layout" %}
+
+{% block title %}
+	{{ 'Er is een nieuw Repair Event verstuurd door '|t }}
+	{{ user.firstName }}
+	{{ user.lastName }}
+{% endblock %}
+
+{% block content %}
+	<p>
+		{{ 'Het event bevat volgende details:'|t }}
+	</p>
+
+	<ul>
+		{% for key,value in event %}
+			<li>
+				<strong>
+					{% switch key %}
+						{% case "title" %}
+							Titel van het evenement
+						{% case "date" %}
+							Datum
+						{% case "location" %}
+							Locatie
+						{% case "organisationName" %}
+							Organisator
+						{% case "organisationUrl" %}
+							Organisator URL
+						{% case "category" %}
+							Event categorie
+						{% case "registerUrl" %}
+							Link naar registratie formulier
+						{% case "infoUrl" %}
+							Link naar meer informatie
+						{% case "intro" %}
+							Introductie
+						{% case "body" %}
+							Body tekst
+					{% endswitch %}
+				</strong>
+				<br>
+				{{ value|raw }}
+			</li>
+		{% endfor %}
+	</ul>
+
+	<p>
+		{{ 'Bekijk en publiceer dit event zo snel mogelijk aub.'|t }}
+	</p>
+{% endblock %}

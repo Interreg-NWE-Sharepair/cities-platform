@@ -1,0 +1,30 @@
+fieldLayouts:
+  a646a8f4-7495-4add-979c-80f88cae05f0:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            heading: 'If an image is missing, this image will be used to replace the missing one.'
+            type: craft\fieldlayoutelements\Heading
+            uid: d104453c-d3d0-4b71-870f-6aafdee9f2c5
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: a44287f8-d6ed-4f2c-8a63-0c1312ef236e # Image
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 133b9441-d4ac-42f2-a23c-2164d405bd7d
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 18238c4e-9b7c-40d9-bc26-c789d9d6557e
+        userCondition: null
+handle: fallback
+name: Fallback
+sortOrder: 2

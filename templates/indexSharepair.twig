@@ -1,0 +1,56 @@
+{% extends "_layout.twig" %}
+
+{#{% if currentSite.handle == "platform" %}
+	{% redirect "/admin" %}
+{% endif %}#}
+
+{% block content %}
+
+	<div class="py-0 section section--light">
+		<div class="container">
+			<div class="flex flex-wrap">
+				{% set homeHero = entry.homeHero|first %}
+				{% if homeHero %}
+				<div class="w-full py-6 md:py-20 md:w-1/3 lg:w-4/12">
+						<h1 class="text-secondary">{{ homeHero.heroTitle }}</h1>
+						{% if homeHero.intro|length %}
+							<div class="my-10 text-xl redactor">
+								{{ homeHero.intro }}
+							</div>
+						{% endif %}
+						{% if homeHero.cta|length %}
+							<div class="mt-10">
+								{% for cta in homeHero.cta.all() %}
+									{% include '_snippet/_content/_blocks/_cta/_default.twig' %}
+								{% endfor %}
+							</div>
+						{% endif %}
+				</div>
+				<div class="w-full md:w-2/3 lg:w-8/12">
+					<div class="relative js-pull-out" data-direction="right" data-max="130" data-breakpoint="820">
+						{% if siteInfo.hero|length %}
+							<img src="{{siteInfo.hero|first.getUrl()}}" alt="" class="w-full"/>
+						{% else %}
+							<img src="/img/hero.svg" alt="" class="w-full"/>
+						{% endif %}
+					</div>
+					{% if homeHero.legend %}
+						<div id="heroLegend" class="">
+							{{ homeHero.legend }}
+						</div>
+					{% endif %}
+				</div>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+
+	{% include ['_snippet/_content/_contentBuilder/_' ~ currentSite.handle ~'.twig', '_snippet/_content/_contentBuilder/_default.twig']
+		with {
+		settings : {
+			section: 'section',
+			container: 'container',
+		}
+	} %}
+
+{% endblock %}

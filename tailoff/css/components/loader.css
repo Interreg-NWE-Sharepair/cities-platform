@@ -1,0 +1,61 @@
+/* purgecss start ignore */
+.loader {
+  .wrench {
+    transform-origin: 3.6px 12.9px;
+    transform: translate(8.64499px, 71px) rotate(-60deg);
+    animation: wrenchAni 2s infinite;
+  }
+
+  .bolt {
+    transform-origin: 12.5px 84.5px;
+    transform: rotate(30deg);
+    animation: boltAni 2s infinite;
+  }
+}
+
+@keyframes wrenchAni {
+  0% {
+    transform-origin: 3.6px 12.9px;
+    transform: translate(8.64499px, 71px) rotate(-60deg);
+  }
+  25% {
+    transform-origin: 3.6px 12.9px;
+    transform: translate(8.64499px, 71px) rotate(0deg);
+  }
+  25% {
+    transform-origin: 3.6px 12.9px;
+    transform: translate(8.64499px, 71px) rotate(0deg);
+  }
+  40% {
+    transform-origin: 3.6px 12.9px;
+    transform: translate(20px, 71px) rotate(0deg);
+  }
+  40% {
+    transform-origin: -16.4px 12.9px;
+    transform: translate(20px, 71px) rotate(0deg);
+  }
+  65% {
+    transform-origin: -16.4px 12.9px;
+    transform: translate(20px, 71px) rotate(-60deg);
+  }
+  90% {
+    transform-origin: 3.6px 12.9px;
+    transform: translate(8.64499px, 71px) rotate(-60deg);
+  }
+  100% {
+    transform-origin: 3.6px 12.9px;
+    transform: translate(8.64499px, 71px) rotate(-60deg);
+  }
+}
+@keyframes boltAni {
+  0% {
+    transform: rotate(30deg);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+/* purgecss end ignore */

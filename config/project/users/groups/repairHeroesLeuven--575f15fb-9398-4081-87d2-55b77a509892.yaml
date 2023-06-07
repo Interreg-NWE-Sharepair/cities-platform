@@ -1,0 +1,12 @@
+description: null
+handle: repairHeroesLeuven
+name: 'Repair heroes Leuven'
+permissions:
+  - 'assignusergroup:575f15fb-9398-4081-87d2-55b77a509892' # Repair heroes Leuven
+  - 'createentries:5fde66b3-825c-4efc-b013-f877eae296a3' # Repair Stories
+  - 'createentries:7801d79f-ad8f-4f1b-8e2f-ac3747b72114' # Events
+  - 'editsite:780304c4-c532-4a30-8dc2-6890f5d60517' # Leuven NL
+  - 'editsite:9194d239-4539-4912-ad6a-0c181ecfb860' # Leuven EN
+  - editusers
+  - 'viewentries:5fde66b3-825c-4efc-b013-f877eae296a3' # Repair Stories
+  - 'viewentries:7801d79f-ad8f-4f1b-8e2f-ac3747b72114' # Events

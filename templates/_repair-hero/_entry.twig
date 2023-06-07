@@ -1,0 +1,33 @@
+{% extends '_layout' %}
+
+{% set userUid = craft.app.request.getSegment(2) %}
+{% set user = craft.users.uid(userUid).one() %}
+
+{% set breadcrumbs = [
+    craft.entries.section('repairHeroesOverview').one(),
+	{
+		'url': '',
+		'title' : user.name
+	}
+]
+%}
+
+{% block content %}
+
+	{% include '_snippet/_item/_profile/_default.twig' with {editable:false} %}
+
+	{% set stories = craft.entries.section('repairStories').authorId(user.id).orderBy('postDate DESC').all() %}
+	{% if stories|length %}
+		<div class="section section--light">
+			<div class="container">
+				<h2 class="text-center">{{"Verhalen van {name}"|t({name: user.firstName})}}</h2>	
+				<div class="flex flex-wrap mt-8 -mx-3">
+					{% for cardEntry in stories %}
+						{% include "_snippet/_item/_card/_default.twig" with {showContrast: true} %}
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	{% endif %}
+
+{% endblock %}

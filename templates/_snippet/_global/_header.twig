@@ -1,0 +1,60 @@
+<header class="page-header">
+	{% if not (currentSite.handle == "platform" or currentSite.group().name == "3D") %}
+		{% set searchKey = craft.app.config.custom.cse[currentSite.handle] %}
+
+		<div class="hidden bg-light md:block">
+			<div class="container">
+				<div class="relative flex items-center justify-end py-2 text-base">
+					<div class="flex items-center js-search-hide">
+						{% include '_snippet/_nav/_service.twig' %}
+						<nav class="ml-8">
+							<ul>
+								<li>
+									{% set login = craft.entries.section("login").one().url %}
+									<a href="{% if currentUser %}{{ craft.entries.section('profile').one().url }}{% else %}{{ login }}{% endif %}" class="text-base text-black underline hover:text-primary-hover">
+										<svg class="mr-1 text-lg icon text-primary" aria-hidden="true"><use xlink:href="/icon/sprite.svg#person-outline"></use></svg>
+										{% if currentUser %}
+											{{ 'Mijn profiel'|t }}
+										{% else %}
+											{{ 'Login'|t }}
+										{% endif %}
+									</a>
+								</li>
+							</ul>
+						</nav>
+						{% include '_snippet/_nav/_language.twig' %}
+						<div class="pl-2 ml-4 border-l-1 border-divider">
+							<button class="ml-4 cursor-pointer js-search-trigger js-search-animated">
+								<span class="sr-only">{{ 'Zoeken'|t }}</span>
+								<svg class="text-xl icon text-primary hover:text-primary-hover" aria-hidden="true">
+									<use xlink:href="/icon/sprite.svg#search"></use>
+								</svg>
+							</button>
+						</div>
+					</div>
+					{% include "_snippet/_global/_search.twig" %}
+				</div>
+			</div>
+		</div>
+	{% endif %}
+	<div class="container">
+		<div class="flex items-center justify-between py-2">
+			<a href="{{ siteUrl }}" class="flex-shrink block py-4 mr-6">
+				{% if siteInfo.logo|length %}
+					<img class="w-auto md:w-full lg:w-auto max-h-logo-mobile md:max-h-logo" src="{{siteInfo.logo|first.getUrl()}}" alt=""/>
+				{% else %}
+					{{ svg('@webroot/img/logo.svg')|attr({ class: 'w-auto md:w-full lg:w-auto max-h-logo-mobile md:max-h-logo' }) }}
+				{% endif %}
+			</a>
+
+			{% include '_snippet/_nav/_main.twig' %}
+
+			<a href="#flyout" class="text-3xl js-flyout-toggle md:hidden text-secondary hover:text-secondary-hover" role="button">
+				<span class="sr-only">Menu</span>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="/icon/sprite.svg#menu"></use>
+				</svg>
+			</a>
+		</div>
+	</div>
+</header>

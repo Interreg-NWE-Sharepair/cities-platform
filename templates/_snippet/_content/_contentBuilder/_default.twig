@@ -1,0 +1,28 @@
+{% if settings is not defined %}
+	{% set settings = [] %}
+{% endif %}
+{% if settings.center is not defined %}
+	{% set settings = settings|merge({'center': false}) %}
+{% endif %}
+
+{% for block in entry.contentBuilder.with(['textImage:image', 'image:image']).all()|filter(block => block.status == 'enabled') %}
+
+	{% if settings.section is defined %}
+		<div class="{{ settings.section }} {% if block['backgroundColor'] is defined and (block.type.handle != "textImage" or block.backgroundColor != "section--light" ) %}{{ block.backgroundColor|replace("-full","") }}{% else %}section--default{% endif %}">
+		{% endif %}
+
+		{% if settings.container is defined %}
+			<div class="{{ settings.container }}">
+			{% endif %}
+
+			{% include '_snippet/_content/_blocks/_' ~ block.type.handle ~ '/_default' with { settings: settings } %}
+
+			{% if settings.container is defined %}
+			</div>
+		{% endif %}
+
+		{% if settings.section is defined %}
+		</div>
+	{% endif %}
+
+{% endfor %}

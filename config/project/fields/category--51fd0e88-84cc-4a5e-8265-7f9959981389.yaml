@@ -1,0 +1,23 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 3e2b6360-0c98-4b32-a8ec-672d54f7a09a # Events
+handle: category
+instructions: null
+name: Category
+searchable: true
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  localizeRelations: false
+  maintainHierarchy: true
+  maxRelations: null
+  minRelations: null
+  selectionLabel: 'Add an event type'
+  showSiteMenu: false
+  source: 'group:5d3f9f3d-7382-4e6a-ab5a-e51b78e7f509' # Event Type
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Categories

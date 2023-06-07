@@ -1,0 +1,142 @@
+defaultPlacement: end
+fieldLayouts:
+  65253178-5b3e-4509-b1e9-c70f2d825203:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            uid: 5dedfc2d-398a-4793-9762-a8181260af0b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: bb9385fe-249e-4f2c-8305-d55060448917 # Category ID
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9b580423-5bda-4f15-af62-0081f9015cb5
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: abdfd1d2-0eda-45d7-b016-c468bda7b5fd # Title NL
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8a7b576b-a169-4059-b837-4a3c4d7d887b
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 3a8affe4-de3d-4133-9cee-41871ec34521 # Title FR
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 64fb9eda-6f18-4633-898c-bd76c45f168d
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 03f63c8d-ce28-4d17-887e-3587aebae8d7 # Title EN
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5016a3b4-acf6-469a-9144-badad714b059
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: b123b2df-32b7-436e-9914-7232a28b194a # Title DE
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5e1ac743-ad05-47d1-9275-c52259a1e791
+            userCondition: null
+            warning: null
+            width: 50
+        name: Content
+        uid: cd1f6ba1-4d49-48e9-ad07-381e3c4c6194
+        userCondition: null
+handle: productCategory
+name: 'Product Category'
+siteSettings:
+  6de046f0-6167-4af1-aa91-ffaf83e36a14: # Platform
+    hasUrls: true
+    template: null
+    uriFormat: 'product-category/{slug}'
+  8aa67b04-5a77-45c2-a2ac-d1f65698459f: # 3D Repair FR
+    hasUrls: true
+    template: null
+    uriFormat: 'product-category/{slug}'
+  047f745f-3685-4496-8e78-bd0b667af2e0: # 3D Repair EN
+    hasUrls: true
+    template: null
+    uriFormat: 'product-category/{slug}'
+  51cad071-cea3-48ce-8809-1681b032cbd6: # Louvain La Neuve FR
+    hasUrls: true
+    template: null
+    uriFormat: 'product-category/{slug}'
+  583f2eba-5ad5-4741-b9a2-132b67b3bcaf: # 3D Repair NL
+    hasUrls: true
+    template: null
+    uriFormat: 'product-category/{slug}'
+  9194d239-4539-4912-ad6a-0c181ecfb860: # Leuven EN
+    hasUrls: true
+    template: null
+    uriFormat: 'product-category/{slug}'
+  74572bf4-408d-451b-bdd2-d2367f83a598: # Apeldoorn NL
+    hasUrls: true
+    template: null
+    uriFormat: 'product-category/{slug}'
+  780304c4-c532-4a30-8dc2-6890f5d60517: # Leuven NL
+    hasUrls: true
+    template: null
+    uriFormat: 'product-category/{slug}'
+  cd22acbb-24d6-4b36-94b8-5addbd7bd365: # 3D Repair DE
+    hasUrls: true
+    template: null
+    uriFormat: 'product-category/{slug}'
+  fc9c5d93-393d-4dfd-8d21-c9ff35643fb4: # Roeselare NL
+    hasUrls: true
+    template: null
+    uriFormat: 'product-category/{slug}'
+structure:
+  maxLevels: null
+  uid: aa2e4ef6-8314-4af3-a8a0-52c20171ac9e

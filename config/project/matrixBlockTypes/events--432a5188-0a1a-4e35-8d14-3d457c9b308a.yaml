@@ -1,0 +1,163 @@
+field: 56d715d0-6a9d-4562-9c66-e5b4caad7f44 # Content Builder
+fieldLayouts:
+  8a424d7d-97e7-43c9-9cb4-f7f824a974d0:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: c5101d08-5136-43d0-bce4-d010233a5a83 # Titel
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 624de277-b0a4-45f9-a2b3-ff3688997a60
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 716e4e23-f568-4682-865c-f990a262c66f # Event entries
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c0c35780-7e81-4a06-bb71-09c7e897e793
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: a9118c75-3e2c-4625-bfc9-48f994a65b76 # Call to Action
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6acef5d8-f453-4000-9bb9-2d363fb3403c
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: bb0f1895-b542-44a3-a69e-ff819dddff53
+        userCondition: null
+fields:
+  716e4e23-f568-4682-865c-f990a262c66f: # Event entries
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: eventEntries
+    instructions: 'If no entries are selected, the latest events will be shown automatically.'
+    name: 'Event entries'
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      branchLimit: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 3
+      minRelations: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Entry
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\entries\EntryCondition
+      selectionLabel: null
+      showSiteMenu: false
+      sources:
+        - 'section:7801d79f-ad8f-4f1b-8e2f-ac3747b72114' # Events
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+  a9118c75-3e2c-4625-bfc9-48f994a65b76: # Call to Action
+    columnSuffix: keckygvk
+    contentColumnType: text
+    fieldGroup: null
+    handle: cta
+    instructions: null
+    name: 'Call to Action'
+    searchable: false
+    settings:
+      allowClass: '1'
+      allowCustomText: '1'
+      allowTarget: '1'
+      allowedLinkNames:
+        3: entry
+        6: url
+      class: null
+      classes: null
+      defaultLinkName: entry
+      defaultText: ''
+      typeSettings:
+        __assoc__:
+          -
+            - asset
+            -
+              __assoc__:
+                -
+                  - sources
+                  - '*'
+          -
+            - category
+            -
+              __assoc__:
+                -
+                  - sources
+                  - '*'
+          -
+            - entry
+            -
+              __assoc__:
+                -
+                  - sources
+                  - '*'
+          -
+            - email
+            -
+              __assoc__:
+                -
+                  - disableValidation
+                  - ''
+          -
+            - tel
+            -
+              __assoc__:
+                -
+                  - disableValidation
+                  - ''
+          -
+            - url
+            -
+              __assoc__:
+                -
+                  - disableValidation
+                  - ''
+    translationKeyFormat: null
+    translationMethod: site
+    type: statikbe\cta\fields\CTAField
+  c5101d08-5136-43d0-bce4-d010233a5a83: # Titel
+    columnSuffix: fmhwpxtq
+    contentColumnType: string
+    fieldGroup: null
+    handle: blockTitle
+    instructions: null
+    name: Titel
+    searchable: true
+    translationKeyFormat: null
+    translationMethod: site
+    type: modules\statik\fields\AnchorLink
+handle: events
+name: Events
+sortOrder: 10

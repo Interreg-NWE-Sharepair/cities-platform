@@ -1,0 +1,325 @@
+fieldLayouts:
+  62e41304-9e9b-4085-a18f-dc7ed60fa939:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: c97a584a-3909-499f-8d3a-1fdf5a4bcf63
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 2f3c77a3-3293-43f5-8017-9f4f1bd612d7 # Organisation Logo
+            instructions: null
+            label: Logo
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 62d85952-4ac1-4a2b-aa9e-4d72e7b7d6de
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: aa1b29ec-8a0e-4be8-94e7-12f1efb06317 # Organisation Images
+            instructions: null
+            label: Images
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 978c76bf-71b4-49ec-b14a-09dee474eae5
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: efb7aad9-f749-480b-aacb-0befb57a8947 # Organisation ID
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 36caaec0-ec21-4eb2-afe3-60e7bd7f7655
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 42f1e6ed-0396-4813-92ae-48dd2c543ae2 # Organisation Type
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 44ab3cd1-977d-4f39-ac0a-b1ca276beac8
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 43fe5995-68e1-4d4e-aa98-1307c93de1f8 # Organisation Intro
+            instructions: null
+            label: Intro
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b66149d5-f9b7-4c1c-95f6-e5d5b63e6f1d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 54ece3f4-5ab1-467e-b418-3888182bce09 # Product Category
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5fcc7e75-9df1-4f32-bac2-f77f2887d78f
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: ada64ed7-985b-4cd8-a6b8-a28ced733cf3 # Warranty
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0a5fbc50-293e-4277-8462-4c3b4aa702b4
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 04f0b8c6-c108-4e77-bfb9-7b72c25f6469 # Active repairers
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6da307a0-7cdb-47c0-99f0-f3c94cbe7af0
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 441d6c82-7169-4825-ba97-16d39b15e874 # Repaired devices
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e25ce5ec-ef37-4a76-88eb-b628990b32f1
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            heading: 'Contact info'
+            type: craft\fieldlayoutelements\Heading
+            uid: 2be22b59-f09e-4b04-8909-da1f76dc5b88
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: 5a067099-5a42-4774-b468-8f1a7088cea6 # Street + Number
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6c096b09-b3d2-47e1-8ac3-aac135ed71b5
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 434fadee-fb0a-4f48-874c-6b2a24644b8e # Postal Code
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8a4b661a-b73b-4313-9e18-49f8914d1ca3
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 66564b95-f024-402f-bf55-e4715288b763 # Organisation City
+            instructions: null
+            label: City
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d5da4dad-64ac-4a40-9ac7-d85ddb9df752
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: b3b6a956-e5ed-4160-aa14-08330f9a37a9 # Country
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 442ef27a-2768-4706-aa06-f694128ff907
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 92932144-18dc-4910-b247-d497a258fbf8 # Longitude
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 08a1f81f-9f3b-42a8-a53e-23183193ad99
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 1336a491-e09c-44ad-bb66-015e47a50d31 # Latitude
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 30b767c5-cacb-402b-9c9d-4f3b6a099f88
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 47a0df54-7864-4425-b23d-c467dd50c435 # Phone Number
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2f8bf5fa-cdfe-426c-aa5d-46597cc7de53
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 75143cbf-edc5-4f30-8538-a97fac45c977 # Email
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5352c52e-b3c5-4045-a864-1cd78f074948
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: e146c4cc-5c7a-4b9c-a01b-6ac2247953bf # Organisation URL
+            instructions: null
+            label: Website
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f90f6614-f050-45ec-b750-1b0a0edee2c4
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: b24fce05-ec3d-403d-8ae8-e25e15d522ee
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 4a2bad07-8d89-4689-b0bf-774eed764660 # Overview title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 24f95eb0-74cf-4173-8cc7-3da9d5194118
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 2f8a6ddc-4ab7-4f9f-a2ea-72c6cb387f38 # Overview description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a70ca4da-3c54-4af5-8797-909b8ac96ec4
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 15ed2b72-8955-4cec-93f8-9736a9e50e80 # Overview image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3e54804d-81c5-4c72-bc27-5713ec177ece
+            userCondition: null
+            warning: null
+            width: 100
+        name: Overview
+        uid: f736207d-125b-4efe-9a4e-818b4d7023d6
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 685530fc-e1f1-4be1-813b-ebf9ac3aa108 # SEO
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: dcb68aef-1aee-4f27-a12d-651810ffcb3c
+            userCondition: null
+            warning: null
+            width: 100
+        name: SEO
+        uid: 2a7f5830-ad80-4a9e-9737-b61d71047f61
+        userCondition: null
+handle: organisations
+hasTitleField: true
+name: Organisations
+section: 7e2be3d2-532d-4b69-bcbd-9f23653a0471 # Organisations
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

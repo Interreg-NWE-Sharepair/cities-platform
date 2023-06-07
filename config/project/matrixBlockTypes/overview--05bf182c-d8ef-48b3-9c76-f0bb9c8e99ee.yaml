@@ -1,0 +1,119 @@
+field: 56d715d0-6a9d-4562-9c66-e5b4caad7f44 # Content Builder
+fieldLayouts:
+  4a590723-a543-4a75-97a8-9c84d3788351:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 493bdf75-476a-4b8c-b931-3cf3bbea7b9b # Title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5c55c3d4-7f8d-420b-88de-eebce12dd312
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: fa0bda57-b539-4335-9141-76c456deedaa # Entries
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f844e86f-6998-45f1-b502-36fffb9603be
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 0f8387d8-20dc-48a9-adfc-01252e7c737a # Background Color
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4c98d53b-e43b-4cf1-962a-ed48d85c398b
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: f19cfc0b-ac14-45bf-8098-0324ca9e753b
+        userCondition: null
+fields:
+  0f8387d8-20dc-48a9-adfc-01252e7c737a: # Background Color
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: backgroundColor
+    instructions: 'Select the background color of the whole section. Note: depending on the background color, the text colors might change.'
+    name: 'Background Color'
+    searchable: true
+    settings:
+      dataSet: 'Background colors'
+      type: dropdown
+    translationKeyFormat: null
+    translationMethod: none
+    type: statikbe\configvaluesfield\fields\ConfigValuesFieldField
+  493bdf75-476a-4b8c-b931-3cf3bbea7b9b: # Title
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: blockTitle
+    instructions: 'Add an optional title to the block'
+    name: Title
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  fa0bda57-b539-4335-9141-76c456deedaa: # Entries
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: entries
+    instructions: 'Select entries to display in this overview'
+    name: Entries
+    searchable: true
+    settings:
+      allowSelfRelations: false
+      branchLimit: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: null
+      minRelations: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Entry
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\entries\EntryCondition
+      selectionLabel: null
+      showSiteMenu: false
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+handle: overview
+name: Overview
+sortOrder: 7

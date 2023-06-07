@@ -1,0 +1,54 @@
+{% extends "_layout.twig" %}
+
+{% set breadcrumbs = [
+    craft.entries.section('profile').one(),
+	entry
+] %}
+
+{% set draftId = craft.app.request.getQueryParam('draftId') %}
+{% if draftId %}
+	{% set draft = craft.entries.draftId(draftId).status(null).one() %}
+{% endif %}
+
+{% block content %}
+	{% requireLogin %}
+	<div class="section section--light">
+		<div class="container">
+			<div class="w-full md:w-2/3">
+				{% include ['_snippet/_content/_pageTitle/_' ~ currentSite.handle ~'.twig', '_snippet/_content/_pageTitle/_default.twig'] %}
+				{% include ['_snippet/_content/_intro/_' ~ currentSite.handle ~'.twig', '_snippet/_content/_intro/_default.twig'] %}
+			</div>
+		</div>
+	</div>
+	<div class="section section--light">
+		<div class="container">
+			<form class="w-full md:w-2/3" method="POST" enctype="multipart/form-data" data-s-validate>
+				{{ csrfInput() }}
+				{{ actionInput('statik/stories/save-story') }}
+				{{ redirectInput(craft.entries.section('profile').one().url) }}
+				{{ hiddenInput('siteId', currentSite.id) }}
+				{{ hiddenInput('authorId', currentUser.id) }}
+				{{ hiddenInput('enabled', '0') }}
+				{% if draftId|length %}
+					{{ hiddenInput('draftId', draftId) }}
+				{% endif %}
+
+				<h2>{{ 'Inzendingsformulier repareerverhaal'|t }}</h2>
+
+				{% include "_snippet/_item/_form/_createStory.twig" %}
+
+				<div class="flex flex-wrap justify-between w-full mt-4 submit-with-loader">
+					<input class="my-2 btn btn--primary btn--ext" name="submitStory" type="submit" value="{{ 'Stuur je verhaal in'|t }}">
+					<input class="my-2 btn btn--secondary btn--ext" name="saveDraft" type="submit" value="{{ 'Sla op als draft'|t }}">
+					<div class="flex flex-col items-center justify-center w-full pb-4 bg-white loader-block">
+						<span class="scale-50">
+							{% include '_snippet/_item/_loader/_default.twig' %}
+						</span>
+						<span class="-mt-4 italic">{{"We slaan jouw verhaal op..."|t}}</span>
+					</div>
+				</div>
+				<p class="mt-4 text-base">{{ 'Na het indienen zal een beheerder uw artikel binnenkort beoordelen en publiceren.'|t }}</p>
+			</form>
+		</div>
+	</div>
+{% endblock %}

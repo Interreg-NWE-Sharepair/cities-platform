@@ -1,0 +1,241 @@
+description: null
+handle: contentManagersLouvainLaNeuve
+name: 'Content Managers Louvain-La-Neuve'
+permissions:
+  - accesscp
+  - accessplugin-freeform
+  - accessplugin-navigate
+  - accessplugin-seo-fields
+  - accessplugin-translate
+  - administrateusers
+  - 'assignusergroup:9d4490ff-3288-44c5-8d66-15a7c7f91136' # Content Managers Louvain-La-Neuve
+  - 'assignusergroup:e8eda379-a954-411d-a7ce-6693810139a2' # Repair heroes Louvain-La-Neuve
+  - 'createentries:45b7c78f-587d-441b-bbd1-605ca629d0bd' # Pages
+  - 'createentries:5fde66b3-825c-4efc-b013-f877eae296a3' # Repair Stories
+  - 'createentries:7801d79f-ad8f-4f1b-8e2f-ac3747b72114' # Events
+  - 'createentries:c576870d-abd8-46aa-8fe5-cdd12c40dfa8' # News
+  - 'createentries:edafcdcc-cb6a-4636-8b06-692031d123dc' # Functionals
+  - 'createentries:fdde9cc3-a5b8-4fe1-9486-e1e7fc5528a9' # All DIY Repairs
+  - 'createfolders:15d0b6ac-6fae-4d64-abf2-3a53ea5348ca' # Frontend
+  - 'createfolders:24f78479-5082-43fd-82d7-cd0227dd8b25' # Backend Louvain-La-Neuve
+  - 'deleteassets:15d0b6ac-6fae-4d64-abf2-3a53ea5348ca' # Frontend
+  - 'deleteassets:24f78479-5082-43fd-82d7-cd0227dd8b25' # Backend Louvain-La-Neuve
+  - 'deletecategories:5d3f9f3d-7382-4e6a-ab5a-e51b78e7f509' # Event Type
+  - 'deletecategories:e8d8c9b7-2370-4a54-adb6-049b1f0c90bc' # Repair status
+  - 'deleteentries:45b7c78f-587d-441b-bbd1-605ca629d0bd' # Pages
+  - 'deleteentries:5fde66b3-825c-4efc-b013-f877eae296a3' # Repair Stories
+  - 'deleteentries:7801d79f-ad8f-4f1b-8e2f-ac3747b72114' # Events
+  - 'deleteentries:c576870d-abd8-46aa-8fe5-cdd12c40dfa8' # News
+  - 'deleteentries:fdde9cc3-a5b8-4fe1-9486-e1e7fc5528a9' # All DIY Repairs
+  - 'deletepeerassets:15d0b6ac-6fae-4d64-abf2-3a53ea5348ca' # Frontend
+  - 'deletepeerassets:24f78479-5082-43fd-82d7-cd0227dd8b25' # Backend Louvain-La-Neuve
+  - 'deletepeercategorydrafts:5d3f9f3d-7382-4e6a-ab5a-e51b78e7f509' # Event Type
+  - 'deletepeercategorydrafts:e8d8c9b7-2370-4a54-adb6-049b1f0c90bc' # Repair status
+  - 'deletepeerentries:45b7c78f-587d-441b-bbd1-605ca629d0bd' # Pages
+  - 'deletepeerentries:5fde66b3-825c-4efc-b013-f877eae296a3' # Repair Stories
+  - 'deletepeerentries:7801d79f-ad8f-4f1b-8e2f-ac3747b72114' # Events
+  - 'deletepeerentries:c576870d-abd8-46aa-8fe5-cdd12c40dfa8' # News
+  - 'deletepeerentries:fdde9cc3-a5b8-4fe1-9486-e1e7fc5528a9' # All DIY Repairs
+  - 'deletepeerentrydrafts:0731fc69-9ba5-4022-b4e8-d26be5c12bf8' # Privacy policy
+  - 'deletepeerentrydrafts:361daec5-5ea3-4d9f-957f-f39c78bb595e' # Profile
+  - 'deletepeerentrydrafts:36895330-a28e-477f-9327-bdbe66dabf99' # Cookie policy
+  - 'deletepeerentrydrafts:3e25ba53-21e0-4c7c-abf5-1b1adccb8808' # Create Event
+  - 'deletepeerentrydrafts:40291883-407a-406f-997c-b700ede4d9e6' # Repair café repair
+  - 'deletepeerentrydrafts:45b7c78f-587d-441b-bbd1-605ca629d0bd' # Pages
+  - 'deletepeerentrydrafts:4750849d-9328-4d3e-956d-9d317da5e6eb' # Page not found
+  - 'deletepeerentrydrafts:4c32edae-2824-4f0f-b38b-2477d2500dfe' # News Overview
+  - 'deletepeerentrydrafts:50902bed-57c4-4fac-86a7-24e875920867' # Repair in
+  - 'deletepeerentrydrafts:550ddd6d-8487-42a8-ae38-a84c4b865e2a' # Edit Profile
+  - 'deletepeerentrydrafts:5611e98d-93ec-4bd4-95dd-18f282b8c5e8' # Home
+  - 'deletepeerentrydrafts:5d236e94-b6a8-472c-9296-a5c992cdd49a' # Contact
+  - 'deletepeerentrydrafts:5fde66b3-825c-4efc-b013-f877eae296a3' # Repair Stories
+  - 'deletepeerentrydrafts:64981bba-82ed-4e4d-859a-7043d01c2b06' # Register repairs
+  - 'deletepeerentrydrafts:684ece64-c23a-4abf-9574-f2c053d496e8' # Register
+  - 'deletepeerentrydrafts:7801d79f-ad8f-4f1b-8e2f-ac3747b72114' # Events
+  - 'deletepeerentrydrafts:7cfd7e3b-194d-4bc6-bd9b-524569d9b44a' # DIY Repair
+  - 'deletepeerentrydrafts:82a743d4-a8a9-44f2-9cc0-1e05f8c41804' # Create repair story
+  - 'deletepeerentrydrafts:9d5ffe8b-eae4-4957-9758-28b1fd0d2c68' # Repair Stories Overview
+  - 'deletepeerentrydrafts:c25b1e19-dca6-4ab5-a776-a043f6ee4c82' # Login
+  - 'deletepeerentrydrafts:c4a0336c-284c-4275-af4a-7a0b597fae07' # Submit Repair Story
+  - 'deletepeerentrydrafts:c576870d-abd8-46aa-8fe5-cdd12c40dfa8' # News
+  - 'deletepeerentrydrafts:d0806258-9281-4187-9b48-a8b770c43316' # Nominate
+  - 'deletepeerentrydrafts:d9372d4c-e9dd-46c9-bad8-0b769ca57f10' # Professional Repair
+  - 'deletepeerentrydrafts:defcf5bd-5207-471b-9e12-68ada21b246c' # Events Overview
+  - 'deletepeerentrydrafts:e3bed4e1-82ae-45e8-908c-0a6669141b31' # Search results
+  - 'deletepeerentrydrafts:eb3d6a1e-5d53-4c56-9987-fb42d0fa27bd' # Repair Heroes Overview
+  - 'deletepeerentrydrafts:fdde9cc3-a5b8-4fe1-9486-e1e7fc5528a9' # All DIY Repairs
+  - 'editglobalset:10fdc148-c0a4-486b-a5d1-3d36f2862352' # Social Media
+  - 'editglobalset:4666d048-0521-4d0f-9a4a-208e6182fb85' # Fallback
+  - 'editglobalset:a16348a9-07b9-433a-9f5b-c1cc61d632eb' # Site Specific Info
+  - 'editglobalset:ea47ff3a-c705-483f-895b-b57c76b061cb' # Partners
+  - 'editimages:15d0b6ac-6fae-4d64-abf2-3a53ea5348ca' # Frontend
+  - 'editimages:24f78479-5082-43fd-82d7-cd0227dd8b25' # Backend Louvain-La-Neuve
+  - 'editpeerimages:15d0b6ac-6fae-4d64-abf2-3a53ea5348ca' # Frontend
+  - 'editpeerimages:24f78479-5082-43fd-82d7-cd0227dd8b25' # Backend Louvain-La-Neuve
+  - 'editsite:51cad071-cea3-48ce-8809-1681b032cbd6' # Louvain La Neuve FR
+  - editusers
+  - freeform-submissionsaccess
+  - freeform-submissionsmanage
+  - 'freeform-submissionsmanage:12'
+  - 'freeform-submissionsmanage:15'
+  - 'freeform-submissionsmanage:19'
+  - 'freeform-submissionsmanage:7'
+  - freeform-submissionsmanageindividual
+  - freeform-submissionsread
+  - 'freeform-submissionsread:12'
+  - 'freeform-submissionsread:15'
+  - 'freeform-submissionsread:7'
+  - freeform-submissionsreadindividual
+  - moderateusers
+  - registerusers
+  - 'replacefiles:15d0b6ac-6fae-4d64-abf2-3a53ea5348ca' # Frontend
+  - 'replacefiles:24f78479-5082-43fd-82d7-cd0227dd8b25' # Backend Louvain-La-Neuve
+  - 'replacepeerfiles:15d0b6ac-6fae-4d64-abf2-3a53ea5348ca' # Frontend
+  - 'replacepeerfiles:24f78479-5082-43fd-82d7-cd0227dd8b25' # Backend Louvain-La-Neuve
+  - 'saveassets:15d0b6ac-6fae-4d64-abf2-3a53ea5348ca' # Frontend
+  - 'saveassets:24f78479-5082-43fd-82d7-cd0227dd8b25' # Backend Louvain-La-Neuve
+  - 'savecategories:5d3f9f3d-7382-4e6a-ab5a-e51b78e7f509' # Event Type
+  - 'savecategories:e8d8c9b7-2370-4a54-adb6-049b1f0c90bc' # Repair status
+  - 'saveentries:0731fc69-9ba5-4022-b4e8-d26be5c12bf8' # Privacy policy
+  - 'saveentries:361daec5-5ea3-4d9f-957f-f39c78bb595e' # Profile
+  - 'saveentries:36895330-a28e-477f-9327-bdbe66dabf99' # Cookie policy
+  - 'saveentries:3e25ba53-21e0-4c7c-abf5-1b1adccb8808' # Create Event
+  - 'saveentries:40291883-407a-406f-997c-b700ede4d9e6' # Repair café repair
+  - 'saveentries:45b7c78f-587d-441b-bbd1-605ca629d0bd' # Pages
+  - 'saveentries:4750849d-9328-4d3e-956d-9d317da5e6eb' # Page not found
+  - 'saveentries:4c32edae-2824-4f0f-b38b-2477d2500dfe' # News Overview
+  - 'saveentries:50902bed-57c4-4fac-86a7-24e875920867' # Repair in
+  - 'saveentries:550ddd6d-8487-42a8-ae38-a84c4b865e2a' # Edit Profile
+  - 'saveentries:5611e98d-93ec-4bd4-95dd-18f282b8c5e8' # Home
+  - 'saveentries:5d236e94-b6a8-472c-9296-a5c992cdd49a' # Contact
+  - 'saveentries:5fde66b3-825c-4efc-b013-f877eae296a3' # Repair Stories
+  - 'saveentries:64981bba-82ed-4e4d-859a-7043d01c2b06' # Register repairs
+  - 'saveentries:684ece64-c23a-4abf-9574-f2c053d496e8' # Register
+  - 'saveentries:7801d79f-ad8f-4f1b-8e2f-ac3747b72114' # Events
+  - 'saveentries:7cfd7e3b-194d-4bc6-bd9b-524569d9b44a' # DIY Repair
+  - 'saveentries:82a743d4-a8a9-44f2-9cc0-1e05f8c41804' # Create repair story
+  - 'saveentries:9d5ffe8b-eae4-4957-9758-28b1fd0d2c68' # Repair Stories Overview
+  - 'saveentries:c25b1e19-dca6-4ab5-a776-a043f6ee4c82' # Login
+  - 'saveentries:c4a0336c-284c-4275-af4a-7a0b597fae07' # Submit Repair Story
+  - 'saveentries:c576870d-abd8-46aa-8fe5-cdd12c40dfa8' # News
+  - 'saveentries:d0806258-9281-4187-9b48-a8b770c43316' # Nominate
+  - 'saveentries:d9372d4c-e9dd-46c9-bad8-0b769ca57f10' # Professional Repair
+  - 'saveentries:defcf5bd-5207-471b-9e12-68ada21b246c' # Events Overview
+  - 'saveentries:e3bed4e1-82ae-45e8-908c-0a6669141b31' # Search results
+  - 'saveentries:eb3d6a1e-5d53-4c56-9987-fb42d0fa27bd' # Repair Heroes Overview
+  - 'saveentries:edafcdcc-cb6a-4636-8b06-692031d123dc' # Functionals
+  - 'saveentries:fdde9cc3-a5b8-4fe1-9486-e1e7fc5528a9' # All DIY Repairs
+  - 'savepeerassets:15d0b6ac-6fae-4d64-abf2-3a53ea5348ca' # Frontend
+  - 'savepeerassets:24f78479-5082-43fd-82d7-cd0227dd8b25' # Backend Louvain-La-Neuve
+  - 'savepeercategorydrafts:5d3f9f3d-7382-4e6a-ab5a-e51b78e7f509' # Event Type
+  - 'savepeercategorydrafts:e8d8c9b7-2370-4a54-adb6-049b1f0c90bc' # Repair status
+  - 'savepeerentries:45b7c78f-587d-441b-bbd1-605ca629d0bd' # Pages
+  - 'savepeerentries:5fde66b3-825c-4efc-b013-f877eae296a3' # Repair Stories
+  - 'savepeerentries:7801d79f-ad8f-4f1b-8e2f-ac3747b72114' # Events
+  - 'savepeerentries:c576870d-abd8-46aa-8fe5-cdd12c40dfa8' # News
+  - 'savepeerentries:edafcdcc-cb6a-4636-8b06-692031d123dc' # Functionals
+  - 'savepeerentries:fdde9cc3-a5b8-4fe1-9486-e1e7fc5528a9' # All DIY Repairs
+  - 'savepeerentrydrafts:0731fc69-9ba5-4022-b4e8-d26be5c12bf8' # Privacy policy
+  - 'savepeerentrydrafts:361daec5-5ea3-4d9f-957f-f39c78bb595e' # Profile
+  - 'savepeerentrydrafts:36895330-a28e-477f-9327-bdbe66dabf99' # Cookie policy
+  - 'savepeerentrydrafts:3e25ba53-21e0-4c7c-abf5-1b1adccb8808' # Create Event
+  - 'savepeerentrydrafts:40291883-407a-406f-997c-b700ede4d9e6' # Repair café repair
+  - 'savepeerentrydrafts:45b7c78f-587d-441b-bbd1-605ca629d0bd' # Pages
+  - 'savepeerentrydrafts:4750849d-9328-4d3e-956d-9d317da5e6eb' # Page not found
+  - 'savepeerentrydrafts:4c32edae-2824-4f0f-b38b-2477d2500dfe' # News Overview
+  - 'savepeerentrydrafts:50902bed-57c4-4fac-86a7-24e875920867' # Repair in
+  - 'savepeerentrydrafts:550ddd6d-8487-42a8-ae38-a84c4b865e2a' # Edit Profile
+  - 'savepeerentrydrafts:5611e98d-93ec-4bd4-95dd-18f282b8c5e8' # Home
+  - 'savepeerentrydrafts:5d236e94-b6a8-472c-9296-a5c992cdd49a' # Contact
+  - 'savepeerentrydrafts:5fde66b3-825c-4efc-b013-f877eae296a3' # Repair Stories
+  - 'savepeerentrydrafts:64981bba-82ed-4e4d-859a-7043d01c2b06' # Register repairs
+  - 'savepeerentrydrafts:684ece64-c23a-4abf-9574-f2c053d496e8' # Register
+  - 'savepeerentrydrafts:7801d79f-ad8f-4f1b-8e2f-ac3747b72114' # Events
+  - 'savepeerentrydrafts:7cfd7e3b-194d-4bc6-bd9b-524569d9b44a' # DIY Repair
+  - 'savepeerentrydrafts:82a743d4-a8a9-44f2-9cc0-1e05f8c41804' # Create repair story
+  - 'savepeerentrydrafts:9d5ffe8b-eae4-4957-9758-28b1fd0d2c68' # Repair Stories Overview
+  - 'savepeerentrydrafts:c25b1e19-dca6-4ab5-a776-a043f6ee4c82' # Login
+  - 'savepeerentrydrafts:c4a0336c-284c-4275-af4a-7a0b597fae07' # Submit Repair Story
+  - 'savepeerentrydrafts:c576870d-abd8-46aa-8fe5-cdd12c40dfa8' # News
+  - 'savepeerentrydrafts:d0806258-9281-4187-9b48-a8b770c43316' # Nominate
+  - 'savepeerentrydrafts:d9372d4c-e9dd-46c9-bad8-0b769ca57f10' # Professional Repair
+  - 'savepeerentrydrafts:defcf5bd-5207-471b-9e12-68ada21b246c' # Events Overview
+  - 'savepeerentrydrafts:e3bed4e1-82ae-45e8-908c-0a6669141b31' # Search results
+  - 'savepeerentrydrafts:eb3d6a1e-5d53-4c56-9987-fb42d0fa27bd' # Repair Heroes Overview
+  - 'savepeerentrydrafts:edafcdcc-cb6a-4636-8b06-692031d123dc' # Functionals
+  - 'savepeerentrydrafts:fdde9cc3-a5b8-4fe1-9486-e1e7fc5528a9' # All DIY Repairs
+  - 'seo-fields:default'
+  - 'seo-fields:notfound'
+  - 'seo-fields:redirects'
+  - 'viewassets:15d0b6ac-6fae-4d64-abf2-3a53ea5348ca' # Frontend
+  - 'viewassets:24f78479-5082-43fd-82d7-cd0227dd8b25' # Backend Louvain-La-Neuve
+  - 'viewcategories:5d3f9f3d-7382-4e6a-ab5a-e51b78e7f509' # Event Type
+  - 'viewcategories:e8d8c9b7-2370-4a54-adb6-049b1f0c90bc' # Repair status
+  - 'viewentries:0731fc69-9ba5-4022-b4e8-d26be5c12bf8' # Privacy policy
+  - 'viewentries:361daec5-5ea3-4d9f-957f-f39c78bb595e' # Profile
+  - 'viewentries:36895330-a28e-477f-9327-bdbe66dabf99' # Cookie policy
+  - 'viewentries:3e25ba53-21e0-4c7c-abf5-1b1adccb8808' # Create Event
+  - 'viewentries:40291883-407a-406f-997c-b700ede4d9e6' # Repair café repair
+  - 'viewentries:45b7c78f-587d-441b-bbd1-605ca629d0bd' # Pages
+  - 'viewentries:4750849d-9328-4d3e-956d-9d317da5e6eb' # Page not found
+  - 'viewentries:4c32edae-2824-4f0f-b38b-2477d2500dfe' # News Overview
+  - 'viewentries:50902bed-57c4-4fac-86a7-24e875920867' # Repair in
+  - 'viewentries:550ddd6d-8487-42a8-ae38-a84c4b865e2a' # Edit Profile
+  - 'viewentries:5611e98d-93ec-4bd4-95dd-18f282b8c5e8' # Home
+  - 'viewentries:5d236e94-b6a8-472c-9296-a5c992cdd49a' # Contact
+  - 'viewentries:5fde66b3-825c-4efc-b013-f877eae296a3' # Repair Stories
+  - 'viewentries:64981bba-82ed-4e4d-859a-7043d01c2b06' # Register repairs
+  - 'viewentries:684ece64-c23a-4abf-9574-f2c053d496e8' # Register
+  - 'viewentries:7801d79f-ad8f-4f1b-8e2f-ac3747b72114' # Events
+  - 'viewentries:7cfd7e3b-194d-4bc6-bd9b-524569d9b44a' # DIY Repair
+  - 'viewentries:82a743d4-a8a9-44f2-9cc0-1e05f8c41804' # Create repair story
+  - 'viewentries:9d5ffe8b-eae4-4957-9758-28b1fd0d2c68' # Repair Stories Overview
+  - 'viewentries:c25b1e19-dca6-4ab5-a776-a043f6ee4c82' # Login
+  - 'viewentries:c4a0336c-284c-4275-af4a-7a0b597fae07' # Submit Repair Story
+  - 'viewentries:c576870d-abd8-46aa-8fe5-cdd12c40dfa8' # News
+  - 'viewentries:d0806258-9281-4187-9b48-a8b770c43316' # Nominate
+  - 'viewentries:d9372d4c-e9dd-46c9-bad8-0b769ca57f10' # Professional Repair
+  - 'viewentries:defcf5bd-5207-471b-9e12-68ada21b246c' # Events Overview
+  - 'viewentries:e3bed4e1-82ae-45e8-908c-0a6669141b31' # Search results
+  - 'viewentries:eb3d6a1e-5d53-4c56-9987-fb42d0fa27bd' # Repair Heroes Overview
+  - 'viewentries:edafcdcc-cb6a-4636-8b06-692031d123dc' # Functionals
+  - 'viewentries:fdde9cc3-a5b8-4fe1-9486-e1e7fc5528a9' # All DIY Repairs
+  - 'viewpeerassets:15d0b6ac-6fae-4d64-abf2-3a53ea5348ca' # Frontend
+  - 'viewpeerassets:24f78479-5082-43fd-82d7-cd0227dd8b25' # Backend Louvain-La-Neuve
+  - 'viewpeercategorydrafts:5d3f9f3d-7382-4e6a-ab5a-e51b78e7f509' # Event Type
+  - 'viewpeercategorydrafts:e8d8c9b7-2370-4a54-adb6-049b1f0c90bc' # Repair status
+  - 'viewpeerentries:45b7c78f-587d-441b-bbd1-605ca629d0bd' # Pages
+  - 'viewpeerentries:5fde66b3-825c-4efc-b013-f877eae296a3' # Repair Stories
+  - 'viewpeerentries:7801d79f-ad8f-4f1b-8e2f-ac3747b72114' # Events
+  - 'viewpeerentries:c576870d-abd8-46aa-8fe5-cdd12c40dfa8' # News
+  - 'viewpeerentries:edafcdcc-cb6a-4636-8b06-692031d123dc' # Functionals
+  - 'viewpeerentries:fdde9cc3-a5b8-4fe1-9486-e1e7fc5528a9' # All DIY Repairs
+  - 'viewpeerentrydrafts:0731fc69-9ba5-4022-b4e8-d26be5c12bf8' # Privacy policy
+  - 'viewpeerentrydrafts:361daec5-5ea3-4d9f-957f-f39c78bb595e' # Profile
+  - 'viewpeerentrydrafts:36895330-a28e-477f-9327-bdbe66dabf99' # Cookie policy
+  - 'viewpeerentrydrafts:3e25ba53-21e0-4c7c-abf5-1b1adccb8808' # Create Event
+  - 'viewpeerentrydrafts:40291883-407a-406f-997c-b700ede4d9e6' # Repair café repair
+  - 'viewpeerentrydrafts:45b7c78f-587d-441b-bbd1-605ca629d0bd' # Pages
+  - 'viewpeerentrydrafts:4750849d-9328-4d3e-956d-9d317da5e6eb' # Page not found
+  - 'viewpeerentrydrafts:4c32edae-2824-4f0f-b38b-2477d2500dfe' # News Overview
+  - 'viewpeerentrydrafts:50902bed-57c4-4fac-86a7-24e875920867' # Repair in
+  - 'viewpeerentrydrafts:550ddd6d-8487-42a8-ae38-a84c4b865e2a' # Edit Profile
+  - 'viewpeerentrydrafts:5611e98d-93ec-4bd4-95dd-18f282b8c5e8' # Home
+  - 'viewpeerentrydrafts:5d236e94-b6a8-472c-9296-a5c992cdd49a' # Contact
+  - 'viewpeerentrydrafts:5fde66b3-825c-4efc-b013-f877eae296a3' # Repair Stories
+  - 'viewpeerentrydrafts:64981bba-82ed-4e4d-859a-7043d01c2b06' # Register repairs
+  - 'viewpeerentrydrafts:684ece64-c23a-4abf-9574-f2c053d496e8' # Register
+  - 'viewpeerentrydrafts:7801d79f-ad8f-4f1b-8e2f-ac3747b72114' # Events
+  - 'viewpeerentrydrafts:7cfd7e3b-194d-4bc6-bd9b-524569d9b44a' # DIY Repair
+  - 'viewpeerentrydrafts:82a743d4-a8a9-44f2-9cc0-1e05f8c41804' # Create repair story
+  - 'viewpeerentrydrafts:9d5ffe8b-eae4-4957-9758-28b1fd0d2c68' # Repair Stories Overview
+  - 'viewpeerentrydrafts:c25b1e19-dca6-4ab5-a776-a043f6ee4c82' # Login
+  - 'viewpeerentrydrafts:c4a0336c-284c-4275-af4a-7a0b597fae07' # Submit Repair Story
+  - 'viewpeerentrydrafts:c576870d-abd8-46aa-8fe5-cdd12c40dfa8' # News
+  - 'viewpeerentrydrafts:d0806258-9281-4187-9b48-a8b770c43316' # Nominate
+  - 'viewpeerentrydrafts:d9372d4c-e9dd-46c9-bad8-0b769ca57f10' # Professional Repair
+  - 'viewpeerentrydrafts:defcf5bd-5207-471b-9e12-68ada21b246c' # Events Overview
+  - 'viewpeerentrydrafts:e3bed4e1-82ae-45e8-908c-0a6669141b31' # Search results
+  - 'viewpeerentrydrafts:eb3d6a1e-5d53-4c56-9987-fb42d0fa27bd' # Repair Heroes Overview
+  - 'viewpeerentrydrafts:edafcdcc-cb6a-4636-8b06-692031d123dc' # Functionals
+  - 'viewpeerentrydrafts:fdde9cc3-a5b8-4fe1-9486-e1e7fc5528a9' # All DIY Repairs

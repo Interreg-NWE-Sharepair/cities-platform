@@ -1,0 +1,34 @@
+{# Show the right hero stats embed on the right subsite #}
+{% set embedLanguage = currentSite.language|trim('-BE')|default('nl') %}
+{% if currentSite.handle == 'apeldoornNl' %}
+  <iframe title="City statistics"
+    id="city-statistics-embed"
+    src="https://www.repairconnects.org/api/repair/statistics?bbox=52.11219824513436,5.863780975341797,52.246826882985566,5.996475219726563&lang={{ embedLanguage }}&header=true&image=https://www.repairconnects.org/repgui/img/sharepair_apeldoorn.svg"
+    frameborder="0"
+    style="width: 1px; min-width: 100%;"></iframe>
+{% elseif currentSite.handle == 'leuvenNl' or currentSite.handle == 'leuvenEn' %}
+  <iframe title="City statistics"
+    id="city-statistics-embed"
+    src="https://www.repairconnects.org/api/repair/statistics?bbox=50.810165303594566,4.632453918457032,50.94869429460228,4.765148162841798&lang={{ embedLanguage }}&header=true&image=https://www.repairconnects.org/repgui/img/sharepair_leuven.svg"
+    frameborder="0"
+    style="width: 1px; min-width: 100%;"></iframe>
+{# {% elseif currentSite.handle == 'louvainLaNeuveFr' %}
+  <iframe
+    id="statistics-embed"
+    title="Statistics"
+    src="https://www.repairconnects.org/api/repair/statistics?lang={{ embedLanguage }}&bbox=50.60579369643938,4.547481536865235,50.74253872133164,4.680175781250001&baseUrl={{ currentSite.baseUrl|slice(0, -1) }}&mapUrlBbox={{ currentSite.baseUrl }}repair-louvain-la-neuve?bbox=50.60579369643938,4.547481536865235,50.74253872133164,4.680175781250001&mapUrlFilters={{ currentSite.baseUrl }}repair-louvain-la-neuve?organisation_types=repair_cafe"
+    frameborder="0"
+    style="width: 1px; min-width: 100%;"></iframe> #}
+{% elseif currentSite.handle == 'roeselareNl' %}
+  <iframe title="City statistics"
+    id="city-statistics-embed"
+    src="https://www.repairconnects.org/api/repair/statistics?bbox=50.875311142200765,3.058490753173828,51.013646659086646,3.191184997558594&lang={{ embedLanguage }}&header=true&image=https://www.repairconnects.org/repgui/img/sharepair_roeselare.svg"
+    frameborder="0"
+    style="width: 1px; min-width: 100%;"></iframe>
+{% endif %}
+
+{% if currentSite.handle == 'apeldoornNl' or currentSite.handle == 'leuvenNl' or currentSite.handle == 'leuvenEn' or currentSite.handle == 'roeselareNl' %}
+  <script>
+    iFrameResize({}, '#city-statistics-embed');
+  </script>
+{% endif %}

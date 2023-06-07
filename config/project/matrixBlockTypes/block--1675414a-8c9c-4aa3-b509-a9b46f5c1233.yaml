@@ -1,0 +1,121 @@
+field: 2b66c84f-5b06-4222-b0c4-10288b90068e # Quote
+fieldLayouts:
+  57ef1e40-26e4-4221-a488-541d6e4343c6:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 18dc6e60-ce7f-497d-b9c3-e25081a31142 # Text
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e949cc73-a079-40b4-b0eb-1f1800d0fb96
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 583116e3-59c5-462b-9ba0-adda934aac7d # Author
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1c5b1ed1-a4e0-4718-a256-66aadda2c7dd
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: eaed2a9f-28fd-4f6a-b296-367ff2c606d3 # CTA
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a1a035ff-500c-4733-a5a4-2a4448296e53
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: b7457732-cd00-4912-8c3e-02118d49a39d
+        userCondition: null
+fields:
+  18dc6e60-ce7f-497d-b9c3-e25081a31142: # Text
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: text
+    instructions: null
+    name: Text
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+  583116e3-59c5-462b-9ba0-adda934aac7d: # Author
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: writer
+    instructions: null
+    name: Author
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  eaed2a9f-28fd-4f6a-b296-367ff2c606d3: # CTA
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: cta
+    instructions: 'Add one or more call to actions and define styling (button, link, ...).'
+    name: CTA
+    searchable: true
+    settings:
+      blockTypeFields: 0
+      changedFieldIndicator: null
+      columns:
+        __assoc__:
+          -
+            - fd6fd6ba-ec39-4df3-8caf-6267267f6fca # Link
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+      contentTable: '{{%stc_23_cta}}'
+      fieldLayout: matrix
+      maxRows: null
+      minRows: null
+      propagationKeyFormat: null
+      propagationMethod: all
+      selectionLabel: 'Add a call to action'
+      staticField: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: verbb\supertable\fields\SuperTableField
+handle: block
+name: Block
+sortOrder: 1

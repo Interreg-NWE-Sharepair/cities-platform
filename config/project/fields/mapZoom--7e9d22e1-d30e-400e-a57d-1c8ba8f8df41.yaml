@@ -1,0 +1,89 @@
+columnSuffix: hwjtriqw
+contentColumnType: string
+fieldGroup: 39b3406d-d1bb-4a84-a13a-bce5cc293238 # Globals
+handle: mapZoom
+instructions: null
+name: 'Map Zoom'
+searchable: false
+settings:
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - '11'
+        -
+          - value
+          - '11'
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - '12'
+        -
+          - value
+          - '12'
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - '13'
+        -
+          - value
+          - '13'
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - '14'
+        -
+          - value
+          - '14'
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - '15'
+        -
+          - value
+          - '15'
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - '16'
+        -
+          - value
+          - '16'
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - '17'
+        -
+          - value
+          - '17'
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

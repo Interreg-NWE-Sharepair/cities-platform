@@ -1,0 +1,17 @@
+{% extends "_layout.twig" %}
+
+{% set breadcrumbs = entry.ancestors().all()|merge([entry]) %}
+
+{% block content %}
+
+	{% include ['_snippet/_global/_hero/_' ~ currentSite.handle ~'.twig', '_snippet/_global/_hero/_default.twig'] %}
+
+	{% include ['_snippet/_content/_contentBuilder/_' ~ currentSite.handle ~'.twig', '_snippet/_content/_contentBuilder/_default.twig']
+        with {
+        settings : {
+            section: 'section',
+            container: 'container',
+        }
+    } %}
+
+{% endblock %}

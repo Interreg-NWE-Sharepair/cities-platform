@@ -1,0 +1,261 @@
+field: 56d715d0-6a9d-4562-9c66-e5b4caad7f44 # Content Builder
+fieldLayouts:
+  d0b38e0e-beb2-4ccd-beaf-333182970b36:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 0dc288fc-f1dd-4a90-8754-444768769c4c # Title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 63d4abce-de23-4680-acd1-a35e06c0e6f2
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: a138d15e-cf83-46fe-af37-05a999ca33dd # Text
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a79f0dde-05d4-4c44-b75e-47c32750d81c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 6983c563-8642-4e33-9653-30a8b404ce9d # Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 308ec4a7-1d68-4939-8b38-a9f229d4f671
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 24be1cb8-144b-4601-a8e0-daf63a2a8c52 # Image Position
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7c1dad68-f9a0-4329-b099-f48fc6b9706b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 10ca0503-675f-41f5-8e3b-af2cbdf260cc # Call to action(s)
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f3666b35-63ad-4689-abe1-176862cc1deb
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: aa047bda-dfe4-4841-b66b-18cda7303496 # Background Color
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 50b48643-b621-44d2-a3ef-54ec58298db0
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 0c4d5d28-77fe-4511-ac83-e12829ddb95f
+        userCondition: null
+fields:
+  0dc288fc-f1dd-4a90-8754-444768769c4c: # Title
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: blockTitle
+    instructions: 'Add an optional title to the block'
+    name: Title
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  10ca0503-675f-41f5-8e3b-af2cbdf260cc: # Call to action(s)
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: cta
+    instructions: 'Add one or more call to actions and define styling (button, link, ...).'
+    name: 'Call to action(s)'
+    searchable: true
+    settings:
+      blockTypeFields: 0
+      changedFieldIndicator: 249197573
+      columns:
+        __assoc__:
+          -
+            - 749e41f9-09e7-48d5-a46b-2305e35e6132 # Link
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+      contentTable: '{{%stc_25_cta}}'
+      fieldLayout: matrix
+      maxRows: null
+      minRows: 1
+      propagationKeyFormat: null
+      propagationMethod: all
+      selectionLabel: null
+      staticField: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: verbb\supertable\fields\SuperTableField
+  24be1cb8-144b-4601-a8e0-daf63a2a8c52: # Image Position
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: position
+    instructions: 'Select the position of the image in relation to the text block.'
+    name: 'Image Position'
+    searchable: true
+    settings:
+      default: left
+      options:
+        __assoc__:
+          -
+            - left
+            - '1'
+          -
+            - center
+            - ''
+          -
+            - right
+            - '1'
+          -
+            - full
+            - ''
+          -
+            - drop-left
+            - ''
+          -
+            - drop-right
+            - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: rias\positionfieldtype\fields\Position
+  6983c563-8642-4e33-9653-30a8b404ce9d: # Image
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: image
+    instructions: null
+    name: Image
+    searchable: true
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: false
+      allowedKinds:
+        - image
+      branchLimit: null
+      defaultUploadLocationSource: 'volume:979c3eeb-f99a-4ca1-bcbe-ce9298a4e4ca' # Files
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 1
+      minRelations: null
+      previewMode: full
+      restrictFiles: true
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:979c3eeb-f99a-4ca1-bcbe-ce9298a4e4ca' # Files
+      restrictedLocationSubpath: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Asset
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\assets\AssetCondition
+      selectionLabel: 'Add an image'
+      showSiteMenu: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  a138d15e-cf83-46fe-af37-05a999ca33dd: # Text
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: text
+    instructions: 'Type your text here'
+    name: Text
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: Simple.json
+      removeEmptyTags: true
+      removeInlineStyles: true
+      removeNbsp: true
+      showHtmlButtonForNonAdmins: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  aa047bda-dfe4-4841-b66b-18cda7303496: # Background Color
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: backgroundColor
+    instructions: 'Select the background color of the whole section. Note: depending on the background color, the text colors might change.'
+    name: 'Background Color'
+    searchable: true
+    settings:
+      dataSet: 'Background colors'
+      type: dropdown
+    translationKeyFormat: null
+    translationMethod: none
+    type: statikbe\configvaluesfield\fields\ConfigValuesFieldField
+handle: callToAction
+name: 'Call To Action'
+sortOrder: 8

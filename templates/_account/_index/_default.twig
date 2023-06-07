@@ -1,0 +1,56 @@
+{% extends "_layout.twig" %}
+
+{% set breadcrumbs = [
+    {
+        'title' : "Mijn profiel"|t,
+        'url' : entry.url
+    }
+] %}
+
+{% set user = currentUser %}
+
+{% block content %}
+	{% requireLogin %}
+	{% include '_snippet/_item/_profile/_default.twig' with {editable:true} %}
+
+	<div class="section section--light">
+		<div class="container">
+			<h2>{{"Verhalen van {name}"|t({name: currentUser.firstName})}}</h2>
+			<div class="flex flex-wrap mt-8 -mx-3">
+				<a href="{{ craft.entries.section('createRepairStory').one().getUrl() }}" class="flex w-full px-3 mb-4 sm:w-1/2 md:w-1/3">
+					<div class="flex flex-col items-center justify-center w-full p-12 text-center text-white bg-primary rounded-card">
+						<svg class="mb-12 text-6xl icon" aria-hidden="true"><use xlink:href="/icon/sprite.svg#add-circle-outline"></use></svg>
+						<p class="text-3xl font-black">{{ 'Schrijf een nieuw reparatie verhaal'|t }}</p>
+					</div>
+				</a>
+				{% for cardEntry in craft.entries.section('repairStories').draftCreator(currentUser).status(null).all() %}
+					{% include "_snippet/_item/_card/_default.twig" with {showContrast: true, status: cardEntry.status } %}
+				{% endfor %}
+				{% for cardEntry in craft.entries.section('repairStories').authorId(currentUser.id).status(null).all() %}
+					{% include "_snippet/_item/_card/_default.twig" with {showContrast: true, status: cardEntry.status} %}
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+
+	<div class="section section--light">
+		<div class="container">
+			<h2>{{"Evenementen van {name}"|t({name: currentUser.firstName})}}</h2>
+				<div class="flex flex-wrap mt-8 -mx-3">
+				<a href="{{ craft.entries.section('createEvent').one().getUrl() }}" class="flex w-full px-3 mb-4 sm:w-1/2 md:w-1/3">
+					<div class="flex flex-col items-center justify-center w-full p-12 text-center text-white bg-primary rounded-card">
+						<svg class="mb-12 text-6xl icon" aria-hidden="true"><use xlink:href="/icon/sprite.svg#add-circle-outline"></use></svg>
+						<p class="text-3xl font-black">{{ 'Maak een nieuw reparatie event aan'|t }}</p>
+					</div>
+				</a>
+				{% for cardEntry in craft.entries.section('events').draftCreator(currentUser).status(null).all() %}
+					{% include "_snippet/_item/_card/_default.twig" with {showContrast: true, status: cardEntry.status} %}
+				{% endfor %}
+				{% for cardEntry in craft.entries.section('events').authorId(currentUser.id).status(null).all() %}
+					{% include "_snippet/_item/_card/_default.twig" with {showContrast: true, status: cardEntry.status} %}
+				{% endfor %}
+			</div>
+
+		</div>
+	</div>
+{% endblock %}

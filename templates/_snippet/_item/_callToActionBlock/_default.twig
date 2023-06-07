@@ -1,0 +1,15 @@
+<div class="mt-8">
+    {% if ctaBlock.blockTitle|length %}
+    <h2>{{ ctaBlock.blockTitle }}</h2>
+    {% endif %}
+    <div class="{{ fontSize ?? 'text-xl' }} redactor">
+        {{ ctaBlock.text }}
+    </div>
+    <div class="flex flex-wrap mt-6">
+        {% for cta in ctaBlock.cta.all() %}
+            <div class="mt-4 mr-4">
+                {{ cta.linkit.getLink() }}
+            </div>
+        {% endfor %}
+    </div>
+</div>

@@ -1,0 +1,11 @@
+description: null
+handle: repairHeroesApeldoorn
+name: 'Repair heroes Apeldoorn'
+permissions:
+  - 'assignusergroup:111dbcc7-d429-41a7-9432-5f7b7b47b612' # Repair heroes Apeldoorn
+  - 'createentries:5fde66b3-825c-4efc-b013-f877eae296a3' # Repair Stories
+  - 'createentries:7801d79f-ad8f-4f1b-8e2f-ac3747b72114' # Events
+  - 'editsite:74572bf4-408d-451b-bdd2-d2367f83a598' # Apeldoorn NL
+  - editusers
+  - 'viewentries:5fde66b3-825c-4efc-b013-f877eae296a3' # Repair Stories
+  - 'viewentries:7801d79f-ad8f-4f1b-8e2f-ac3747b72114' # Events

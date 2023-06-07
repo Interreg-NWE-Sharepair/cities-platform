@@ -1,0 +1,139 @@
+field: 86c7969c-4689-42ce-9439-e8c63dcd9452 # Options
+fieldLayouts:
+  4e694535-77b4-4458-991e-5eba314078fe:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: e2a70a58-4ca0-4912-b443-f6a57ae66e03 # Title
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c61eb475-fc6e-4ee9-b199-878929dd4d25
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 2aa8f052-22c5-47c5-88b5-96ae81befc8f # Image
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d4fe2632-7a23-43bb-8733-2dce5c92f97b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 7e23c327-4825-4f8b-815a-6f07dae99dd2 # Call to actions
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 877b2925-d95e-40f8-981d-f567ee8087bf
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: a0957151-835e-4c8a-9cc5-794d5766da9d
+        userCondition: null
+fields:
+  2aa8f052-22c5-47c5-88b5-96ae81befc8f: # Image
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: image
+    instructions: null
+    name: Image
+    searchable: true
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: false
+      allowedKinds:
+        - image
+      branchLimit: null
+      defaultUploadLocationSource: 'volume:979c3eeb-f99a-4ca1-bcbe-ce9298a4e4ca' # Files
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 1
+      minRelations: null
+      previewMode: full
+      restrictFiles: true
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:979c3eeb-f99a-4ca1-bcbe-ce9298a4e4ca' # Files
+      restrictedLocationSubpath: null
+      selectionLabel: 'Add an image'
+      showSiteMenu: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  7e23c327-4825-4f8b-815a-6f07dae99dd2: # Call to actions
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: cta
+    instructions: null
+    name: 'Call to actions'
+    searchable: true
+    settings:
+      blockTypeFields: 0
+      changedFieldIndicator: null
+      columns:
+        __assoc__:
+          -
+            - 7e31e194-fc15-495f-aaef-d2906c3cc267 # link
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+      contentTable: '{{%stc_12_cta}}'
+      fieldLayout: matrix
+      maxRows: null
+      minRows: null
+      propagationKeyFormat: null
+      propagationMethod: all
+      selectionLabel: 'Add a call to action'
+      staticField: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: verbb\supertable\fields\SuperTableField
+  e2a70a58-4ca0-4912-b443-f6a57ae66e03: # Title
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: optionTitle
+    instructions: null
+    name: Title
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+handle: option
+name: Option
+sortOrder: 1

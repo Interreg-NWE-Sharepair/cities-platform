@@ -1,0 +1,47 @@
+{% extends "_mail/_layout" %}
+
+{% block title %}
+	{{ "Merci d'avoir soumis une a Repair Story"|t }}
+{% endblock %}
+
+{% block content %}
+	<p>Bonjour
+		{% if user is defined %}
+			{{ user.firstName }}
+		{% else %}
+			{{ story.firstName }}
+		{% endif %}
+	</p>
+
+	<p>{{ 'Une copie de votre soumission:'|t }}</p>
+
+	<ul>
+		{% for key,value in story %}
+			<li>
+				<strong>
+					{% switch key %}
+						{% case "title" %}
+							Titre
+						{% case "intro" %}
+							Introduction
+						{% case "body" %}
+							Body texte
+						{% case "firstName" %}
+							Prénom
+						{% case "lastName" %}
+							Nom de famille
+						{% case "email" %}
+							Adresse e-mail
+						{% case "phone" %}
+							Numéro de téléphone
+						{% case "bio" %}
+							Courte biographie
+					{% endswitch %}
+				</strong>
+				<br>
+				{{ value|raw }}
+			</li>
+		{% endfor %}
+	</ul>
+
+{% endblock %}

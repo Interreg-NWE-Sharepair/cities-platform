@@ -1,0 +1,34 @@
+<div class="w-full mx-auto md:w-2/3">
+	<blockquote>
+		<div class="quote">
+			{{ block.text }}
+		</div>
+		{% if block.writer|length %}
+			<footer class="flex flex-wrap items-center justify-center mt-4 italic font-bold">
+				{% if block.image|length %}
+					<div class="mr-6">
+					{% set asset = block.image|first %}
+					{% do asset.setTransform({ width: 50, height: 50 }) %}
+					{{ tag('img', {
+						src: asset.url,
+						width: asset.width,
+						height: asset.height,
+						srcset: asset.getSrcset(['1.5x', '2x', '3x']),
+						alt: block.image|first.imageCaption ?? block.image|first.title ?? block.author,
+						class: "w-[50px] rounded-full",
+						loading: "lazy"
+					}) }}
+					</div>
+				{% endif %}
+				{{ block.writer }}
+			</footer>
+		{% endif %}
+	</blockquote>
+	{% if block.cta|length %}
+		<div class="flex flex-wrap justify-center mt-8">
+			{% for cta in block.cta.all() %}
+				{% include '_snippet/_content/_blocks/_cta/_default.twig' %}
+			{% endfor %}
+		</div>
+	{% endif %}
+</div>

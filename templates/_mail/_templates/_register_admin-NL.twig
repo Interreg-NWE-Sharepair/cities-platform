@@ -1,0 +1,40 @@
+{% set baseUrl = craft.app.config.general.aliases.baseUrl %}
+{% set city = craft.globals().getSetByHandle('siteInfo') %}
+{% extends "_mail/_layout" %}
+
+{# subject: Een nieuwe repair hero heeft zich geregistreerd op {{ siteInfo.cityName }} #}
+{# fromEmail: {{ craft.app.projectConfig.get('email.fromEmail') }} #}
+{# fromName: {{ siteInfo.cityName }} #}
+{# replyToEmail: {{ craft.app.projectConfig.get('email.fromEmail') }} #}
+{# cc:  #}
+{# bcc: #}
+{# includeAttachments: true #}
+{# presetAssets: 42,67 #}
+{# description: #}
+
+	{% block title %}
+	{{ "Een nieuwe repair hero heeft zich geregistreerd op"|t }} {{ city.cityName }}
+{% endblock %}
+
+	{% block content %}
+		<p>
+		{{ 'Hallo'|t }}
+	,
+	</p>
+		<p>
+	{{ "Een nieuwe repair hero heeft zich geregistreerd op"|t }} {{ city.cityName }}{{ ". Ze hebben volgende details gedeeld:"|t }}
+	</p>
+		<ul>
+			{% for field in allFields|filter(field => field.handle != 'terms' and field.handle != 'data') %}
+				<li>
+					<strong>
+				{{ field.label }}
+				</strong>
+				<br>
+			{{ field.getValueAsString() }}
+		</li>
+	{% endfor %}
+	</ul>
+		<p>
+	{{ 'Bedankt om deze repair hero te contacteren, hem voor te stellen aan de community en hun account te activeren.'|t }}
+</p>{% endblock %}

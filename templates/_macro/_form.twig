@@ -1,0 +1,12 @@
+{% macro errorList(errors) %}
+    {% if errors %}
+        <div class="form__msg-error" id="s-validate-0-5">
+            {% for error in errors %}
+                {{ error|raw }}
+                {% if not loop.last %}
+                    <br/>
+                {% endif %}
+            {% endfor %}
+        </div>
+    {% endif %}
+{% endmacro %}

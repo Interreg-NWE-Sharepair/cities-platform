@@ -1,0 +1,58 @@
+{% extends "_layout" %}
+
+{% set breadcrumbs = [
+    entry,
+] %}
+
+{% block content %}
+
+	<div class="pt-0 section section--light sm:pt-12">
+		<div class="container">
+			<div class="flex flex-wrap -mx-4">
+				<div class="order-2 w-full px-4 sm:w-2/3 sm:order-1">
+					{% include ['_snippet/_content/_pageTitle/_' ~ currentSite.handle ~'.twig', '_snippet/_content/_pageTitle/_default.twig'] %}
+					{% include ['_snippet/_content/_intro/_' ~ currentSite.handle ~'.twig', '_snippet/_content/_intro/_default.twig'] %}
+					{% for ctaBlock in entry.callToActionBlock.all() %}
+						{% include ['_snippet/_item/_callToActionBlock/_' ~ currentSite.handle ~'.twig', '_snippet/_item/_callToActionBlock/_default.twig'] with { fontSize: 'text-lg' } %}
+					{% endfor %}
+				</div>
+				{% if entry.hero is defined and entry.hero|length %}
+				<div class="order-1 w-full max-w-xs px-4 mx-auto sm:max-w-none sm:w-1/3 sm:block">
+					{% if entry.hero|first.extension != 'svg' %}
+						{% set optimizedImage = entry.hero|first.optimizedTextImage %}
+						<picture>
+							{% if craft.imageOptimize.serverSupportsWebP() and entry.hero|first.extension != 'svg' %}
+								<source data-srcset="{{ optimizedImage.srcsetWebP() }}" sizes="(max-width: 479px) 95vw, (min-width: 480px) and (max-width: 659px) 448px, (min-width: 660px) and (max-width: 819px) 628px, (min-width: 820px) and (max-width: 979px) 378px, (min-width: 980px) and (max-width: 1199px) 458px, (min-width: 1200px) 568px" type="image/webp"/>
+							{% endif %}
+							<img src="{{ optimizedImage.placeholderBox() }}" data-srcset="{{ optimizedImage.srcset() }}" sizes="(max-width: 479px) 95vw, (min-width: 480px) and (max-width: 659px) 448px, (min-width: 660px) and (max-width: 819px) 628px, (min-width: 820px) and (max-width: 979px) 378px, (min-width: 980px) and (max-width: 1199px) 458px, (min-width: 1200px) 568px" alt="{{ entry.hero|first.imageCaption ?? entry.hero|first.title ?? entry.title }}" class="lazyload"/>
+						</picture>
+					{% else %}
+						<img src="{{entry.hero|first.getUrl()}}" alt="{{ entry.hero|first.imageCaption ?? entry.hero|first.title ?? entry.title }}" class="lazyload"/>
+					{% endif %}
+				</div>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+
+	{% set entries = craft.entries.section('repairStories').with(['overviewImage']).orderBy('postDate DESC') %}
+	{% paginate entries.limit(12) as pageInfo, stories %}
+
+		<div class="section section--default">
+			<div class="container">
+				<div class="flex flex-wrap -mx-4">
+					{% for cardEntry in stories %}
+						{% include '_snippet/_item/_card/_default.twig' %}
+					{% endfor %}
+				</div>
+
+				{# Zie CHANGELOG.md voor de nieuwe paginatie #}
+				{{ craft.statik.paginate(pageInfo, {
+                pageRange: 2, 
+                prevText: '«',
+                nextText: '»'
+            }) }}
+
+			</div>
+		</div>
+	{% endblock %}

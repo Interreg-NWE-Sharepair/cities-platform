@@ -1,0 +1,20 @@
+columnSuffix: jcolatwg
+contentColumnType: integer(10)
+fieldGroup: c5433317-7d49-4535-8c7b-894b8be40653 # Home
+handle: startNumberCafe
+instructions: 'This number gets added up to the "Number Café" field which is retrieved from the API'
+name: 'Start Number Café'
+searchable: true
+settings:
+  decimals: 0
+  defaultValue: null
+  max: null
+  min: 0
+  prefix: null
+  previewCurrency: null
+  previewFormat: decimal
+  size: null
+  suffix: null
+translationKeyFormat: null
+translationMethod: siteGroup
+type: craft\fields\Number

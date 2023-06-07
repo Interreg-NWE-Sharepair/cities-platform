@@ -1,0 +1,81 @@
+{% if fullwidth is not defined %}
+	{% set fullwidth = false %}
+{% endif %}
+
+{% if block.image|length == 1 %}
+		<div class="w-full {% if not fullwidth %}mx-auto md:w-5/6{% endif %}">
+			{% set optimizedImage = block.image|first.optimizedContent %}
+			<picture>
+				{% if craft.imageOptimize.serverSupportsWebP() and block.image|first.extension != 'svg' %}
+					<source data-srcset="{{ optimizedImage.srcsetWebP() }}" sizes="(max-width: 479px) 95vw, (min-width: 480px) and (max-width: 659px) 448px, (min-width: 660px) and (max-width: 819px) 628px, (min-width: 820px) and (max-width: 979px) 591px, (min-width: 980px) and (max-width: 1199px) 711px, (min-width: 1200px) 876px" type="image/webp"/>
+				{% endif %}
+				<img src="{{ optimizedImage.placeholderBox() }}" data-srcset="{{ optimizedImage.srcset() }}" sizes="(max-width: 479px) 95vw, (min-width: 480px) and (max-width: 659px) 448px, (min-width: 660px) and (max-width: 819px) 628px, (min-width: 820px) and (max-width: 979px) 591px, (min-width: 980px) and (max-width: 1199px) 711px, (min-width: 1200px) 876px" alt="{{ block.image|first.imageCaption ?? block.image|first.title ?? entry.title }}" class="w-full lazyload"/>
+			</picture>
+			{% if block.image|first.imageCopyright|length %}
+				<div class="mt-2 text-base">{{ block.image|first.imageCopyright }}</div>
+			{% endif %}
+		</div>
+{% endif %}
+{% if block.image|length == 2 %}
+		<div class="grid grid-cols-1 gap-5 md:grid-cols-2">
+			{% for image in block.image %}				
+				{% set optimizedImage = image.optimizedContent %}
+				<picture>
+					{% if craft.imageOptimize.serverSupportsWebP() and block.image|first.extension != 'svg' %}
+						<source data-srcset="{{ optimizedImage.srcsetWebP() }}" sizes="(max-width: 479px) 95vw, (min-width: 480px) and (max-width: 659px) 448px, (min-width: 660px) and (max-width: 819px) 628px, (min-width: 820px) and (max-width: 979px) 591px, (min-width: 980px) and (max-width: 1199px) 711px, (min-width: 1200px) 876px" type="image/webp"/>
+					{% endif %}
+					<img src="{{ optimizedImage.placeholderBox() }}" data-srcset="{{ optimizedImage.srcset() }}" sizes="(max-width: 479px) 95vw, (min-width: 480px) and (max-width: 659px) 448px, (min-width: 660px) and (max-width: 819px) 628px, (min-width: 820px) and (max-width: 979px) 591px, (min-width: 980px) and (max-width: 1199px) 711px, (min-width: 1200px) 876px" alt="{{ block.image|first.imageCaption ?? block.image|first.title ?? entry.title }}" class="w-full lazyload"/>
+				</picture>
+				{% if block.image|first.imageCopyright|length %}
+					<div class="mt-2 text-base">{{ block.image|first.imageCopyright }}</div>
+				{% endif %}
+			{% endfor %}
+		</div>
+{% endif %}
+
+{% if block.image|length > 2 %}
+<div class="w-full glide js-slider {% if not fullwidth %}mx-auto md:w-3/4 lg:w-2/3{% endif %}" id="slider-{{block.id}}">
+	<div class="relative">
+		<div class="glide__track bg-light" data-glide-el="track">
+			<div class="flex items-stretch glide__slides">
+				{% set images = block.image %}
+				{% for image in images %}
+					<div class="flex flex-col justify-center w-full h-auto md:flex-row glide__slide">
+						<div class="relative flex flex-col flex-1 h-auto md:flex-row glide__slide">
+							<a href="{{image.url}}" class="block w-full js-modal-image" data-group="image-{{block.id}}">
+								<div class="w-full bg-black bg-center bg-no-repeat bg-cover aspect-ratio-square" id="slider-image-{{loop.index}}"></div>
+								<img src="{{image.url}}" alt="" class="sr-only" data-bg-target="slider-image-{{loop.index}}"/>
+							</a>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+		<div class="absolute z-10 hidden w-full max-w-screen-xl sm:block top-1/2 left-1/2 pull-to-center" data-glide-el="controls">
+			<button class="left-0 flex items-center justify-center ml-4 bg-white md:-ml-6 md:-translate-x-full glide__arrow glide__arrow--left" data-glide-dir="&lt;">
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="/icon/sprite.svg#chevron-left"></use>
+				</svg>
+			</button>
+			<button class="right-0 flex items-center justify-center mr-4 bg-white md:-mr-6 md:translate-x-full glide__arrow glide__arrow--right" data-glide-dir="&gt;">
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="/icon/sprite.svg#chevron-right"></use>
+				</svg>
+			</button>
+		</div>
+	</div>
+	{# <div class="glide__bullets" data-glide-el="controls[nav]">
+		{% for image in images %}
+			<button class="glide__bullet" data-glide-dir="={{loop.index - 1}}">
+				{% set optimizedImage = image.optimizedOverview %}
+				<picture>
+					{% if craft.imageOptimize.serverSupportsWebP() and image.extension != 'svg' %}
+						<source data-srcset="{{ optimizedImage.srcsetWebP() }}" sizes="(max-width: 479px) 95vw, (min-width: 480px) and (max-width: 659px) 448px, (min-width: 660px) and (max-width: 819px) 628px, (min-width: 820px) and (max-width: 979px) 591px, (min-width: 980px) and (max-width: 1199px) 711px, (min-width: 1200px) 876px" type="image/webp"/>
+					{% endif %}
+					<img src="{{ optimizedImage.placeholderBox() }}" data-srcset="{{ optimizedImage.srcset() }}" sizes="(max-width: 479px) 95vw, (min-width: 480px) and (max-width: 659px) 448px, (min-width: 660px) and (max-width: 819px) 628px, (min-width: 820px) and (max-width: 979px) 591px, (min-width: 980px) and (max-width: 1199px) 711px, (min-width: 1200px) 876px" alt="{{ image.imageCaption ?? image.title ?? entry.title }}" class="w-full lazyload"/>
+				</picture>
+			</button>
+		{% endfor %}
+	</div> #}
+</div>
+{% endif %}

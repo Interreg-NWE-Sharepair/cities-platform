@@ -1,0 +1,103 @@
+fieldLayouts:
+  5364a393-b1fd-409d-bf52-7958fd3bc462:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 0b4fd7ba-ebc1-4982-87b7-89b63e2ccc6a
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 2faa1392-73fe-416a-af37-d99bd8376af8
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 4a2bad07-8d89-4689-b0bf-774eed764660 # Overview title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e1c1ddcf-e9d9-4614-9eaa-5370098e20e1
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 2f8a6ddc-4ab7-4f9f-a2ea-72c6cb387f38 # Overview description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: cd522cc8-3b0a-447f-a086-fb78d39c0f8f
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 15ed2b72-8955-4cec-93f8-9736a9e50e80 # Overview image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e54481d5-f7d5-4751-89e0-9d2ff4ff2345
+            userCondition: null
+            warning: null
+            width: 100
+        name: Overview
+        uid: 673e31b6-098d-4008-811d-1e70f368fd97
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 685530fc-e1f1-4be1-813b-ebf9ac3aa108 # SEO
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1a6f9577-5084-4247-9fbf-848435e9b558
+            userCondition: null
+            warning: null
+            width: 100
+        name: SEO
+        uid: 5bf1fa30-98a1-458d-8f35-dc7de81e0374
+        userCondition: null
+handle: searchResults
+hasTitleField: false
+name: 'Search results'
+section: e3bed4e1-82ae-45e8-908c-0a6669141b31 # Search results
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

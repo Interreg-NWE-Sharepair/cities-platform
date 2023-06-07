@@ -1,0 +1,9 @@
+baseUrl: '@baseUrlRoeselare'
+enabled: '1'
+handle: roeselareNl
+hasUrls: true
+language: nl-BE
+name: 'Roeselare NL'
+primary: false
+siteGroup: 56162141-008d-4130-95a9-dba0b5eb9f8a # Roeselare
+sortOrder: 7

@@ -1,0 +1,145 @@
+{% extends "_layout.twig" %}
+
+{% set breadcrumbs = [
+    craft.entries.section('repairIn').one(),
+    entry,
+] %}
+
+{% block content %}
+
+	<div class="section section--light">
+		<div class="container">
+			<div class="pb-5">
+				{% include '_snippet/_nav/_breadcrumb.twig' %}
+			</div>
+			<div class="flex flex-wrap -mx-4">
+				<div class="order-2 w-full px-4 mt-6 sm:w-2/3 sm:order-1 sm:mt-0">
+					<h1>{{ entry.title }}</h1>
+					<div class="flex flex-col flex-wrap -mx-4 text-lg font-semibold sm:flex-row skew-dividers">
+						{% if entry.organisationType|length %}
+							<div class="px-4 py-3 font-semibold md:py-0">
+								<svg class="mr-1 text-lg icon" style="color: {{entry.organisationType.one().color}}" aria-hidden="true"><use xlink:href="/icon/sprite.svg#place"></use></svg>
+								{{ entry.organisationType.one().title }}
+							</div>
+							{% if entry.organisationType.one().slug == "repair-café" and entry.activeRepairers|length and entry.activeRepairers > 0 %}
+								<div class="px-4 py-3 font-semibold md:py-0">
+									<span class="text-secondary">{{ entry.activeRepairers }}</span> {{ "actieve herstellers"|t }}
+								</div>
+							{% endif %}
+						{% endif %}
+						{% if entry.repairedDevices|length and entry.repairedDevices > 0 %}
+							<div class="px-4 py-3 font-semibold md:py-0">
+								<span class="text-primary">{{ entry.repairedDevices }}</span> {{ "herstelde toestellen"|t }}
+							</div>
+						{% endif %}
+					</div>
+					{% if entry.organisationIntro|length %}
+						<div class="mt-4 text-xl redactor">{{ entry.organisationIntro }}</div>
+					{% endif %}
+					<div class="mt-10">
+						{% if entry.street|length %}
+							<div>
+								<svg class="mr-1 text-lg icon text-primary" aria-hidden="true"><use xlink:href="/icon/sprite.svg#place"></use></svg>
+								{{ entry.street }}, {{ entry.postalCode }} {{ entry.organisationCity }}, {{ entry.country }}
+							</div>
+						{% endif %}
+
+						{% if entry.phone|length %}
+							<div>
+								<svg class="mr-1 text-lg icon text-primary" aria-hidden="true"><use xlink:href="/icon/sprite.svg#phone"></use></svg>
+								<a href="tel:{{ entry.phone }}" class="underline hover:no-underline">{{ entry.phone }}</a>
+							</div>
+						{% endif %}
+
+						{% if entry.email|length %}
+							<div>
+								<svg class="mr-1 text-lg icon text-primary" aria-hidden="true"><use xlink:href="/icon/sprite.svg#envelope"></use></svg>
+								<a href="mailto:{{ entry.email }}" class="underline hover:no-underline">{{ entry.email }}</a>
+							</div>
+						{% endif %}
+
+						{% if entry.organisationUrl|length %}
+							<div>
+								<svg class="mr-1 text-lg icon text-primary" aria-hidden="true"><use xlink:href="/icon/sprite.svg#public"></use></svg>
+								<a href="{{ entry.organisationUrl }}" class="underline hover:no-underline">{{ entry.organisationUrl }}</a>
+							</div>
+						{% endif %}
+					</div>
+				</div>
+				{% if entry.organisationLogo|length %}
+					<div class="order-1 w-full max-w-xs px-4 mx-auto sm:max-w-none sm:w-1/3 sm:block">
+						<img src="{{ entry.organisationLogo }}"/>
+					</div>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+
+	<div class="section section--default">
+		<div class="container">
+			<div class="">
+				{% if entry.productCategory|length %}
+					<div class="w-full p-8 rounded-card bg-light">
+						<h2 class="text-primary">{{ 'Product categorieën'|t }}</h2>
+						{% set products = entry.productCategory.all() %}
+						<div class="flex flex-wrap -mx-1 -mt-1">
+							{% for product in products %}
+								<div class="px-1 m-1 text-sm font-bold bg-white rounded text-secondary">{{ product.title }}</div>
+							{% endfor %}
+						</div>
+					</div>
+				{% endif %}
+
+				{% if entry.warranty|length %}
+					<div class="flex w-full px-4 mt-8 md:w-1/2 md:mt-0">
+						<div class="w-full p-8 rounded-card bg-light">
+							<h2>{{ 'Garantie'|t }}</h2>
+							{{ entry.warranty }}
+						</div>
+					</div>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+
+	{% if entry.organisationImages|length %}
+		<div class="section section--default">
+			<div class="container">
+				<div class="">
+					{% set images = entry.organisationImages|split(',') %}
+					{% for image in images %}
+						<img src="{{ image }}"/>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	{% endif %}
+
+	
+	{% set professional = craft.categories.group('organisationType').id(3583).one() %}
+	<div class="section section--default">
+		<div class="container">
+			<div class="flex flex-wrap -mx-4">
+				<div class="w-full px-4 {% if entry.organisationType.one().id == professional.id %}md:w-1/2{% endif %}">
+					<h2>{{ 'Is er iets mis?'|t }}</h2>
+					<p>{{ 'Neem dan even contact op via onderstaande link'|t }}</p>
+					<div class="mt-6">
+						{% set org = entry.organisationId %}
+						{% set currentLocale = craft.app.language|split('-') %}
+						<a href="{{ getenv("MAP_CORRECTION_LINK") }}{% if currentLocale[0] != 'en' %}/{{currentLocale[0]}}{% endif %}/location/{{ org }}/edit" class="btn btn-ghost btn--ext" target="_blank">{{ 'Stel een correctie voor'|t }}</a>
+					</div>
+				</div>
+				{% if entry.organisationType.one().id == professional.id %}
+					<div class="w-full px-4 mt-12 md:w-1/2 md:mt-0">
+						<h2>{{ 'Iets laten repareren bij deze hersteller?'|t }}</h2>
+						<p>{{ 'Laat het ons weten, dan nemen we de herstelling op in ons stadsoverzicht.'|t }}</p>
+						<div class="mt-6">
+							{% set registerProfessionalRepairURL = craft.entries.section('professionalRepair').one().url() %}
+							<a href="{{ registerProfessionalRepairURL }}?organisation={{ entry.organisationId }}" class="btn btn-ghost btn--ext">{{ 'Registreer je repairs'|t }}</a>
+						</div>
+					</div>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+{% endblock %}

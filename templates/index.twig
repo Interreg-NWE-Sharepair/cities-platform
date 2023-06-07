@@ -1,0 +1,202 @@
+{% extends "_layout.twig" %}
+
+{% if currentSite.handle == "platform" %}
+	{% redirect "/admin" %}
+{% endif %}
+
+{% block content %}
+
+	{% set diyRepairs = craft.entries.section("allDiyRepairs").count() %}
+	{% set professionalRepairs = craft.entries.section("allProfessionalRepairs").count() %}
+
+	<div class="py-0 section section--light">
+		<div class="container">
+			<div class="flex flex-wrap">
+				{% set homeHero = entry.homeHero|first %}
+				{% if homeHero %}
+					<div class="w-full py-6 md:py-20 md:w-1/3 lg:w-4/12">
+							<h1 class="text-secondary">{{ homeHero.heroTitle }}</h1>
+							{% if homeHero.intro|length %}
+								<div class="my-10 text-xl redactor">
+									{{ homeHero.intro }}
+								</div>
+							{% endif %}
+							{% if homeHero.cta|length %}
+								<div class="mt-10">
+									{% for cta in homeHero.cta.all() %}
+										{% include '_snippet/_content/_blocks/_cta/_default.twig' %}
+									{% endfor %}
+								</div>
+							{% endif %}
+					</div>
+					<div class="w-full py-6 md:py-0 md:w-2/3 lg:w-8/12">
+						<div class="relative js-pull-out" data-direction="right" data-max="130" data-breakpoint="820">
+							{% if currentSite.handle == 'apeldoornNl' or currentSite.handle == 'leuvenNl' or currentSite.handle == 'leuvenEn' or currentSite.handle == 'roeselareNl' %}
+
+								{# Import the iframe resizer #}
+								{# NOTE: the `_statsEmbed/_default.twig` (around line 140) also uses the iframe resizer so be careful when changing this. #}
+								<script src="https://unpkg.com/iframe-resizer@4.3.2/js/iframeResizer.min.js"></script>
+								{% include '_snippet/_item/_statsEmbed/_hero.twig' %}
+								
+							{% else %}
+								{% if siteInfo.hero|length %}
+								<img src="{{siteInfo.hero|first.getUrl()}}" alt="" class="w-full"/>
+								{% else %}
+									<img src="/img/hero.svg" alt="" class="w-full"/>
+								{% endif %}
+
+								{% set totalRepairs = professionalRepairs + diyRepairs + (entry.numberCafe + (entry.startNumberCafe ?? 0)) %}
+								<div id="heroNr4" class="">
+									<span>{{ totalRepairs }}</span>
+									{% set cityName = siteInfo.city %}
+									{% switch currentSite.language %}
+									{% case 'nl-BE' %}
+										{{ "herstellingen in "|t ~ cityName }}
+									{% case 'en-BE' %}
+										{{ "repairs in "|t ~ cityName }}
+									{% case 'fr-BE' %}
+										{{ "réparations à "|t ~ cityName }}
+									{% endswitch %}
+								</div>
+
+								<div id="heroNr1" class="">
+									<span>{{ professionalRepairs }}</span>
+									{% switch currentSite.language %}
+										{% case 'nl-BE' %}
+											{{ "door professionelen"|t }}
+										{% case 'en-BE' %}
+											{{ "repairs by professionals"|t }}
+										{% case 'fr-BE' %}
+											{{ "par des professionnels"|t }}
+									{% endswitch %}
+								</div>
+
+								<div id="heroNr2" class="">
+									<span>{{ diyRepairs }}</span>
+									{% switch currentSite.language %}
+									{% case 'nl-BE' %}
+										{{ "door DIY reparatie"|t }}
+									{% case 'en-BE' %}
+										{{ "repaired by DIY repair"|t }}
+									{% case 'fr-BE' %}
+										{{ "réparation DIY"|t }}
+									{% endswitch %}
+								</div>
+
+								<div id="heroNr3" class="">
+									<span>{{ entry.numberCafe + (entry.startNumberCafe ?? 0) }}</span>
+									{% switch currentSite.language %}
+									{% case 'nl-BE' %}
+										{{ "door Repair cafés"|t }}
+									{% case 'en-BE' %}
+										{{ "repairs by Repair cafés"|t }}
+									{% case 'fr-BE' %}
+										{{ "par les Repair cafés"|t }}
+									{% endswitch %}
+								</div>
+								{% if homeHero.legend %}
+									<div id="heroLegend">
+										{{ homeHero.legend }}
+									</div>
+								{% endif %}
+							{% endif %}
+						</div>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</div>
+
+	{% if entry.ctaStartRepair|length and currentSite.handle != 'louvainLaNeuveFr' %}
+		{% set ctaStartRepair = entry.ctaStartRepair|first %}
+		<div class="section section--default">
+			<div class="container">
+				{% set ctaStartRepair = ctaStartRepair %}
+				{% include "_snippet/_content/_ctaStartRepair/_default.twig" with { block: ctaStartRepair, position: "right", backgroundColor: "section--light", illustration: true, highlight: false } %}
+			</div>
+		</div>
+	{% endif %}
+
+	{% if entry.quote|length and currentSite.handle != 'louvainLaNeuveFr' %}
+		{% set quote = entry.quote|first %}
+		<div class="section section--default">
+			<div class="container">
+				{% include "_snippet/_content/_blocks/_quote/_default.twig" with { block: quote } %}
+			</div>
+		</div>
+	{% endif %}
+
+	{% if entry.contentBuilder|length and currentSite.handle == 'louvainLaNeuveFr' %}
+		{% include ['_snippet/_content/_contentBuilder/_' ~ currentSite.handle ~'.twig', '_snippet/_content/_contentBuilder/_default.twig']
+			with {
+			settings : {
+				section: 'section',
+				container: 'container',
+			}
+		} %}
+	{% endif %}
+
+	{# Statistics embed for each city #}
+	{% include '_snippet/_item/_statsEmbed/_default.twig' %}
+
+	{% set stories = craft.entries().section('repairStories').with(['overviewImage']).orderBy('postDate DESC').limit(3) %}
+	{% if stories|length %}
+		<div class="section section--light">
+			<div class="container">
+				<h2 class="text-center">{{ "Repair stories"|t }}</h2>
+				<div class="flex flex-wrap mt-10 -mx-3">
+					{% for cardEntry in stories.all %}
+						{% include '_snippet/_item/_card/_default.twig' with {showContrast: true} %}
+					{% endfor %}
+				</div>
+				{% set overview = craft.entries.section('repairStoriesOverview').one() %}
+				<div class="flex justify-center mt-10">
+					<a href="{{ overview.url }}" class="btn btn--ghost btn--ext">{{ "Bekijk al onze repair stories"|t }}</a>
+				</div>
+			</div>
+		</div>
+	{% endif %}
+
+	{% if entry.ctaRepairCity|length and currentSite.handle != 'louvainLaNeuveFr' %}
+		<div class="section section--default">
+			<div class="container">
+				{% include "_snippet/_content/_blocks/_textImage/_default.twig" with { block: entry.ctaRepairCity.one(), position: 'right', backgroundColor: "section--light", illustration: true, highlight: false } %}
+			</div>
+		</div>
+	{% endif %}
+
+	{% if entry.whatCanYouDo|length %}
+		{% set whatCanYouDo = entry.whatCanYouDo|first %}
+		<div class="overflow-hidden section section--default">
+			<div class="container">
+				<h2 class="text-center heading-2">{{ whatCanYouDo.blockTitle }}</h2>
+				<div class="flex flex-wrap justify-center -mx-8 skew-dividers">
+					{% for option in whatCanYouDo.options.all() %}
+						<div class="w-full px-8 mt-8 md:mt-0 sm:w-1/3">
+							{% if option.image|first %}
+								<picture class="relative block mx-auto xs:w-1/2 sm:w-full">
+									{% if option.image|first.extension != 'svg' %}
+										{% set optimizedImage = option.image|first.optimizedTextImage %}
+										{% if craft.imageOptimize.serverSupportsWebP() %}
+											<source data-srcset="{{ optimizedImage.srcsetWebP() }}" sizes="(max-width: 479px) 95vw, (min-width: 480px) and (max-width: 819px) 298px, (min-width: 820px) and (max-width: 1199px) 295px, (min-width: 1200px) 368px" type="image/webp"/>
+										{% endif %}
+										<img src="{{ optimizedImage.placeholderBox() }}" data-srcset="{{ optimizedImage.srcset() }}" srcset="{{ optimizedImage.srcset() }}" sizes="(max-width: 479px) 95vw, (min-width: 480px) and (max-width: 819px) 298px, (min-width: 820px) and (max-width: 1199px) 295px, (min-width: 1200px) 368px" alt="{{ option.image|first.imageCaption ?? option.image|first.title ?? cardEntry.title }}" class="w-full lazyload"/>
+									{% else %}
+										<img src="{{option.image|first.getUrl()}}" alt="{{ option.image|first.imageCaption ?? option.image|first.title ?? cardEntry.title }}" class="w-full lazyload"/>
+									{% endif %}
+								</picture>
+								<h3 class="text-center text-primary">{{option.optionTitle}}</h3>
+								{% for cta in option.cta.all() %}
+									<div class="my-2">
+										{{ cta.linkit.getLink({class: 'btn btn--link btn--ext'}) }}
+									</div>
+								{% endfor %}
+							{% endif %}
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	{% endif %}
+
+{% endblock %}

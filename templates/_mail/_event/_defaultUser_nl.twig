@@ -1,0 +1,47 @@
+{% extends "_mail/_layout" %}
+
+{% block title %}
+	{{ 'Bedankt om een Repair Event in te zenden'|t }}
+{% endblock %}
+
+{% block content %}
+	<p>Hey
+		{{ user.firstName }}
+	</p>
+
+	<p>{{ 'Een kopie van jouw inzending:'|t }}</p>
+
+	<ul>
+		{% for key,value in event %}
+			<li>
+				<strong>
+					{% switch key %}
+						{% case "title" %}
+							Titel van het evenement
+						{% case "date" %}
+							Datum
+						{% case "location" %}
+							Locatie
+						{% case "organisationName" %}
+							Organisator
+						{% case "organisationUrl" %}
+							Organisator URL
+						{% case "category" %}
+							Event categorie
+						{% case "registerUrl" %}
+							Link naar registratie formulier
+						{% case "infoUrl" %}
+							Link naar meer informatie
+						{% case "intro" %}
+							Introductie
+						{% case "body" %}
+							Body tekst
+					{% endswitch %}
+				</strong>
+				<br>
+				{{ value|raw }}
+			</li>
+		{% endfor %}
+	</ul>
+
+{% endblock %}

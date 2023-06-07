@@ -1,0 +1,9 @@
+baseUrl: '@baseUrl3D/nl'
+enabled: '1'
+handle: printingNl
+hasUrls: true
+language: nl-BE
+name: '3D Repair NL'
+primary: false
+siteGroup: 2eeee8c3-6f2e-4b49-a272-3e9ea09940d5 # 3D
+sortOrder: 10

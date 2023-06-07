@@ -1,0 +1,50 @@
+{% if socialMedia.facebook %}
+    <li class="nav__item">
+        <a href="{{ socialMedia.facebook }}" aria-label="{{ 'Bekijk onze Facebook pagina'|t }}" target="_blank" rel="noopener" class="flex items-center text-sm">
+            <svg class="flex-shrink-0 mr-2 text-3xl icon" aria-hidden="true">
+                <use xlink:href="/icon/sprite.svg#facebook"></use>
+            </svg>
+            <span class="truncate">{{ socialMedia.facebook|replace("/(http[s]*:\\/\\/(www.)*)/i", "")|replace("facebook", "fb") }}</span>
+        </a>
+    </li>
+{% endif %}
+{% if socialMedia.instagram %}
+    <li class="nav__item">
+        <a href="{{ socialMedia.instagram }}" aria-label="{{ 'Bekijk onze Instagram pagina'|t }}" target="_blank" rel="noopener" class="flex items-center text-sm">
+            <svg class="flex-shrink-0 mr-2 text-3xl icon" aria-hidden="true">
+                <use xlink:href="/icon/sprite.svg#instagram"></use>
+            </svg>
+            <span class="truncate">@{{ socialMedia.instagram|replace("/(http[s]*:\\/\\/(www.)*instagram.com\\/)/i", "")|replace("/", "") }}</span>
+        </a>
+    </li>
+{% endif %}
+{% if socialMedia.linkedin %}
+    <li class="nav__item">
+        <a href="{{ socialMedia.linkedin }}" aria-label="{{ 'Bekijk onze LinkedIn pagina'|t }}" target="_blank" rel="noopener" class="flex items-center text-sm">
+            <svg class="flex-shrink-0 mr-2 text-3xl icon" aria-hidden="true">
+                <use xlink:href="/icon/sprite.svg#linkedin"></use>
+            </svg>
+            <span class="truncate">{{ socialMedia.linkedin|replace("/(http[s]*:\\/\\/(www.)*)/i", "") }}</span>
+        </a>
+    </li>
+{% endif %}
+{% if socialMedia.twitter %}
+    <li class="nav__item">
+        <a href="{{ socialMedia.twitter }}" aria-label="{{ 'Bekijk onze Twitter pagina'|t }}" target="_blank" rel="noopener" class="flex items-center text-sm">
+            <svg class="flex-shrink-0 mr-2 text-3xl icon" aria-hidden="true">
+                <use xlink:href="/icon/sprite.svg#twitter"></use>
+            </svg>
+            <span class="truncate">@{{ socialMedia.twitter|replace("/(http[s]*:\\/\\/(www.)*twitter.com\\/)/i", "")|replace("/", "") }}</span>
+        </a>
+    </li>
+{% endif %}
+{% if socialMedia.youtube %}
+    <li class="nav__item">
+        <a href="{{ socialMedia.youtube }}" aria-label="{{ 'Bekijk onze YouTube pagina'|t }}" target="_blank" rel="noopener" class="flex items-center text-sm">
+            <svg class="flex-shrink-0 mr-2 text-3xl icon" aria-hidden="true">
+                <use xlink:href="/icon/sprite.svg#youtube"></use>
+            </svg>
+            <span class="truncate">{{ socialMedia.youtube|replace("/(http[s]*:\\/\\/(www.)*)/i", "") }}</span>
+        </a>
+    </li>
+{% endif %}

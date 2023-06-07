@@ -1,0 +1,19 @@
+{% extends "_layout.twig" %}
+
+{% import _self as errors %}
+
+{% set breadcrumbs = [
+    entry,
+] %}
+
+{% block content %}
+
+    {% include ['_snippet/_global/_hero/_' ~ currentSite.handle ~'.twig', '_snippet/_global/_hero/_default.twig'] %}
+
+    <div class="section section--default">
+        <div class="container">
+            {% include '_snippet/_account/_loginForm/_default.twig' %}
+        </div>
+    </div>
+
+{% endblock %}

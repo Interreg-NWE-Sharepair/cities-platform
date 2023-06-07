@@ -1,0 +1,47 @@
+{% extends "_mail/_layout" %}
+
+{% block title %}
+	{{ "Merci d'avoir soumis une a Repair Event"|t }}
+{% endblock %}
+
+{% block content %}
+	<p>Bonjour
+		{{ user.firstName }}
+	</p>
+
+	<p>{{ 'Une copie de votre soumission:'|t }}</p>
+
+	<ul>
+		{% for key,value in event %}
+			<li>
+				<strong>
+					{% switch key %}
+						{% case "title" %}
+							Titre de l'événement
+						{% case "date" %}
+							Date
+						{% case "location" %}
+							Lieu
+						{% case "organisationName" %}
+							Organisation
+						{% case "organisationUrl" %}
+							Organisation URL
+						{% case "category" %}
+							Catégorie de l'événement
+						{% case "registerUrl" %}
+							Lien pour le formulaire d'inscription
+						{% case "infoUrl" %}
+							Lien pour plus d'information
+						{% case "intro" %}
+							Introduction
+						{% case "body" %}
+							Body texte
+					{% endswitch %}
+				</strong>
+				<br>
+				{{ value|raw }}
+			</li>
+		{% endfor %}
+	</ul>
+
+{% endblock %}

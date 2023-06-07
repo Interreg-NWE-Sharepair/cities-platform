@@ -1,0 +1,24 @@
+defaultPlacement: end
+enableVersioning: true
+handle: registrationCompleted
+name: 'Registration completed'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  6de046f0-6167-4af1-aa91-ffaf83e36a14: # Platform
+    enabledByDefault: true
+    hasUrls: true
+    template: _account/_registration-completed
+    uriFormat: registration-completed
+type: single
